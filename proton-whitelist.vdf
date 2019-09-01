@@ -8,3 +8,8 @@
 	"name"		"proton_411"
 	"config"	"noesync"
 }
+
+"491040" // Bot Vice; native version does not recognize controllers
+{
+	"name"		"proton_411"
+}
