@@ -34,7 +34,7 @@ STEAM_FILE = STEAM_DIR + '/config.vdf'
 
 
 try:
-	urllib.request.urlretrieve('https://gamer-os.github.io/proton-whitelist/proton-whitelist.vdf', MAIN_FILE)
+	urllib.request.urlretrieve('https://gamer-os.github.io/steam-tweaks/proton-whitelist.vdf', MAIN_FILE)
 except:
 	print('failed to update whitelist')
 
