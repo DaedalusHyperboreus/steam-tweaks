@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+
+import os
+import vdf
+import urllib.request
+
+def apply_data(whitelist_file, apps):
+	if not os.path.isfile(whitelist_file):
+		return
+
+	data = vdf.load(open(whitelist_file))
+	for key in data:
+		apps[key] = data[key]
+
+
+if 'XDG_DATA_HOME' in os.environ:
+	DATA_HOME = os.environ['XDG_DATA_HOME']
+else:
+	DATA_HOME = os.environ['HOME'] + '/.local/share'
+
+if 'XDG_CONFIG_HOME' in os.environ:
+	CONFIG_HOME = os.environ['XDG_CONFIG_HOME']
+else:
+	CONFIG_HOME = os.environ['HOME'] + '/.config'
+
+
+try:
+	urllib.request.urlretrieve('https://gamer-os.github.io/steam-tweaks/steam-input-whitelist.vdf', MAIN_FILE)
+except:
+	print('failed to update steam input whitelist')
+
+
+MAIN_FILE  = DATA_HOME + '/steam-input-whitelist.vdf'
+LOCAL_FILE = CONFIG_HOME + '/steam-input-whitelist.vdf'
+STEAM_DIR  = DATA_HOME + '/Steam/userdata'
+
+
+for user_dir in os.listdir(STEAM_DIR):
+	config_dir = STEAM_DIR + '/' + user_dir + '/config'
+	config_file = config_dir + '/localconfig.vdf'
+
+	if not os.path.isdir(config_dir):
+		os.makedirs(config_dir)
+
+	if os.path.isfile(config_file):
+		steam_data = vdf.load(open(config_file))
+	else:
+		steam_data = vdf.VDFDict()
+		steam_data['UserLocalConfigStore'] = { 'Apps': {}}
+
+	steam = steam_data['UserLocalConfigStore']
+
+	if 'Apps' not in steam:
+		steam['Apps'] = {}
+
+	apps = steam['Apps']
+
+	apply_data(MAIN_FILE, apps) # add global entries if file exists
+	apply_data(LOCAL_FILE, apps) # add local entries if file exists
+
+	vdf.dump(steam_data, open(config_file, 'w'), pretty=True)
