@@ -23,17 +23,14 @@ if 'XDG_CONFIG_HOME' in os.environ:
 else:
 	CONFIG_HOME = os.environ['HOME'] + '/.config'
 
+MAIN_FILE  = DATA_HOME + '/steam-input-whitelist.vdf'
+LOCAL_FILE = CONFIG_HOME + '/steam-input-whitelist.vdf'
+STEAM_DIR  = DATA_HOME + '/Steam/userdata'
 
 try:
 	urllib.request.urlretrieve('https://gamer-os.github.io/steam-tweaks/steam-input-whitelist.vdf', MAIN_FILE)
 except:
 	print('failed to update steam input whitelist')
-
-
-MAIN_FILE  = DATA_HOME + '/steam-input-whitelist.vdf'
-LOCAL_FILE = CONFIG_HOME + '/steam-input-whitelist.vdf'
-STEAM_DIR  = DATA_HOME + '/Steam/userdata'
-
 
 for user_dir in os.listdir(STEAM_DIR):
 	config_dir = STEAM_DIR + '/' + user_dir + '/config'
