@@ -42,6 +42,7 @@
 "321040" // DiRT 3 Complete Edition
 {
 	"name"		"proton_411"
+	"config"	"noesync"
 }
 
 "285840" // Enemy Mind
