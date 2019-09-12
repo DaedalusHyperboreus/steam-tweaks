@@ -3,10 +3,19 @@
 // CREATE A CUSTOM FILE AT ~/.config/proton-whitelist.vdf
 // ANY ENTRIES IN THAT FILE WILL OVERRIDE ENTRIES IN THIS FILE
 
-"287260" // Toybox Turbos
+"463150" // BARRIER X
 {
 	"name"		"proton_411"
-	"config"	"noesync"
+}
+
+"218060" // BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien; native version has severe controller issues
+{
+	"name"		"proton_411"
+}
+
+"9940" // Blade Kitten
+{
+	"name"		"proton_411"
 }
 
 "491040" // Bot Vice; native version does not recognize controllers
@@ -14,22 +23,7 @@
 	"name"		"proton_411"
 }
 
-"116120" // Lightfish
-{
-	"name"		"proton_411"
-}
-
-"275850" // No Man's Sky
-{
-	"name"		"proton_411"
-}
-
-"32360" // The Secret of Monkey Island: Special Edition
-{
-	"name"		"proton_411"
-}
-
-"463150" // BARRIER X
+"24740" // Burnout Paradise: The Ultimate Box
 {
 	"name"		"proton_411"
 }
@@ -45,17 +39,17 @@
 	"config"	"noesync"
 }
 
+"205100" // Dishonored
+{
+	"name"		"proton_411"
+}
+
 "285840" // Enemy Mind
 {
 	"name"		"proton_411"
 }
 
-"47870" // Need for Speed: Hot Pursuit
-{
-	"name"		"proton_411"
-}
-
-"205100" // Dishonored
+"116120" // Lightfish
 {
 	"name"		"proton_411"
 }
@@ -65,12 +59,12 @@
 	"name"		"proton_411"
 }
 
-"9940" // Blade Kitten
+"47870" // Need for Speed: Hot Pursuit
 {
 	"name"		"proton_411"
 }
 
-"24740" // Burnout Paradise: The Ultimate Box
+"275850" // No Man's Sky
 {
 	"name"		"proton_411"
 }
@@ -80,12 +74,19 @@
 	"name"		"proton_411"
 }
 
+"32360" // The Secret of Monkey Island: Special Edition
+{
+	"name"		"proton_411"
+}
+
 "584400" // Sonic Mania
 {
 	"name"		"proton_411"
 }
 
-"218060" // BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien; native version has severe controller issues
+"287260" // Toybox Turbos
 {
 	"name"		"proton_411"
+	"config"	"noesync"
 }
+
