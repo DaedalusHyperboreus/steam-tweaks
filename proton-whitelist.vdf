@@ -124,7 +124,7 @@
 	"name"		"proton_411"
 }
 
-"255870" // PixelJunk Shooter
+"255870" // PixelJunk Shooter; native version crashes on startup
 {
 	"name"		"proton_411"
 }
