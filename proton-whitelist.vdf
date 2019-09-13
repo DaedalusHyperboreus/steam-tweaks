@@ -79,12 +79,32 @@
 	"name"		"proton_411"
 }
 
+"21130" // LEGO Harry Potter: Years 1-4
+{
+	"name"		"proton_411"
+}
+
+"249130" // LEGO MARVEL Super Heroes
+{
+	"name"		"proton_411"
+}
+
 "116120" // Lightfish
 {
 	"name"		"proton_411"
 }
 
 "220860" // McPixel
+{
+	"name"		"proton_411"
+}
+
+"939560" // Monster Trampoline
+{
+	"name"		"proton_411"
+}
+
+"237110" // Mortal Kombat Komplete Edition
 {
 	"name"		"proton_411"
 }
@@ -104,6 +124,11 @@
 	"name"		"proton_411"
 }
 
+"255870" // PixelJunk Shooter
+{
+	"name"		"proton_411"
+}
+
 "32360" // The Secret of Monkey Island: Special Edition
 {
 	"name"		"proton_411"
@@ -113,6 +138,12 @@
 {
 	"name"		"proton_411"
 	"config"	"d9vk"
+}
+
+"71340" // Sonic Generations
+{
+	"name"		"proton_411"
+	"config"	"noesync, d9vk"
 }
 
 "584400" // Sonic Mania
