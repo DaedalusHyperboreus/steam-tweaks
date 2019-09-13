@@ -18,6 +18,11 @@
 	"name"		"proton_411"
 }
 
+"692850" // Bloodstained: Ritual of the Night
+{
+	"name"		"proton_411"
+}
+
 "491040" // Bot Vice; native version does not recognize controllers
 {
 	"name"		"proton_411"
@@ -102,6 +107,12 @@
 "32360" // The Secret of Monkey Island: Special Edition
 {
 	"name"		"proton_411"
+}
+
+"91100" // SkyDrift
+{
+	"name"		"proton_411"
+	"config"	"d9vk"
 }
 
 "584400" // Sonic Mania
