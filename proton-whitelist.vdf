@@ -140,12 +140,6 @@
 	"config"	"d9vk"
 }
 
-"71340" // Sonic Generations
-{
-	"name"		"proton_411"
-	"config"	"noesync, d9vk"
-}
-
 "584400" // Sonic Mania
 {
 	"name"		"proton_411"
