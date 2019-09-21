@@ -54,6 +54,11 @@
 	"name"		"proton_411"
 }
 
+"275390" // Guacamelee! Super Turbo Championship Edition
+{
+	"name"		"proton_42"
+}
+
 "331670" // The Jackbox Party Pack; native version displays zoomed in view and is unplayable
 {
 	"name"		"proton_411"
@@ -117,6 +122,11 @@
 "275850" // No Man's Sky
 {
 	"name"		"proton_411"
+}
+
+"102600" // Orcs Must Die!
+{
+	"name"		"proton_42"
 }
 
 "201790" // Orcs Must Die! 2
