@@ -3,6 +3,11 @@
 // CREATE A CUSTOM FILE AT ~/.config/proton-whitelist.vdf
 // ANY ENTRIES IN THAT FILE WILL OVERRIDE ENTRIES IN THIS FILE
 
+"209000" // Batman: Arkham Origins
+{
+	"name"		"proton_42"
+}
+
 "463150" // BARRIER X
 {
 	"name"		"proton_411"
