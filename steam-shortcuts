@@ -1,0 +1,131 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import vdf
+import yaml
+from pycrc.crc_algorithms import Crc
+
+
+def shortcut_app_id(exe, name):
+	"""
+	Generates the app id for a given shortcut. Steam uses app ids as a unique
+	identifier for games, but since shortcuts dont have a canonical serverside
+	representation they need to be generated on the fly. The important part
+	about this function is that it will generate the same app id as Steam does
+	for a given shortcut
+	
+	Taken from https://github.com/scottrice/pysteam
+	"""
+	algorithm = Crc(width = 32, poly = 0x04C11DB7, reflect_in = True, xor_in = 0xffffffff, reflect_out = True, xor_out = 0xffffffff)
+	crc_input = ''.join([exe,name])
+	high_32 = algorithm.bit_by_bit(crc_input) | 0x80000000
+	full_64 = (high_32 << 32) | 0x02000000
+	return str(full_64)
+
+
+
+if 'XDG_DATA_HOME' in os.environ:
+	DATA_HOME = os.environ['XDG_DATA_HOME']
+else:
+	DATA_HOME = os.environ['HOME'] + '/.local/share'
+
+DATA_HOME += '/'
+
+if not os.path.isdir(DATA_HOME + 'steam-shortcuts'):
+	os.makedirs(DATA_HOME + 'steam-shortcuts')
+
+SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
+
+if os.path.isdir('/usr/share/steam-shortcuts'):
+	SHORTCUT_DIRS.push('/usr/share/steam-shortcuts')
+
+STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
+STEAM_USER_DIRS = []
+for d in os.listdir(STEAM_USER_BASE_DIR):
+	if os.path.isdir(d):
+		STEAM_USER_DIRS.push(STEAM_USER_BASE_DIR + d + '/')
+
+def create_shortcut(entry):
+	if 'name' not in entry:
+		print('shortcut missing required field "name"; skipping')
+		return
+
+	if 'cmd' not in entry:
+		print('shortcut missing required field "cmd"; skipping')
+		return
+
+	shortcut = {}
+	shortcut['AppName'] = entry['name']
+	shortcut['Exe'] = entry['cmd']
+
+	if 'dir' in entry:
+		shortcut['StartDir'] = entry['dir']
+
+	if 'params' in entry:
+		shortcut['LaunchOptions'] = entry['params']
+
+	if 'hidden' in entry:
+		shortcut['isHidden'] = entry['hidden']
+
+	if 'icon' in entry:
+		shortcut['icon'] = entry['icon']
+
+	shortcut['AllowDesktopConfig'] = 1
+	shortcut['AllowOverlay'] = 1
+	shortcut['OpenVR'] = 0
+	shortcut['tags'] = {}
+
+	if 'tags' in entry:
+		t = 0
+		for tag in entry['tags']:
+			shortcut['tags'][str(t)] = tag
+			t += 1
+
+	if 'image' in entry:
+		app_id = shortcut_app_id(entry['cmd'], entry['name'])
+		_, ext = os.path.splitext(entry['image'])
+
+		for user_dir in STEAM_USER_DIRS:
+			dst_dir = user_dir + '/config/grid/'
+		
+			if not os.path.isdir(dst_dir):
+				os.makedirs(dst_dir)
+			dst = dst_dir + app_id + ext
+			if os.path.isfile(dst):
+				os.remove(dst)
+			os.symlink(entry['image'], dst)
+	
+	return shortcut
+
+
+shortcuts = {}
+n = 0
+for d in SHORTCUT_DIRS:
+	for f in os.listdir(d):
+		y = open(d + '/' + f)
+		data = yaml.load(y, Loader=yaml.FullLoader)
+	
+		if type(data) is list:	
+			for entry in data:
+				shortcut = create_shortcut(entry)
+		elif type(data) is dict:
+			shortcut = create_shortcut(data)
+
+		if shortcut:
+			shortcuts[str(n)] = shortcut
+			n += 1
+
+
+if len(shortcuts) == 0:
+	sys.exit()
+
+
+for user_dir in STEAM_USER_DIRS:
+	file_path = user_dir + '/config/shortcuts.vdf'
+	out = {}
+	out['shortcuts'] = shortcuts
+	if os.path.isfile(file_path):
+		os.truncate(file_path, 0)
+	b = vdf.binary_dumps(out)
+	open(file_path, 'wb').write(b)
