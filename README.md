@@ -25,14 +25,14 @@ NOTE: any existing shortcut data will be lost and replaced with shortcuts specif
 
 #### Single shortcut per file example
 ```
-name: Firefox
-cmd: firefox
-image: /path/to/grid/image.png
-icon: firefox
-params: reddit.com
-dir: /full/path/to/working/dir
-hidden: false
-tags:
+name: Firefox                   # name of the shortcut as it will appear in Steam (required)
+cmd: firefox                    # the command to execute (required)
+dir: /full/path/to/working/dir  # the directory from which to execute the command
+params: github.com              # any parameters to invoke the command with
+image: /path/to/grid/image.png  # the grid image to use (this will by symlinked into Steam's grid directory)
+icon: firefox                   # small icon to show in Steam
+hidden: false                   # 'false' to show the shortcut in Steam, 'true' to hide it
+tags:                           # a list of tags to be assigned to the shortcut in Steam
   - Browser
   - Custom Shortcut
 ```
