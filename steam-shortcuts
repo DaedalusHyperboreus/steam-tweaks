@@ -43,8 +43,9 @@ if os.path.isdir('/usr/share/steam-shortcuts'):
 STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
 STEAM_USER_DIRS = []
 for d in os.listdir(STEAM_USER_BASE_DIR):
-	if os.path.isdir(d):
-		STEAM_USER_DIRS.push(STEAM_USER_BASE_DIR + d + '/')
+	path = STEAM_USER_BASE_DIR + d + '/'
+	if os.path.isdir(path):
+		STEAM_USER_DIRS.append(path)
 
 def create_shortcut(entry):
 	if 'name' not in entry:
