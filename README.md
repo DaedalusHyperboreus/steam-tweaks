@@ -7,7 +7,8 @@ A set of tools that unlock various quality of life improvements for Steam on Lin
 Install to Arch Linux from the AUR as `steam-tweaks`. Available by default on GamerOS.
 
 ## Usage
-You can invoke each script listed below with the command given in brackets. Alternatively, run the `steam-tweaks` convenience script which runs all the tools. The tools should be invoked when Steam is not running, otherwise any changes the tools make will be overwritten by Steam.
+If you use GamerOS or steamos-compositor-plus and have steam-tweaks installed all the tools will run when the Steam session starts.
+You can also invoke each script listed below manually with the command given in brackets. Alternatively, run the `steam-tweaks` convenience script which runs all the tools. The tools should be invoked when Steam is not running, otherwise any changes the tools make will be overwritten by Steam.
 
 ## The Tools
 ### Proton Whitelist (proton-whitelist)
