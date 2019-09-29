@@ -4,7 +4,7 @@
 A set of tools that unlock various quality of life improvements for Steam on Linux with a particular focus on SteamOS and GamerOS.
 
 ## Installation
-Install to Arch Linux from the AUR as `steam-tweaks`. Available by default on GamerOS.
+On Arch Linux, install `steam-tweaks` from the AUR. On GamerOS, the package is pre-installed.
 
 ## Usage
 If you use GamerOS or use `steamos-compositor-plus` and have `steam-tweaks` installed all the tools will run automatically when the Steam session starts.
