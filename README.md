@@ -8,6 +8,7 @@ Install to Arch Linux from the AUR as `steam-tweaks`. Available by default on Ga
 
 ## Usage
 If you use GamerOS or steamos-compositor-plus and have steam-tweaks installed all the tools will run when the Steam session starts.
+
 You can also invoke each script listed below manually with the command given in brackets. Alternatively, run the `steam-tweaks` convenience script which runs all the tools. The tools should be invoked when Steam is not running, otherwise any changes the tools make will be overwritten by Steam.
 
 ## The Tools
