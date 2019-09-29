@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+
+import os
+import vdf
+import urllib.request
+
+
+def symlink(src, dst):
+	if not os.path.isfile(src):
+		return
+
+	if os.path.isfile(dst):
+		return
+
+	os.symlink(src, dst)
+
+
+if 'XDG_CACHE_HOME' in os.environ:
+    CACHE_HOME = os.environ['XDG_CACHE_HOME']
+else:
+    CACHE_HOME = os.environ['HOME'] + '/.cache'
+
+if 'XDG_DATA_HOME' in os.environ:
+    DATA_HOME = os.environ['XDG_DATA_HOME']
+else:
+    DATA_HOME = os.environ['HOME'] + '/.local/share'
+
+CACHE_DIR = CACHE_HOME + '/steam-grid/'
+STEAM_USER_BASE_DIR = DATA_HOME + '/Steam/userdata/'
+STEAM_USER_DIRS = []
+for d in os.listdir(STEAM_USER_BASE_DIR):
+	path = STEAM_USER_BASE_DIR + d + '/'
+	if os.path.isdir(path):
+		STEAM_USER_DIRS.append(path)
+
+for u in STEAM_USER_DIRS:
+	file_path = u + '/config/localconfig.vdf'
+	grid_dir = u + '/config/grid/'
+
+	if not os.path.isdir(grid_dir):
+		os.makedirs(grid_dir)
+
+	apps = {}
+	try:
+		data = vdf.load(open(file_path))
+		apps = data['UserLocalConfigStore']['Software']['Valve']['Steam']['Apps']
+	except:
+		pass
+
+	for appid in apps:
+		if not os.path.isdir(CACHE_DIR):
+			os.makedirs(CACHE_DIR)
+
+		grid_img = grid_dir + appid + '.jpg'
+		cache_img = CACHE_DIR + appid + '.jpg'
+		if os.path.isfile(cache_img):
+			symlink(cache_img, grid_img)
+			continue
+
+		try:
+			urllib.request.urlretrieve('https://steamcdn-a.akamaihd.net/steam/apps/'+appid+'/header.jpg', cache_img)
+			symlink(cache_img, grid_img)
+		except:
+			print('could not download image for '+appid)
