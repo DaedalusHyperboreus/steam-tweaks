@@ -1,0 +1,6 @@
+#! /bin/bash
+
+proton-whitelist
+steam-input-whitelist
+steam-shortcuts
+steam-grid-cache &
