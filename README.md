@@ -22,7 +22,7 @@ Enables Steam Input for games according to the `steam-input-whitelist.vdf` file 
 Downloads and caches all Steam grid images for all available Steam accounts for use in offline mode.
 
 ### Steam Shortcuts (steam-shortcuts)
-Reads yaml formatted shortcut definition files from `/usr/share/steam-shortcuts/` and `~/.local/share/steam-shortcuts/` and adds the shortcuts to all available Steam accounts.
+Reads one or more yaml formatted shortcut definition files stored under `/usr/share/steam-shortcuts/` or `~/.local/share/steam-shortcuts/` and adds the shortcuts to all available Steam accounts.
 NOTE: any existing shortcut data will be lost and replaced with shortcuts specified in the shortcut definition files.
 
 #### Single shortcut per file example
