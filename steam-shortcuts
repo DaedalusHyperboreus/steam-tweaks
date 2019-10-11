@@ -83,9 +83,9 @@ def create_shortcut(entry):
 			shortcut['tags'][str(t)] = tag
 			t += 1
 
-	if 'image' in entry:
+	if 'banner' in entry:
 		app_id = shortcut_app_id(entry['cmd'], entry['name'])
-		_, ext = os.path.splitext(entry['image'])
+		_, ext = os.path.splitext(entry['banner'])
 
 		for user_dir in STEAM_USER_DIRS:
 			dst_dir = user_dir + '/config/grid/'
@@ -95,7 +95,7 @@ def create_shortcut(entry):
 			dst = dst_dir + app_id + ext
 			if os.path.isfile(dst):
 				os.remove(dst)
-			os.symlink(entry['image'], dst)
+			os.symlink(entry['banner'], dst)
 	
 	return shortcut
 

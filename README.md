@@ -19,7 +19,7 @@ Adds games to the proton whitelist in Steam according to the `proton-whitelist.v
 Enables Steam Input for games according to the `steam-input-whitelist.vdf` file downloaded automatically from this repository and a user customized file found at `~/.config/steam-input-whitelist.vdf`. This allows controllers to be recognized out of the box by the whitelisted games.
 
 ### Steam Grid Cache (steam-grid-cache)
-Downloads and caches all Steam grid images for all available Steam accounts for use in offline mode.
+Downloads and caches all Steam grid banner images for all available Steam accounts for use in offline mode.
 
 ### Steam Shortcuts (steam-shortcuts)
 Reads one or more yaml formatted shortcut definition files stored under `/usr/share/steam-shortcuts/` or `~/.local/share/steam-shortcuts/` and adds the shortcuts to all available Steam accounts.
@@ -31,7 +31,7 @@ name: Firefox                   # name of the shortcut as it will appear in Stea
 cmd: firefox                    # the command to execute (required)
 dir: /full/path/to/working/dir  # the directory from which to execute the command
 params: github.com              # any parameters to invoke the command with
-image: /path/to/grid/image.png  # the grid image to use (this will by symlinked into Steam's grid directory)
+banner: /path/to/image.png      # the grid banner image to use (this will by symlinked into Steam's grid directory)
 icon: firefox                   # small icon to show in Steam
 hidden: false                   # 'false' to show the shortcut in Steam, 'true' to hide it
 tags:                           # a list of tags to be assigned to the shortcut in Steam
