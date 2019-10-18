@@ -18,3 +18,11 @@
 	"SteamControllerRumbleIntensity" "320"
 	"EnableSCTenFootOverlayCheckNew" "1"
 }
+
+"314660" // Oddworld: New 'n' Tasty
+{
+	"UseSteamControllerConfig" "2"
+	"SteamControllerRumble" "-1"
+	"SteamControllerRumbleIntensity" "320"
+	"EnableSCTenFootOverlayCheckNew" "1"
+}
