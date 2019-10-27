@@ -106,7 +106,8 @@ for d in SHORTCUT_DIRS:
 	for f in os.listdir(d):
 		y = open(d + '/' + f)
 		data = yaml.load(y, Loader=yaml.FullLoader)
-	
+
+		shortcut = None
 		if type(data) is list:	
 			for entry in data:
 				shortcut = create_shortcut(entry)
