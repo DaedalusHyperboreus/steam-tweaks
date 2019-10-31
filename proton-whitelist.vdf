@@ -3,6 +3,11 @@
 // CREATE A CUSTOM FILE AT ~/.config/proton-whitelist.vdf
 // ANY ENTRIES IN THAT FILE WILL OVERRIDE ENTRIES IN THIS FILE
 
+"791180" // 1 Screen Platformer
+{
+	"name"		"proton_42"
+}
+
 "209000" // Batman: Arkham Origins
 {
 	"name"		"proton_42"
@@ -147,6 +152,11 @@
 "255870" // PixelJunk Shooter; native version crashes on startup
 {
 	"name"		"proton_411"
+}
+
+"1152020" // Return Of The Zombie King
+{
+	"name"		"proton_42"
 }
 
 "32360" // The Secret of Monkey Island: Special Edition
