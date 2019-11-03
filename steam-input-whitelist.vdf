@@ -3,6 +3,14 @@
 // CREATE A CUSTOM FILE AT ~/.config/steam-input-whitelist.vdf
 // ANY ENTRIES IN THAT FILE WILL OVERRIDE ENTRIES IN THIS FILE
 
+"8870" // BioShock Infinite
+{
+	"UseSteamControllerConfig" "2"
+	"SteamControllerRumble" "-1"
+	"SteamControllerRumbleIntensity" "320"
+	"EnableSCTenFootOverlayCheckNew" "1"
+}
+
 "201700" // DiRT Showdown
 {
 	"UseSteamControllerConfig" "2"
