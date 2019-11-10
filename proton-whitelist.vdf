@@ -74,6 +74,12 @@
 	"name"		"proton_42"
 }
 
+"12750" // GRID (2008)
+{
+	"name"		"proton_411"
+	"config"	"d9vk"
+}
+
 "331670" // The Jackbox Party Pack; native version displays zoomed in view and is unplayable
 {
 	"name"		"proton_411"
