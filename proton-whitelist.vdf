@@ -80,6 +80,11 @@
 	"config"	"d9vk"
 }
 
+"464960" // Hiiro
+{
+	"name"		"proton_411"
+}
+
 "331670" // The Jackbox Party Pack; native version displays zoomed in view and is unplayable
 {
 	"name"		"proton_411"
@@ -111,6 +116,11 @@
 }
 
 "249130" // LEGO MARVEL Super Heroes
+{
+	"name"		"proton_411"
+}
+
+"267530" // The LEGO Movie - Videogame
 {
 	"name"		"proton_411"
 }
@@ -179,6 +189,11 @@
 {
 	"name"		"proton_411"
 	"config"	"d9vk"
+}
+
+"637100" // Sonic Forces
+{
+	"name"		"proton_411"
 }
 
 "584400" // Sonic Mania
