@@ -111,13 +111,13 @@ for d in SHORTCUT_DIRS:
 		data = yaml.load(y, Loader=yaml.FullLoader)
 
 		shortcut = None
-		if type(data) is list:	
+		if type(data) is list:
 			for entry in data:
 				shortcut = create_shortcut(entry)
+				shortcuts[str(n)] = shortcut
+				n += 1
 		elif type(data) is dict:
 			shortcut = create_shortcut(data)
-
-		if shortcut:
 			shortcuts[str(n)] = shortcut
 			n += 1
 
