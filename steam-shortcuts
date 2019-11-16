@@ -46,7 +46,7 @@ if os.path.isdir('/var/lib/steam-buddy/shortcuts'):
 STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
 STEAM_USER_DIRS = []
 for d in os.listdir(STEAM_USER_BASE_DIR):
-	path = STEAM_USER_BASE_DIR + d + '/'
+	path = STEAM_USER_BASE_DIR + d
 	if os.path.isdir(path):
 		STEAM_USER_DIRS.append(path)
 
@@ -96,7 +96,7 @@ def create_shortcut(entry):
 			if not os.path.isdir(dst_dir):
 				os.makedirs(dst_dir)
 			dst = dst_dir + app_id + ext
-			if os.path.isfile(dst):
+			if os.path.islink(dst) or os.path.isfile(dst):
 				os.remove(dst)
 			os.symlink(entry['banner'], dst)
 	
