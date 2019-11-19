@@ -8,6 +8,16 @@
 	"name"		"proton_42"
 }
 
+"396710" // The Adventure Pals
+{
+	"name"		"proton_411"
+}
+
+"331870" // AER Memories of Old
+{
+	"name"		"proton_411"
+}
+
 "209000" // Batman: Arkham Origins
 {
 	"name"		"proton_42"
@@ -85,6 +95,11 @@
 	"name"		"proton_411"
 }
 
+"400170" // The Incredible Adventures of Van Helsing: Final Cut
+{
+	"name"		"proton_411"
+}
+
 "331670" // The Jackbox Party Pack; native version displays zoomed in view and is unplayable
 {
 	"name"		"proton_411"
@@ -123,6 +138,11 @@
 "267530" // The LEGO Movie - Videogame
 {
 	"name"		"proton_411"
+}
+
+"332310" // LEGO Worlds
+{
+	"name"		"proton_42"
 }
 
 "116120" // Lightfish
@@ -171,6 +191,11 @@
 }
 
 "255870" // PixelJunk Shooter; native version crashes on startup
+{
+	"name"		"proton_411"
+}
+
+"254700" // Resident Evil 4
 {
 	"name"		"proton_411"
 }
