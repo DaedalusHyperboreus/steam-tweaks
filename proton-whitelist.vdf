@@ -33,6 +33,11 @@
 	"name"		"proton_411"
 }
 
+"927250" // Bladed Fury
+{
+	"name"		"proton_411"
+}
+
 "9940" // Blade Kitten
 {
 	"name"		"proton_411"
@@ -216,6 +221,11 @@
 	"config"	"d9vk"
 }
 
+"71250" // Sonic Adventure DX
+{
+	"name"		"proton_411"
+}
+
 "637100" // Sonic Forces
 {
 	"name"		"proton_411"
@@ -235,6 +245,11 @@
 {
 	"name"		"proton_42"
 	"config"	"noesync"
+}
+
+"530320" // Wandersong
+{
+	"name"		"proton_42"
 }
 
 "834530" // Yakuza Kiwami
