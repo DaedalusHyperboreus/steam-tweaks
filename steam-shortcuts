@@ -40,9 +40,6 @@ SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
 if os.path.isdir('/usr/share/steam-shortcuts'):
 	SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
 
-if os.path.isdir('/var/lib/steam-buddy/shortcuts'):
-	SHORTCUT_DIRS.append('/var/lib/steam-buddy/shortcuts')
-
 STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
 STEAM_USER_DIRS = []
 for d in os.listdir(STEAM_USER_BASE_DIR):
