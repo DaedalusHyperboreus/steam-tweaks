@@ -85,6 +85,12 @@
 	"name"		"proton_411"
 }
 
+"525040" // The Disney Afternoon Collection
+{
+	"name"		"proton_42"
+	"config"	"forcelgadd"
+}
+
 "285840" // Enemy Mind
 {
 	"name"		"proton_411"
@@ -201,6 +207,11 @@
 	"name"		"proton_411"
 }
 
+"387290" // Ori and the Blind Forest: Definitive Edition
+{
+	"name"		"proton_42"
+}
+
 "255870" // PixelJunk Shooter; native version crashes on startup
 {
 	"name"		"proton_411"
@@ -254,6 +265,16 @@
 }
 
 "530320" // Wandersong
+{
+	"name"		"proton_42"
+}
+
+"201810" // Wolfenstein: The New Order
+{
+	"name"		"proton_42"
+}
+
+"288570" // Wolfenstein: The New Order German Edition
 {
 	"name"		"proton_42"
 }
