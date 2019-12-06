@@ -13,7 +13,12 @@
 	"name"		"proton_411"
 }
 
-"331870" // AER Memories of Old
+"331870" // AER Memories of Old; native version displays only black screen
+{
+	"name"		"proton_411"
+}
+
+"951940" // Almost There: The Platformer
 {
 	"name"		"proton_411"
 }
@@ -163,6 +168,11 @@
 }
 
 "116120" // Lightfish
+{
+	"name"		"proton_411"
+}
+
+"453910" // Love is Dead
 {
 	"name"		"proton_411"
 }
