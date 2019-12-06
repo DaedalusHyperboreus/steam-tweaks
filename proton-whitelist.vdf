@@ -232,6 +232,11 @@
 	"name"		"proton_42"
 }
 
+"749800" // PixelJunk Monsters Ultimate; native version does not recognize controllers
+{
+	"name"		"proton_42"
+}
+
 "255870" // PixelJunk Shooter; native version crashes on startup
 {
 	"name"		"proton_411"
