@@ -1,6 +1,5 @@
 #! /bin/bash
 
-proton-whitelist
-steam-input-whitelist
+steam-config
 steam-shortcuts
 steam-grid-cache &

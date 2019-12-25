@@ -12,11 +12,23 @@ If you use GamerOS or use `steamos-compositor-plus` and have `steam-tweaks` inst
 You can also invoke each script listed below manually with the command given in brackets. Alternatively, run the `steam-tweaks` convenience script which runs all the tools. The tools should be invoked when Steam is not running, otherwise any changes the tools make will be overwritten by Steam.
 
 ## The Tools
-### Proton Whitelist (proton-whitelist)
-Adds games to the proton whitelist in Steam according to the `proton-whitelist.vdf` file downloaded automatically from this repository and a user customized file found at `~/.config/proton-whitelist.vdf`.
+### Steam Config (steam-config)
+Configures Steam games according to the automatically downloaded configuration file, or the local override file if found at `~/.config/steam-tweaks.yaml`.
 
-### Steam Input Whitelist (steam-input-whitelist)
-Enables Steam Input for games according to the `steam-input-whitelist.vdf` file downloaded automatically from this repository and a user customized file found at `~/.config/steam-input-whitelist.vdf`. This allows controllers to be recognized out of the box by the whitelisted games.
+#### Options
+`compat_tool`: the compatibility tool to be used for the specified game, e.g. `proton_42`, `proton_411`, `steamlinuxruntime`
+`compat_config`: the configuration for the compatibility tool specified, e.g. for proton: `d9vk`, `noesync`, etc; see the [Proton docs][https://github.com/ValveSoftware/Proton#runtime-config-options] for the full list of available options
+`launch_options`: the launch options to be used
+
+#### Example
+```
+"321040":
+  compat_tool: proton_411
+  compat_config: noesync
+  launch_options: MY_VARIABLE=1 %command%
+```
+
+Each game is specified by its Steam app id. Note that the app id MUST be quoted.
 
 ### Steam Grid Cache (steam-grid-cache)
 Downloads and caches all Steam grid banner images for all available Steam accounts for use in offline mode.
