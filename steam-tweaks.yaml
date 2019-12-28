@@ -201,6 +201,12 @@
 "530320": # Wandersong
   compat_tool: proton_42
 
+"292030": # The Witcher 3: Wild Hunt
+  compat_tool: proton_42
+
+"499450": # The Witcher 3: Wild Hunt - Game of the Year Edition
+  compat_tool: proton_42
+
 "201810": # Wolfenstein: The New Order
   compat_tool: proton_42
 
