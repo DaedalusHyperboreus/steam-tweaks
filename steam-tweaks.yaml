@@ -45,6 +45,9 @@
 "24740": # Burnout Paradise: The Ultimate Box
   compat_tool: proton_411
 
+"319450": # Chariot
+  compat_tool: proton_42
+
 "731490": # Crash Bandicoot N. Sane Trilogy
   compat_tool: proton_411
 
