@@ -103,6 +103,10 @@
 "774461": # The Jackbox Party Pack 5; native version displays zoomed in view and is unplayable
   compat_tool: proton_411
 
+"205950": # Jet Set Radio
+  compat_tool: proton_42
+  launch_options: mv jetsetradio.exe jsrsetup.exe; %command%
+
 "285160": # LEGO The Hobbit
   compat_tool: proton_42
 
