@@ -29,6 +29,8 @@ CACHE_DIR = CACHE_HOME + '/steam-grid/'
 STEAM_USER_BASE_DIR = DATA_HOME + '/Steam/userdata/'
 STEAM_USER_DIRS = []
 for d in os.listdir(STEAM_USER_BASE_DIR):
+	if d == 'anonymous':
+		continue
 	path = STEAM_USER_BASE_DIR + d + '/'
 	if os.path.isdir(path):
 		STEAM_USER_DIRS.append(path)

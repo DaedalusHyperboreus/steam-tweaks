@@ -117,6 +117,9 @@ vdf.dump(config_data, open(config_file, 'w'), pretty=True)
 
 USERS_DIR = STEAM_DIR + '/userdata'
 for user_dir in os.listdir(USERS_DIR):
+	if user_dir == 'anonymous':
+		continue
+
 	config_dir = USERS_DIR + '/' + user_dir + '/config'
 	config_file = config_dir + '/localconfig.vdf'
 
