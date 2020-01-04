@@ -299,6 +299,11 @@
 	"config"	"noesync"
 }
 
+"319910" // Trine 3: The Artifacts of Power
+{
+	"name"		"proton_42"
+}
+
 "530320" // Wandersong
 {
 	"name"		"proton_42"

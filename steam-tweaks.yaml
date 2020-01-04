@@ -206,6 +206,9 @@
   compat_tool: proton_42
   compat_config: noesync
 
+"319910": # Trine 3: The Artifacts of Power
+  compat_tool: proton_42
+
 "530320": # Wandersong
   compat_tool: proton_42
 
