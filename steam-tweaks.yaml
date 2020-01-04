@@ -82,6 +82,10 @@
   compat_tool: proton_411
   compat_config: d9vk
 
+"703860": # GRID (2019)
+  compat_tool: proton_411
+  launch_options: mv Grid.exe Grid_dx12.exe; %command%
+
 "464960": # Hiiro
   compat_tool: proton_411
 
