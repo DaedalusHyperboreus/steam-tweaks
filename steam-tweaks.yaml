@@ -206,7 +206,7 @@
   compat_tool: proton_42
   compat_config: noesync
 
-"319910": # Trine 3: The Artifacts of Power
+"319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
 
 "530320": # Wandersong
