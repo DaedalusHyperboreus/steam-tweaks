@@ -18,6 +18,9 @@
 "951940": # Almost There: The Platformer
   compat_tool: proton_411
 
+"688420": # Bad North
+  compat_tool: proton_42
+
 "209000": # Batman: Arkham Origins
   compat_tool: proton_42
 
@@ -86,6 +89,9 @@
   compat_tool: proton_411
   launch_options: mv Grid.exe Grid_dx12.exe; %command%
 
+"396900": # Grip: Combat Racing
+  compat_tool: proton_42
+
 "464960": # Hiiro
   compat_tool: proton_411
 
@@ -134,6 +140,9 @@
 
 "453910": # Love is Dead
   compat_tool: proton_411
+
+"529660": # Mages of Mystralia
+  compat_tool: proton_42
 
 "220860": # McPixel
   compat_tool: proton_411
@@ -190,6 +199,9 @@
   compat_tool: proton_411
   compat_config: d9vk
 
+"361350": # Skyhook
+  steam_input: enabled
+
 "71250": # Sonic Adventure DX
   compat_tool: proton_411
 
@@ -199,12 +211,18 @@
 "584400": # Sonic Mania
   compat_tool: proton_411
 
+"50300": # Spec Ops: The Line
+  steam_input: enabled
+
 "996580": # Spyro Reignited Trilogy
   compat_tool: proton_411
 
 "287260": # Toybox Turbos
   compat_tool: proton_42
   compat_config: noesync
+
+"585420": # Trailmakers
+  compat_tool: proton_42
 
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
