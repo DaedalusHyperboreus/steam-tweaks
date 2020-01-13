@@ -147,6 +147,10 @@
 "220860": # McPixel
   compat_tool: proton_411
 
+"356190": # Middle-earth: Shadow of War
+  compat_tool: proton_42
+  compat_config: noesync
+
 "939560": # Monster Trampoline
   compat_tool: proton_411
 
@@ -216,6 +220,9 @@
 
 "996580": # Spyro Reignited Trilogy
   compat_tool: proton_411
+
+"574980": # Them's Fightin' Herds
+  compat_tool: proton_42
 
 "287260": # Toybox Turbos
   compat_tool: proton_42
