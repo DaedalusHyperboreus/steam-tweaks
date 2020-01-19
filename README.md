@@ -16,11 +16,10 @@ You can also invoke each script listed below manually with the command given in 
 Configures Steam games according to the automatically downloaded configuration file, or the local override file if found at `~/.config/steam-tweaks.yaml`.
 
 #### Options
-`compat_tool`: the compatibility tool to be used for the specified game, e.g. `proton_42`, `proton_411`, `steamlinuxruntime`
-
-`compat_config`: the configuration for the compatibility tool specified, e.g. for proton: `d9vk`, `noesync`, etc; see the [Proton docs](https://github.com/ValveSoftware/Proton#runtime-config-options) for the full list of available options
-
-`launch_options`: the launch options to be used
+ - **compat_tool**: the compatibility tool to be used for the specified game, e.g. `proton_42`, `steamlinuxruntime`
+ - **compat_config**: the configuration for the compatibility tool specified, e.g. for proton: `d9vk`, `noesync`, etc; see the [Proton docs](https://github.com/ValveSoftware/Proton#runtime-config-options) for the full list of available options
+ - **launch_options**: the launch options to be used
+ - **steam_input**: a value of `enabled` will force the use of Steam Input for the specified game
 
 #### Example
 ```
@@ -28,6 +27,7 @@ Configures Steam games according to the automatically downloaded configuration f
   compat_tool: proton_411
   compat_config: noesync
   launch_options: MY_VARIABLE=1 %command%
+  steam_input: enabled
 ```
 
 Each game is specified by its Steam app id. Note that the app id MUST be quoted.
