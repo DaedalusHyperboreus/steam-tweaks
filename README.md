@@ -15,6 +15,8 @@ You can also invoke each script listed below manually with the command given in 
 ### Steam Config (steam-config)
 Configures Steam games according to the automatically downloaded configuration file, or the local override file if found at `~/.config/steam-tweaks.yaml`.
 
+Extends Valve's Steam Play/Proton whitelist, specifying the compatibility tool, launch options and whether Steam Input is enabled on a per game basis. Many games are already configured to work out of the box, with more being added over time. Please help by testing games you own and submitting your configurations.
+
 #### Options
  - **compat_tool**: the compatibility tool to be used for the specified game, e.g. `proton_42`, `steamlinuxruntime`
  - **compat_config**: the configuration for the compatibility tool specified, e.g. for proton: `d9vk`, `noesync`, etc; see the [Proton docs](https://github.com/ValveSoftware/Proton#runtime-config-options) for the full list of available options
