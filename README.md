@@ -17,7 +17,9 @@ Configures Steam games according to the automatically downloaded configuration f
 
 #### Options
 `compat_tool`: the compatibility tool to be used for the specified game, e.g. `proton_42`, `proton_411`, `steamlinuxruntime`
-`compat_config`: the configuration for the compatibility tool specified, e.g. for proton: `d9vk`, `noesync`, etc; see the [Proton docs][https://github.com/ValveSoftware/Proton#runtime-config-options] for the full list of available options
+
+`compat_config`: the configuration for the compatibility tool specified, e.g. for proton: `d9vk`, `noesync`, etc; see the [Proton docs](https://github.com/ValveSoftware/Proton#runtime-config-options) for the full list of available options
+
 `launch_options`: the launch options to be used
 
 #### Example
