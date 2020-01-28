@@ -48,6 +48,9 @@
 "24740": # Burnout Paradise: The Ultimate Box
   compat_tool: proton_411
 
+"204360": # Castle Crashers; Valve whitelisted proton version no longer works
+  compat_tool: proton_411
+
 "319450": # Chariot
   compat_tool: proton_42
 
@@ -192,6 +195,11 @@
 
 "1152020": # Return Of The Zombie King
   compat_tool: proton_42
+
+"252950": # Rocket League
+  compat_tool: proton_411
+  compat_config: d9vk
+  launch_options: RADV_PERFTEST=aco
 
 "32360": # The Secret of Monkey Island: Special Edition
   compat_tool: proton_411
