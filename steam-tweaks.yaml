@@ -199,7 +199,7 @@
 "252950": # Rocket League
   compat_tool: proton_411
   compat_config: d9vk
-  launch_options: RADV_PERFTEST=aco
+  launch_options: RADV_PERFTEST=aco %command%
 
 "32360": # The Secret of Monkey Island: Special Edition
   compat_tool: proton_411
