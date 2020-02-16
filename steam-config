@@ -93,6 +93,8 @@ def update_steam_localconfig(tweaks_file, steam_data):
 			}
 
 		if 'launch_options' in data[key]:
+			if key not in launch_options:
+				launch_options[key] = {}
 			launch_options[key]['LaunchOptions'] = data[key]['launch_options']
 
 
