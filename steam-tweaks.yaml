@@ -187,6 +187,10 @@
 "255870": # PixelJunk Shooter; native version crashes on startup
   compat_tool: proton_411
 
+"971620": # Puyo Puyo Champions
+  compat_tool: proton_411
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+
 "355010": # Race Arcade
   steam_input: enabled
 
