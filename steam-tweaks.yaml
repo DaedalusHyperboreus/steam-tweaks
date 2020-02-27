@@ -42,6 +42,9 @@
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
 
+"449960": # Book of Demons
+  compat_tool: proton_411
+
 "491040": # Bot Vice; native version does not recognize controllers
   compat_tool: proton_411
 
@@ -166,11 +169,17 @@
 "47870": # Need for Speed: Hot Pursuit
   compat_tool: proton_411
 
+"680380": # Night Call
+  compat_tool: proton_411
+
 "275850": # No Man's Sky
   compat_tool: proton_411
 
 "314660": # Oddworld: New 'n' Tasty
   steam_input: enabled
+
+"587620": # OKAMI HD / 大神 絶景版
+  compat_tool: proton_411
 
 "102600": # Orcs Must Die!
   compat_tool: proton_42
