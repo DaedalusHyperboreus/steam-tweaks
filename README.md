@@ -9,13 +9,13 @@ On Arch Linux, install `steam-tweaks` from the AUR. On GamerOS, the package is p
 ## Usage
 If you use GamerOS or use `steamos-compositor-plus` and have `steam-tweaks` installed all the tools will run automatically when the Steam session starts.
 
-You can also invoke each script listed below manually with the command given in brackets. Alternatively, run the `steam-tweaks` convenience script which runs all the tools. The tools should be invoked when Steam is not running, otherwise any changes the tools make will be overwritten by Steam.
+You can also invoke each script listed below manually with the command given in brackets. Alternatively, run the `steam-tweaks` convenience script which runs all the tools. The tools should be invoked when Steam is not running. Any changes the tools make while Steam is running will be overwritten by Steam.
 
 ## The Tools
 ### Steam Config (steam-config)
 Configures Steam games according to the automatically downloaded configuration file, or the local override file if found at `~/.config/steam-tweaks.yaml`.
 
-Extends Valve's Steam Play/Proton whitelist, specifying the compatibility tool, launch options and whether Steam Input is enabled on a per game basis. Many games are already configured to work out of the box, with more being added over time. Please help by testing games you own and submitting your configurations.
+Extends Valve's Steam Play/Proton whitelist, specifying the compatibility tool, launch options and whether Steam Input is enabled on a per-game basis. Many games are already configured to work out of the box, with more being added over time. Please help by testing the games you own and submitting your configurations.
 
 #### Options
  - **compat_tool**: the compatibility tool to be used for the specified game, e.g. `proton_42`, `steamlinuxruntime`
@@ -38,7 +38,7 @@ Each game is specified by its Steam app id. Note that the app id MUST be quoted.
 Downloads and caches all Steam grid banner images for all available Steam accounts for use in offline mode.
 
 ### Steam Shortcuts (steam-shortcuts)
-Reads one or more yaml formatted shortcut definition files stored under `/usr/share/steam-shortcuts/` or `~/.local/share/steam-shortcuts/` and adds the shortcuts to all available Steam accounts.
+Reads one or more YAML formatted shortcut definition files stored under `/usr/share/steam-shortcuts/` or `~/.local/share/steam-shortcuts/` and adds the shortcuts to all available Steam accounts.
 NOTE: any existing shortcut data will be lost and replaced with shortcuts specified in the shortcut definition files.
 
 #### Single shortcut per file example
@@ -47,7 +47,7 @@ name: Firefox                   # name of the shortcut as it will appear in Stea
 cmd: firefox                    # the command to execute (required)
 dir: /full/path/to/working/dir  # the directory from which to execute the command
 params: github.com              # any parameters to invoke the command with
-banner: /path/to/image.png      # the grid banner image to use (this will by symlinked into Steam's grid directory)
+banner: /path/to/image.png      # the grid banner image to use (this will be symlinked into Steam's grid directory)
 icon: firefox                   # small icon to show in Steam
 hidden: false                   # 'false' to show the shortcut in Steam, 'true' to hide it
 tags:                           # a list of tags to be assigned to the shortcut in Steam
