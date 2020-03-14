@@ -49,6 +49,10 @@
 "9940": # Blade Kitten
   compat_tool: proton_411
 
+"774361": # Blasphemous
+  compat_tool: proton_411
+  launch_options: tweaks-mfplat 4.11; %command%
+
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
 
