@@ -245,6 +245,9 @@
   compat_config: d9vk
   launch_options: RADV_PERFTEST=aco %command%
 
+"516130": # Runner3
+  compat_tool: proton_411
+
 "32360": # The Secret of Monkey Island: Special Edition
   compat_tool: proton_411
 
