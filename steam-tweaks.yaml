@@ -184,6 +184,9 @@
 "220860": # McPixel
   compat_tool: proton_411
 
+"535850": # Micro Machines World Series; native version has poor controller support
+  compat_tool: proton_411
+
 "356190": # Middle-earth: Shadow of War
   compat_tool: proton_42
   compat_config: noesync
@@ -233,6 +236,9 @@
 
 "355010": # Race Arcade
   steam_input: enabled
+
+"367430": # Redshift Blueshift; native version has poor controller support
+  compat_tool: proton_411
 
 "254700": # Resident Evil 4
   compat_tool: proton_411
