@@ -287,6 +287,9 @@
   compat_tool: proton_411
   launch_options: tweaks-mfplat 4.11; %command%
 
+"375120": # Super Star Path; native version does not recognize controllers
+  compat_tool: proton_411
+
 "574980": # Them's Fightin' Herds
   compat_tool: proton_42
 
