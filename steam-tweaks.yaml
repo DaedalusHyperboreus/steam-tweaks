@@ -247,8 +247,7 @@
   compat_tool: proton_42
 
 "252950": # Rocket League
-  compat_tool: proton_411
-  compat_config: d9vk
+  compat_tool: proton_5
   launch_options: RADV_PERFTEST=aco %command%
 
 "516130": # Runner3
