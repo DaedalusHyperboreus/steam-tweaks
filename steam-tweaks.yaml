@@ -95,6 +95,9 @@
   compat_tool: proton_411
   compat_config: noesync
 
+"690790": # DiRT Rally 2.0
+  compat_tool: proton_411
+
 "201700": # DiRT Showdown
   steam_input: enabled
 
