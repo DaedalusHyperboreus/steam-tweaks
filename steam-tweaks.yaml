@@ -301,6 +301,9 @@
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
 
+"586200": # Street Fighter 30th Anniversary Collection
+  compat_tool: proton_411
+
 "45760": # Ultra Street Fighter IV
   compat_tool: proton_411
 
