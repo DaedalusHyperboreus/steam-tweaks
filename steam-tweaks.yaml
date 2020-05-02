@@ -128,7 +128,14 @@
 "396900": # Grip: Combat Racing
   compat_tool: proton_42
 
+"683320": # Gris
+  compat_tool: proton_411
+  launch_options: tweaks-mfplat 4.11; %command%
+
 "464960": # Hiiro
+  compat_tool: proton_411
+
+"863550": # HITMAN 2
   compat_tool: proton_411
 
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
@@ -302,6 +309,12 @@
   compat_tool: proton_42
 
 "586200": # Street Fighter 30th Anniversary Collection
+  compat_tool: proton_411
+
+"310950": # Street Fighter V
+  compat_tool: proton_5
+
+"357190": # Ultimate Marvel vs. Capcom 3
   compat_tool: proton_411
 
 "45760": # Ultra Street Fighter IV
