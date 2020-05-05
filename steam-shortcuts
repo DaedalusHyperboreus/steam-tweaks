@@ -4,7 +4,7 @@ import os
 import sys
 import vdf
 import yaml
-from pycrc.crc_algorithms import Crc
+from pycrc.algorithms import Crc
 
 
 def shortcut_app_id(exe, name):
