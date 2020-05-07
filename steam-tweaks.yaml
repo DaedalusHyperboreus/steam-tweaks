@@ -187,6 +187,9 @@
 "529660": # Mages of Mystralia
   compat_tool: proton_42
 
+"504130": # Manual Samuel
+  steam_input: enabled
+
 "220860": # McPixel
   compat_tool: proton_411
 
