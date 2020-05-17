@@ -209,6 +209,9 @@
 "666140": # My Time At Portia
   compat_tool: proton_42
 
+"1248990": # Mýrdalssandur, Iceland
+  compat_tool: proton_5
+
 "47870": # Need for Speed: Hot Pursuit
   compat_tool: proton_411
 
@@ -300,6 +303,9 @@
 
 "375120": # Super Star Path; native version does not recognize controllers
   compat_tool: proton_411
+
+"1000560": # Supraland Demo; native version has sound issues
+  compat_tool: proton_5
 
 "574980": # Them's Fightin' Herds
   compat_tool: proton_42
