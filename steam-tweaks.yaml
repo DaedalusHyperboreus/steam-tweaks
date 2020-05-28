@@ -172,6 +172,9 @@
 "267530": # The LEGO Movie - Videogame
   compat_tool: proton_411
 
+"640590": # The LEGO® NINJAGO® Movie Video Game
+  compat_tool: proton_411
+
 "332310": # LEGO Worlds
   compat_tool: proton_42
 
