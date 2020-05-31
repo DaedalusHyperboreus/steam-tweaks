@@ -255,9 +255,6 @@
 "355010": # Race Arcade
   steam_input: enabled
 
-"367430": # Redshift Blueshift; native version has poor controller support
-  compat_tool: proton_411
-
 "254700": # Resident Evil 4
   compat_tool: proton_411
 
