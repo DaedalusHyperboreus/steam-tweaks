@@ -71,6 +71,9 @@
 "319450": # Chariot
   compat_tool: proton_42
 
+"518060": # Chess Ultra
+  compat_tool: proton_411
+
 "731490": # Crash Bandicoot N. Sane Trilogy
   compat_tool: proton_411
 
@@ -136,6 +139,9 @@
   compat_tool: proton_411
 
 "863550": # HITMAN 2
+  compat_tool: proton_411
+
+"629090": # Horace
   compat_tool: proton_411
 
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
@@ -255,9 +261,6 @@
 "355010": # Race Arcade
   steam_input: enabled
 
-"367430": # Redshift Blueshift; native version has poor controller support
-  compat_tool: proton_411
-
 "254700": # Resident Evil 4
   compat_tool: proton_411
 
@@ -305,6 +308,9 @@
   launch_options: tweaks-mfplat 4.11; %command%
 
 "375120": # Super Star Path; native version does not recognize controllers
+  compat_tool: proton_411
+
+"619780": # The Swords of Ditto: Mormo's Curse; native version controller mappings are bad
   compat_tool: proton_411
 
 "1000560": # Supraland Demo; native version has sound issues
