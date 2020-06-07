@@ -121,6 +121,9 @@
   compat_tool: proton_411
   launch_options: RADV_PERFTEST=aco %command%
 
+"919410": # Felix the Reaper
+  compat_tool: proton_411
+
 "275390": # Guacamelee! Super Turbo Championship Edition
   compat_tool: proton_42
 
@@ -134,6 +137,12 @@
 "683320": # Gris
   compat_tool: proton_411
   launch_options: tweaks-mfplat 4.11; %command%
+
+"905340": # Heave Ho
+  compat_tool: proton_411
+
+"414340": # Hellblade: Senua's Sacrifice
+  compat_tool: proton_411
 
 "464960": # Hiiro
   compat_tool: proton_411
@@ -166,6 +175,15 @@
   compat_tool: proton_42
   launch_options: mv jetsetradio.exe jsrsetup.exe; %command%
 
+"648350": # Jurassic World Evolution
+  compat_tool: proton_50
+
+"812550": # The King's Bird
+  compat_tool: proton_411
+
+"313690": # LEGO Batman 3: Beyond Gotham
+  compat_tool: proton_316
+
 "285160": # LEGO The Hobbit
   compat_tool: proton_42
 
@@ -178,7 +196,7 @@
 "267530": # The LEGO Movie - Videogame
   compat_tool: proton_411
 
-"640590": # The LEGO® NINJAGO® Movie Video Game
+"640590": # The LEGO NINJAGO Movie Video Game
   compat_tool: proton_411
 
 "332310": # LEGO Worlds
