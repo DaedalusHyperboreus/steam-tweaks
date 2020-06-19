@@ -1,0 +1,61 @@
+"InstallScript"
+{
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Codemasters\\DiRT2"
+		{
+			"string"
+			{
+				"PATH_APPLICATION"		"%INSTALLDIR%"
+				"english"
+				{
+					"LANGUAGE"		"eng"
+				}
+				"french"
+				{
+					"LANGUAGE"		"fre"
+				}
+				"german"
+				{
+					"LANGUAGE"		"ger"
+				}
+				"italian"
+				{
+					"LANGUAGE"		"ita"
+				}
+				"spanish"
+				{
+					"LANGUAGE"		"spa"
+				}
+			}
+		}
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Codemasters\\DiRT2\\1.00.0000"
+		{
+			"string"
+			{
+				"(Default)"		""
+			}
+		}
+	}
+	"Run Process"
+	{
+		"DirectX"
+		{
+			"Process 1"		"%INSTALLDIR%\\redist\\DirectX\\DXSETUP.exe"
+			"Command 1"		"/silent"
+			"NoCleanUp"		"1"
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Valve\\Steam\\Apps\\12840"
+		}
+		"OpenAL"
+		{
+			"Process 1"		"%INSTALLDIR%\\redist\\OpenAL\\OpenALwEAX.exe"
+			"Command 1"		"/S"
+			"NoCleanUp"		"1"
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Valve\\Steam\\Apps\\12840"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"89dba3600dc3fcf980d5a6e52f5c72d0b72893515326ac1f423f6c0c19a8e26d302266a31843f96fcd759b20adce07954aeb624d9017e77670148edf694297e702a6a3308d6c4b7b73e8c69fd0aad3d02128d9651af473a42c629498ead53b306a8e23c9753ea00e40cad83d416aef04f1ecde774cc1db3c63212b48093f8287"
+}

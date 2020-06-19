@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hardware_settings_restrictions>
+
+    <cpu>
+        <restrict_info>
+            <restrict_if name="cores" op="int_eq" value="2">
+                <restrict_add>
+                    <threadStrategy parallelUpdateRender="true" workerMapFile="system/workerMap2Core.xml" forceFeedbackProcessor="1" dvdStorageProcessor="1" dataSetMonitorProcessor="0" renderProcessor="0" updateProcessor="1" fileStreamProcessor="1" />
+                </restrict_add>
+            </restrict_if>
+            <restrict_if name="cores" op="int_eq" value="3">
+                <restrict_add>
+                    <threadStrategy parallelUpdateRender="true" workerMapFile="system/workerMap2Core.xml" forceFeedbackProcessor="1" dvdStorageProcessor="1" dataSetMonitorProcessor="0" renderProcessor="0" updateProcessor="1" fileStreamProcessor="1" />
+                </restrict_add>
+            </restrict_if>
+            <restrict_if name="cores" op="int_ge" value="4">
+                <restrict_add>
+                    <threadStrategy parallelUpdateRender="true" workerMapFile="system/workerMap4Core.xml" forceFeedbackProcessor="3" dvdStorageProcessor="3" dataSetMonitorProcessor="1" renderProcessor="0" updateProcessor="2" fileStreamProcessor="3" />
+                </restrict_add>
+            </restrict_if>
+            <restrict_if name="hyperThreading" op="bo_eq" value="true">
+                <restrict_add>
+                    <threadStrategy parallelUpdateRender="true" workerMapFile="system/workerMap2Core.xml" forceFeedbackProcessor="1" dvdStorageProcessor="1" dataSetMonitorProcessor="0" renderProcessor="0" updateProcessor="1" fileStreamProcessor="1" />
+                </restrict_add>
+            </restrict_if>
+            <restrict_else>
+                <restrict_add>
+                    <threadStrategy parallelUpdateRender="false" workerMapFile="system/workerMap.xml" forceFeedbackProcessor="0" dvdStorageProcessor="0" dataSetMonitorProcessor="0" renderProcessor="0" updateProcessor="0" fileStreamProcessor="0" />
+                </restrict_add>
+            </restrict_else>
+        </restrict_info>
+    </cpu>
+    
+    <audio_card>
+        <audio>
+            <restrict_set name="mixing" default="software">
+                 <allowed value="software" />
+                <allowed value="default" />
+		<allowed value="asio" />
+            </restrict_set>
+            <restrict_set name="reverbs" default="1">
+                <allowed value="0" />
+                <allowed value="1" />
+                <allowed value="2" />
+            </restrict_set>
+            <restrict_set name="voices" default="120">
+                <allowed value="40" />
+                <allowed value="50" />
+                <allowed value="60" />
+                <allowed value="70" />
+                <allowed value="80" />
+                <allowed value="90" />
+                <allowed value="100" />
+                <allowed value="110" />
+                <allowed value="119" />
+                <allowed value="120" />
+                <allowed value="121" />
+                <allowed value="creative" />
+                <allowed value="default" />
+            </restrict_set>
+        </audio>
+    </audio_card>
+    
+    <graphics_card>
+  
+        <resolution>
+           <!-- Minimum resolution -->
+           <restrict_logical>
+                <restrict_if name="width" op="int_le" value="639">
+                    <restrict_set name="width" default="640" />
+                    <restrict_set name="height" default="480" />
+                </restrict_if>
+                <restrict_if name="height" op="int_le" value="479">
+                    <restrict_set name="width" default="640" />
+                    <restrict_set name="height" default="480" />
+                </restrict_if>
+            </restrict_logical>
+        
+            <!-- Aspect Ratio -->      
+            <restrict_set name="aspect" default="normal">
+                <allowed value="4:3" />
+                <allowed value="5:4" />
+                <allowed value="16:9" />
+                <allowed value="16:10" />
+                <allowed value="5:3" />
+            </restrict_set>
+            
+        </resolution>
+        
+        <gamma>
+            <restrict_float_range name="level" default="1.0" min="0.5" max="2.5" />
+        </gamma>
+
+        <textures>
+            <restrict_int_range name="lod" default="0" min="0" />
+        </textures>
+        
+    </graphics_card>
+    
+    <shadows>
+        <restrict_set name="size" default="1024">
+            <allowed value="128" />
+            <allowed value="256" />
+            <allowed value="512" />
+            <allowed value="1024" />
+            <allowed value="1536" />
+            <allowed value="2048" />
+            <allowed value="4096" />
+        </restrict_set>
+        <restrict_int_range name="maskQuality" default="2" min="0" max="2" />
+    </shadows>
+    
+    <headlights>
+      <restrict_int_range name="headlightQuality" default="1" min="0" max="2" />
+    </headlights>
+
+    <groundcover>
+        <restrict_int_range name="layers" default="4" min="1" max="4" />
+    </groundcover>
+
+    <crowd>
+        <restrict_bool name="enabled" default="true" />
+    </crowd>
+
+    <cloth>
+        <restrict_bool name="enabled" default="true" />
+    </cloth>
+
+	<physics>
+		<restrict_bool name="environmentalDamage" default="true" />
+		<restrict_bool name="vehicleDamage" default="true" />
+	</physics>
+
+    <particles>
+        <restrict_int_range name="max" default="3000" min="250" max="6000" />
+        <restrict_bool name="enabled" default="true" />
+        <restrict_bool name="collisions" default="true" />
+    </particles>
+
+    <vehicles>
+        <restrict_int_range name="characterQuality" default="2" min="0" max="4" />
+    </vehicles>
+
+    <wind>
+        <restrict_bool name="particles" default="false" />
+        <restrict_bool name="groundcover" default="false" />
+    </wind>
+    
+    <data>
+    </data>
+    
+    <input>
+      <restrict_set name="device_type" default="auto">
+        <allowed value="pad" />
+        <allowed value="wheel" />
+      </restrict_set>
+    </input>
+    
+</hardware_settings_restrictions>

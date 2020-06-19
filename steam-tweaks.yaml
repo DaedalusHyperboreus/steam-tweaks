@@ -3,6 +3,20 @@
 # CREATE A CUSTOM FILE AT ~/.config/steam-tweaks.yaml
 # ANY ENTRIES IN THAT FILE WILL OVERRIDE ENTRIES IN THIS FILE
 
+"12840": # Dirt 2
+  compat_tool: proton_411
+  patch_dir: Dirt 2
+  patches:
+    - copy:
+        src: data/Dirt 2/12840_install.vdf
+        dst: 12840_install.vdf
+    - copy:
+        src: data/common/xlive.ini
+        dst: xlive.ini
+    - copy:
+        src: data/common/xlive.dll
+        dst: xlive.dll
+
 "791180": # 1 Screen Platformer
   compat_tool: proton_42
 
@@ -128,8 +142,15 @@
   compat_tool: proton_42
 
 "12750": # GRID (2008)
-  compat_tool: proton_411
-  compat_config: d9vk
+  compat_tool: proton_50
+  patch_dir: Grid
+  patches:
+    - copy:
+        src: data/Grid/installscript.vdf
+        dst: installscript.vdf
+    - copy:
+        src: data/Grid/hardware_settings_restrictions.xml
+        dst: system/hardware_settings_restrictions.xml
 
 "396900": # Grip: Combat Racing
   compat_tool: proton_42
