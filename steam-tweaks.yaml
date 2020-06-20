@@ -98,7 +98,7 @@
   compat_tool: proton_411
 
 "12840": # DiRT 2
-  compat_tool: proton_411
+  compat_tool: proton_37
   patch_dir: Dirt 2
   patches:
     - copy:
