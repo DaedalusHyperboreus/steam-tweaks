@@ -37,6 +37,9 @@
 "463150": # BARRIER X
   compat_tool: proton_411
 
+"460790": # Bayonetta
+  compat_tool: proton_50
+
 "8870": # BioShock Infinite
   steam_input: enabled
 
@@ -367,6 +370,9 @@
 
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
+
+"544330": # Snake Pass
+  compat_tool: proton_50
 
 "586200": # Street Fighter 30th Anniversary Collection
   compat_tool: proton_411
