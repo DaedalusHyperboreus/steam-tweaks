@@ -4,7 +4,6 @@ import os
 import yaml
 import shutil
 import filecmp
-import urllib.request
 from inotify_simple import INotify, flags
 
 
@@ -18,14 +17,9 @@ if 'XDG_CONFIG_HOME' in os.environ:
 else:
 	CONFIG_HOME = os.environ['HOME'] + '/.config'
 
-MAIN_FILE  = DATA_HOME + '/steam-tweaks.yaml'
+MAIN_FILE  = 'steam-tweaks.yaml'
 LOCAL_FILE = CONFIG_HOME + '/steam-tweaks.yaml'
 STEAM_DIR  = DATA_HOME + '/Steam/steamapps/common'
-
-try:
-	urllib.request.urlretrieve('https://gamer-os.github.io/steam-tweaks/steam-tweaks.yaml', MAIN_FILE)
-except:
-	print('failed to update tweaks file')
 
 inotify = INotify()
 watch_flags = flags.CREATE | flags.MODIFY | flags.DELETE

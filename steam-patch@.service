@@ -1,6 +1,5 @@
 [Unit]
 Description=Steam Patch Service for %i
-After=network-online.target
 
 [Service]
 User=%i
