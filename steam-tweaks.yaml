@@ -38,7 +38,7 @@
   compat_tool: proton_411
 
 "460790": # Bayonetta
-  compat_tool: proton_50
+  compat_tool: proton_5
 
 "8870": # BioShock Infinite
   steam_input: enabled
@@ -145,7 +145,7 @@
   compat_tool: proton_42
 
 "12750": # GRID (2008)
-  compat_tool: proton_50
+  compat_tool: proton_5
   patch_dir: Grid
   patches:
     - copy:
@@ -200,7 +200,7 @@
   launch_options: mv jetsetradio.exe jsrsetup.exe; %command%
 
 "648350": # Jurassic World Evolution
-  compat_tool: proton_50
+  compat_tool: proton_5
 
 "812550": # The King's Bird
   compat_tool: proton_411
@@ -372,7 +372,7 @@
   compat_tool: proton_42
 
 "544330": # Snake Pass
-  compat_tool: proton_50
+  compat_tool: proton_5
 
 "586200": # Street Fighter 30th Anniversary Collection
   compat_tool: proton_411
