@@ -303,6 +303,9 @@
 "355010": # Race Arcade
   steam_input: enabled
 
+"590590": # Remnants of Naezith; native version crashes on startup
+  compat_tool: proton_411
+
 "254700": # Resident Evil 4
   compat_tool: proton_411
 
