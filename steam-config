@@ -3,6 +3,7 @@
 import os
 import vdf
 import yaml
+import shutil
 import urllib.request
 
 
@@ -22,6 +23,10 @@ LOCAL_FILE = CONFIG_HOME + '/steam-tweaks.yaml'
 STEAM_DIR = DATA_HOME + '/Steam'
 if not os.path.isdir(STEAM_DIR):
 	os.makedirs(STEAM_DIR)
+
+STATIC_FILE = '/usr/share/steam-tweaks/steam-tweaks.yaml'
+if os.path.exists(STATIC_FILE) and not os.path.exists(MAIN_FILE):
+	shutil.copyfile(STATIC_FILE, MAIN_FILE)
 
 
 def load_steam_config(path):

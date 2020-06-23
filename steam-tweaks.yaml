@@ -37,6 +37,9 @@
 "463150": # BARRIER X
   compat_tool: proton_411
 
+"460790": # Bayonetta
+  compat_tool: proton_5
+
 "8870": # BioShock Infinite
   steam_input: enabled
 
@@ -94,6 +97,20 @@
 "548430": # Deep Rock Galactic
   compat_tool: proton_411
 
+"12840": # DiRT 2
+  compat_tool: proton_37
+  patch_dir: Dirt 2
+  patches:
+    - copy:
+        src: data/Dirt 2/12840_install.vdf
+        dst: 12840_install.vdf
+    - copy:
+        src: data/common/xlive.ini
+        dst: xlive.ini
+    - copy:
+        src: data/common/xlive.dll
+        dst: xlive.dll
+
 "321040": # DiRT 3 Complete Edition
   compat_tool: proton_411
   compat_config: noesync
@@ -128,8 +145,15 @@
   compat_tool: proton_42
 
 "12750": # GRID (2008)
-  compat_tool: proton_411
-  compat_config: d9vk
+  compat_tool: proton_5
+  patch_dir: Grid
+  patches:
+    - copy:
+        src: data/Grid/installscript.vdf
+        dst: installscript.vdf
+    - copy:
+        src: data/Grid/hardware_settings_restrictions.xml
+        dst: system/hardware_settings_restrictions.xml
 
 "396900": # Grip: Combat Racing
   compat_tool: proton_42
@@ -176,7 +200,7 @@
   launch_options: mv jetsetradio.exe jsrsetup.exe; %command%
 
 "648350": # Jurassic World Evolution
-  compat_tool: proton_50
+  compat_tool: proton_5
 
 "812550": # The King's Bird
   compat_tool: proton_411
@@ -279,6 +303,9 @@
 "355010": # Race Arcade
   steam_input: enabled
 
+"590590": # Remnants of Naezith; native version crashes on startup
+  compat_tool: proton_411
+
 "254700": # Resident Evil 4
   compat_tool: proton_411
 
@@ -346,6 +373,9 @@
 
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
+
+"544330": # Snake Pass
+  compat_tool: proton_5
 
 "586200": # Street Fighter 30th Anniversary Collection
   compat_tool: proton_411

@@ -1,0 +1,70 @@
+"InstallScript"
+{
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\CurrentVersion\\Uninstall\\{5A0B7BA5-4682-4273-81C2-69B17E649103}"
+		{
+			"string"
+			{
+				"InstallLocation"		"%INSTALLDIR%"
+				"DisplayVersion"		"1.30.0000"
+			}
+		}
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Codemasters\\GRID\\1.00.0000"
+		{
+			"string"
+			{
+				"(Default)"		""
+			}
+		}
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Codemasters\\GRID\\1.30.0000"
+		{
+			"string"
+			{
+				"(Default)"		""
+			}
+		}
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Codemasters\\GRID"
+		{
+			"string"
+			{
+				"PATH_APPLICATION"		"%INSTALLDIR%"
+				"DLC_CAPABLE"		"YES"
+				"english"
+				{
+					"Language"		"eng"
+				}
+				"french"
+				{
+					"Language"		"fre"
+				}
+				"german"
+				{
+					"Language"		"ger"
+				}
+				"italian"
+				{
+					"Language"		"ita"
+				}
+				"spanish"
+				{
+					"Language"		"spa"
+				}
+			}
+		}
+	}
+	"Run Process"
+	{
+		"OpenAL"
+		{
+			"HasRunKey"		"HKEY_CURRENT_USER\\Software\\Valve\\Steam\\Apps\\12750"
+			"process 1"		"%INSTALLDIR%\\OpenAL\\oalinst.exe"
+			"Command 1"		"/S"^M
+			"NoCleanUp"		"1"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"35f65100645bf90ac3e134522f2b5b8a056f44d7b7379fded52c4b532f70ba189cd149084715be3eb71782300072943b57b8e0cf299f8e66f625f367954b27c71853c2f12abce2c5baf54ff2df96c537548692d541b8662f634537d5591c847ef2d4b7cc92b13590ffefdf905498ca764cc04a025c0a782d5d7594bc9a5f222b"
+}
