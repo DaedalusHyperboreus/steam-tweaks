@@ -54,7 +54,7 @@
 
 "774361": # Blasphemous
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
@@ -160,7 +160,7 @@
 
 "683320": # Gris
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "905340": # Heave Ho
   compat_tool: proton_411
@@ -346,14 +346,14 @@
 
 "544750": # Soul Calibur VI
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "50300": # Spec Ops: The Line
   steam_input: enabled
 
 "996580": # Spyro Reignited Trilogy
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "375120": # Super Star Path; native version does not recognize controllers
   compat_tool: proton_411
