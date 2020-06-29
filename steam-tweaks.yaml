@@ -299,6 +299,10 @@
 "387290": # Ori and the Blind Forest: Definitive Edition
   compat_tool: proton_42
 
+"758730": # Paw Patrol: On A Roll
+  compat_tool: proton_411
+  launch_options: tweaks-mfplat 4.11 || true && %command%
+
 "749800": # PixelJunk Monsters Ultimate; native version does not recognize controllers
   compat_tool: proton_42
 
