@@ -272,6 +272,9 @@
 "1248990": # Mýrdalssandur, Iceland
   compat_tool: proton_5
 
+"1089350": # NBA 2K20
+  compat_tool: proton_5
+
 "47870": # Need for Speed: Hot Pursuit
   compat_tool: proton_411
 
