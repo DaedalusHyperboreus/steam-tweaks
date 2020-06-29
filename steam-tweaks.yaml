@@ -254,6 +254,12 @@
   compat_tool: proton_42
   compat_config: noesync
 
+"17410": # Mirror's Edge
+  compat_tool: proton_411
+  patch_dir: mirrors edge
+  patches:
+    - exec: echo "fc73cf63e54e9858a45e1786f5881ad9 17410_install.vdf" | md5sum --status -c && sed -i 122,143d 17410_install.vdf
+
 "939560": # Monster Trampoline
   compat_tool: proton_411
 
