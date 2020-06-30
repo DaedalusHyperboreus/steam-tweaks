@@ -351,6 +351,15 @@
 "71250": # Sonic Adventure DX
   compat_tool: proton_411
 
+"200940": # Sonic CD
+  compat_tool: proton_411
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+  patch_dir: Sonic CD
+  patches:
+    - copy:
+        src: data/Sonic CD/installscript.vdf
+        dst: installscript.vdf
+
 "637100": # Sonic Forces
   compat_tool: proton_411
 
