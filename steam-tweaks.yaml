@@ -165,6 +165,14 @@
 "905340": # Heave Ho
   compat_tool: proton_411
 
+"960910": # Heavy Rain
+  compat_tool: proton_5
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+
+"1048290": # Heavy Rain Demo
+  compat_tool: proton_5
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+
 "414340": # Hellblade: Senua's Sacrifice
   compat_tool: proton_411
 
