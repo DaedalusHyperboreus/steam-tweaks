@@ -101,9 +101,7 @@
   compat_tool: proton_37
   patch_dir: Dirt 2
   patches:
-    - copy:
-        src: data/Dirt 2/12840_install.vdf
-        dst: 12840_install.vdf
+    - exec: echo "02c6dd46d6d89347d721ba87dcf443c3 12840_install.vdf" | md5sum --status -c && sed -i 56,69d 12840_install.vdf
     - copy:
         src: data/common/xlive.ini
         dst: xlive.ini
