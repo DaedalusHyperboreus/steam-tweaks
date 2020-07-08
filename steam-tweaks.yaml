@@ -146,12 +146,8 @@
   compat_tool: proton_5
   patch_dir: Grid
   patches:
-    - copy:
-        src: data/Grid/installscript.vdf
-        dst: installscript.vdf
-    - copy:
-        src: data/Grid/hardware_settings_restrictions.xml
-        dst: system/hardware_settings_restrictions.xml
+    - exec: echo "2960d17d77d44b259674e0b099b9e5a6 installscript.vdf" | md5sum --status -c && sed -i '62i \\t\t\t"Command 1"\t\t"/S"^M' installscript.vdf
+    - exec: echo "5c42dc1c0cfb483cee86df0779332168 system/hardware_settings_restrictions.xml" | md5sum --status -c && sed -i 150d system/hardware_settings_restrictions.xml
 
 "396900": # Grip: Combat Racing
   compat_tool: proton_42
