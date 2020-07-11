@@ -54,7 +54,7 @@
 
 "774361": # Blasphemous
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
@@ -101,9 +101,7 @@
   compat_tool: proton_37
   patch_dir: Dirt 2
   patches:
-    - copy:
-        src: data/Dirt 2/12840_install.vdf
-        dst: 12840_install.vdf
+    - exec: echo "02c6dd46d6d89347d721ba87dcf443c3 12840_install.vdf" | md5sum --status -c && sed -i 56,69d 12840_install.vdf
     - copy:
         src: data/common/xlive.ini
         dst: xlive.ini
@@ -148,22 +146,26 @@
   compat_tool: proton_5
   patch_dir: Grid
   patches:
-    - copy:
-        src: data/Grid/installscript.vdf
-        dst: installscript.vdf
-    - copy:
-        src: data/Grid/hardware_settings_restrictions.xml
-        dst: system/hardware_settings_restrictions.xml
+    - exec: echo "2960d17d77d44b259674e0b099b9e5a6 installscript.vdf" | md5sum --status -c && sed -i '62i \\t\t\t"Command 1"\t\t"/S"^M' installscript.vdf
+    - exec: echo "5c42dc1c0cfb483cee86df0779332168 system/hardware_settings_restrictions.xml" | md5sum --status -c && sed -i 150d system/hardware_settings_restrictions.xml
 
 "396900": # Grip: Combat Racing
   compat_tool: proton_42
 
 "683320": # Gris
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "905340": # Heave Ho
   compat_tool: proton_411
+
+"960910": # Heavy Rain
+  compat_tool: proton_5
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+
+"1048290": # Heavy Rain Demo
+  compat_tool: proton_5
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
 
 "414340": # Hellblade: Senua's Sacrifice
   compat_tool: proton_411
@@ -198,6 +200,9 @@
 "205950": # Jet Set Radio
   compat_tool: proton_42
   launch_options: mv jetsetradio.exe jsrsetup.exe; %command%
+
+"638230": # Journey
+  compat_tool: proton_411
 
 "648350": # Jurassic World Evolution
   compat_tool: proton_5
@@ -251,6 +256,12 @@
   compat_tool: proton_42
   compat_config: noesync
 
+"17410": # Mirror's Edge
+  compat_tool: proton_411
+  patch_dir: mirrors edge
+  patches:
+    - exec: echo "fc73cf63e54e9858a45e1786f5881ad9 17410_install.vdf" | md5sum --status -c && sed -i 122,143d 17410_install.vdf
+
 "939560": # Monster Trampoline
   compat_tool: proton_411
 
@@ -261,6 +272,9 @@
   compat_tool: proton_42
 
 "1248990": # Mýrdalssandur, Iceland
+  compat_tool: proton_5
+
+"1089350": # NBA 2K20
   compat_tool: proton_5
 
 "47870": # Need for Speed: Hot Pursuit
@@ -289,6 +303,10 @@
 
 "387290": # Ori and the Blind Forest: Definitive Edition
   compat_tool: proton_42
+
+"758730": # Paw Patrol: On A Roll
+  compat_tool: proton_411
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "749800": # PixelJunk Monsters Ultimate; native version does not recognize controllers
   compat_tool: proton_42
@@ -335,6 +353,15 @@
 "71250": # Sonic Adventure DX
   compat_tool: proton_411
 
+"200940": # Sonic CD
+  compat_tool: proton_411
+  launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+  patch_dir: Sonic CD
+  patches:
+    - copy:
+        src: data/Sonic CD/installscript.vdf
+        dst: installscript.vdf
+
 "637100": # Sonic Forces
   compat_tool: proton_411
 
@@ -343,14 +370,14 @@
 
 "544750": # Soul Calibur VI
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "50300": # Spec Ops: The Line
   steam_input: enabled
 
 "996580": # Spyro Reignited Trilogy
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11; %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "375120": # Super Star Path; native version does not recognize controllers
   compat_tool: proton_411

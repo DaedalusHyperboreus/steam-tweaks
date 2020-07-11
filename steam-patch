@@ -4,6 +4,7 @@ import os
 import yaml
 import shutil
 import filecmp
+import subprocess
 from inotify_simple import INotify, flags
 
 
@@ -17,9 +18,10 @@ if 'XDG_CONFIG_HOME' in os.environ:
 else:
 	CONFIG_HOME = os.environ['HOME'] + '/.config'
 
-MAIN_FILE  = 'steam-tweaks.yaml'
-LOCAL_FILE = CONFIG_HOME + '/steam-tweaks.yaml'
-STEAM_DIR  = DATA_HOME + '/Steam/steamapps/common'
+STATIC_FILE    = 'steam-tweaks.yaml'
+MAIN_FILE      = os.path.join(DATA_HOME, 'steam-tweaks.yaml')
+OVERRIDE_FILE  = os.path.join(CONFIG_HOME, 'steam-tweaks.yaml')
+STEAM_DIR      = os.path.join(DATA_HOME, 'Steam/steamapps/common')
 
 inotify = INotify()
 watch_flags = flags.CREATE | flags.MODIFY | flags.DELETE
@@ -36,7 +38,10 @@ def apply_patch(game_dir):
     print('applying patch:', game_dir)
     patch_specs = patches[game_dir]
     for spec in patch_specs:
-        if 'copy' in spec:
+        if 'exec' in spec:
+            cmd = spec['exec']
+            subprocess.call([ cmd ], shell=True, cwd=os.path.join(STEAM_DIR, game_dir))
+        elif 'copy' in spec:
             args = spec['copy']
             dst = os.path.join(STEAM_DIR, game_dir, args['dst'])
             if not os.path.exists(dst) or not filecmp.cmp(args['src'], dst):
@@ -60,7 +65,7 @@ def load_data(data_path):
         return
 
     print('load_data:', data_path)
-    data = yaml.load(open(MAIN_FILE), Loader=yaml.FullLoader)
+    data = yaml.load(open(data_path), Loader=yaml.FullLoader)
     for gameid in data:
         if 'patch_dir' in data[gameid]:
             game_dir = data[gameid]['patch_dir']
@@ -69,9 +74,9 @@ def load_data(data_path):
 
     data.clear()
 
-
+load_data(STATIC_FILE)
 load_data(MAIN_FILE)
-load_data(LOCAL_FILE)
+load_data(OVERRIDE_FILE)
 
 while True:
     for event in inotify.read():
