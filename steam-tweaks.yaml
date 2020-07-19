@@ -213,9 +213,6 @@
 "313690": # LEGO Batman 3: Beyond Gotham
   compat_tool: proton_316
 
-"285160": # LEGO The Hobbit
-  compat_tool: proton_42
-
 "21130": # LEGO Harry Potter: Years 1-4
   compat_tool: proton_42
 
@@ -227,6 +224,9 @@
 
 "640590": # The LEGO NINJAGO Movie Video Game
   compat_tool: proton_411
+
+"285160": # LEGO The Hobbit
+  compat_tool: proton_42
 
 "332310": # LEGO Worlds
   compat_tool: proton_42
@@ -350,6 +350,9 @@
 "361350": # Skyhook
   steam_input: enabled
 
+"544330": # Snake Pass
+  compat_tool: proton_5
+
 "71250": # Sonic Adventure DX
   compat_tool: proton_411
 
@@ -379,14 +382,20 @@
   compat_tool: proton_411
   launch_options: tweaks-mfplat 4.11 || true && %command%
 
-"375120": # Super Star Path; native version does not recognize controllers
+"586200": # Street Fighter 30th Anniversary Collection
   compat_tool: proton_411
 
-"619780": # The Swords of Ditto: Mormo's Curse; native version controller mappings are bad
+"310950": # Street Fighter V
+  compat_tool: proton_5
+
+"375120": # Super Star Path; native version does not recognize controllers
   compat_tool: proton_411
 
 "1000560": # Supraland Demo; native version has sound issues
   compat_tool: proton_5
+
+"619780": # The Swords of Ditto: Mormo's Curse; native version controller mappings are bad
+  compat_tool: proton_411
 
 "574980": # Them's Fightin' Herds
   compat_tool: proton_42
@@ -401,26 +410,17 @@
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
 
-"544330": # Snake Pass
+"499520": # The Turing Test
   compat_tool: proton_5
-
-"586200": # Street Fighter 30th Anniversary Collection
-  compat_tool: proton_411
-
-"310950": # Street Fighter V
-  compat_tool: proton_5
+  patch_dir: The Turing Test
+  patches:
+    - exec: echo "459610a64e715fda06fc3caaa1bcb266 installer.vdf" | md5sum --status -c && sed -i 1,26d installer.vdf
 
 "357190": # Ultimate Marvel vs. Capcom 3
   compat_tool: proton_411
 
 "45760": # Ultra Street Fighter IV
   compat_tool: proton_411
-
-"499520": # The Turing Test
-  compat_tool: proton_5
-  patch_dir: The Turing Test
-  patches:
-    - exec: echo "459610a64e715fda06fc3caaa1bcb266 installer.vdf" | md5sum --status -c && sed -i 1,26d installer.vdf
 
 "530320": # Wandersong
   compat_tool: proton_42
