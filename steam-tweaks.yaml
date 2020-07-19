@@ -416,6 +416,12 @@
 "45760": # Ultra Street Fighter IV
   compat_tool: proton_411
 
+"499520": # The Turing Test
+  compat_tool: proton_5
+  patch_dir: The Turing Test
+  patches:
+    - exec: echo "459610a64e715fda06fc3caaa1bcb266 installer.vdf" | md5sum --status -c && sed -i 1,26d installer.vdf
+
 "530320": # Wandersong
   compat_tool: proton_42
 
