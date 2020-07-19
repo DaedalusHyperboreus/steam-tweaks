@@ -133,8 +133,8 @@
   compat_tool: proton_411
 
 "928600": # F1 2019
-  compat_tool: proton_411
-  launch_options: RADV_PERFTEST=aco %command%
+  compat_tool: proton_42
+  launch_options: rm -f F1_2019_dx12.exe && ln -s F1_2019.exe F1_2019_dx12.exe; RADV_PERFTEST=aco %command%
 
 "919410": # Felix the Reaper
   compat_tool: proton_411
