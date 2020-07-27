@@ -34,9 +34,6 @@ Extends Valve's Steam Play/Proton whitelist, specifying the compatibility tool, 
 
 Each game is specified by its Steam app id. Note that the app id MUST be quoted.
 
-### Steam Grid Cache (steam-grid-cache)
-Downloads and caches all Steam grid banner images for all available Steam accounts for use in offline mode.
-
 ### Steam Shortcuts (steam-shortcuts)
 Reads one or more YAML formatted shortcut definition files stored under `/usr/share/steam-shortcuts/` or `~/.local/share/steam-shortcuts/` and adds the shortcuts to all available Steam accounts.
 NOTE: any existing shortcut data will be lost and replaced with shortcuts specified in the shortcut definition files.
