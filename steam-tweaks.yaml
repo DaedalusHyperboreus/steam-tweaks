@@ -382,6 +382,9 @@
   compat_tool: proton_411
   launch_options: tweaks-mfplat 4.11 || true && %command%
 
+"1058020" # STAR WARS Battlefront (Classic, 2004)
+  compat_tool: proton_5
+
 "586200": # Street Fighter 30th Anniversary Collection
   compat_tool: proton_411
 
