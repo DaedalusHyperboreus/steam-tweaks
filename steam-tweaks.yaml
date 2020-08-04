@@ -136,6 +136,10 @@
   compat_tool: proton_42
   launch_options: rm -f F1_2019_dx12.exe && ln -s F1_2019.exe F1_2019_dx12.exe; RADV_PERFTEST=aco %command%
 
+"1080110": # F1 2020
+  compat_tool: proton_5
+  compat_config: seccomp
+
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
