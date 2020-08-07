@@ -28,6 +28,9 @@
 "401120": # Anode
   steam_input: enabled
 
+"984800": # Automachef
+  compat_tool: proton_411
+
 "688420": # Bad North
   compat_tool: proton_42
 
@@ -75,6 +78,9 @@
   compat_tool: proton_42
 
 "518060": # Chess Ultra
+  compat_tool: proton_411
+
+"1045720": # The Coma 2: Vicious Sisters; native version has poor controller support
   compat_tool: proton_411
 
 "731490": # Crash Bandicoot N. Sane Trilogy
@@ -132,6 +138,9 @@
 "812160": # Etherborn
   compat_tool: proton_411
 
+"737800": # F1 2018
+  compat_tool: proton_411
+
 "928600": # F1 2019
   compat_tool: proton_42
   launch_options: rm -f F1_2019_dx12.exe && ln -s F1_2019.exe F1_2019_dx12.exe; RADV_PERFTEST=aco %command%
@@ -172,6 +181,9 @@
   launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
 
 "414340": # Hellblade: Senua's Sacrifice
+  compat_tool: proton_411
+
+"521890": # Hello Neighbour
   compat_tool: proton_411
 
 "464960": # Hiiro
@@ -429,8 +441,21 @@
 "45760": # Ultra Street Fighter IV
   compat_tool: proton_411
 
+"427290": # Vampyr
+  compat_tool: proton_42
+
+"857980": # Void Bastards
+  compat_tool: proton_411
+
 "530320": # Wandersong
   compat_tool: proton_42
+
+"607050": # Wargroove
+  compat_tool: proton_411
+  launch_options: --skip-intro
+
+"865360": # We Were Here Together
+  compat_tool: proton_411
 
 "292030": # The Witcher 3: Wild Hunt
   compat_tool: proton_42
