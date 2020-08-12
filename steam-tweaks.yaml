@@ -149,6 +149,9 @@
   compat_tool: proton_5
   compat_config: seccomp
 
+"1097150": # Fall Guys
+  compat_tool: proton_411
+
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
