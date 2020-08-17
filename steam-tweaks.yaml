@@ -402,7 +402,7 @@
 
 "996580": # Spyro Reignited Trilogy
   compat_tool: proton_411
-  launch_options: tweaks-mfplat 4.11 || true && %command%
+  launch_options: tweaks-mfplat 4.11 || true && %command% -nohmd
 
 "1058020": # STAR WARS Battlefront (Classic, 2004)
   compat_tool: proton_5
