@@ -49,12 +49,12 @@
 "409710": # BioShock Remastered
   compat_tool: proton_411
   compat_config: noesync
-  launch_options: '%command% -nointro'
+  launch_options: -nointro
 
 "409720": # BioShock 2 Remastered
   compat_tool: proton_411
   compat_config: noesync
-  launch_options: '%command% -nointro'
+  launch_options: -nointro
 
 "218060": # BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien; native version has severe controller issues
   compat_tool: proton_411
