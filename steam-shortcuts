@@ -4,6 +4,7 @@ import os
 import sys
 import vdf
 import yaml
+import zlib
 from pycrc.algorithms import Crc
 
 
@@ -24,6 +25,17 @@ def shortcut_app_id(exe, name):
 	return str(full_64)
 
 
+def shortcut_app_id_new(exe, name):
+	crc_input = ''.join([exe, name])
+	return str((zlib.crc32(crc_input.encode()) & 0xffffffff) | 0x80000000)
+
+if 'XDG_CACHE_HOME' in os.environ:
+	CACHE_HOME = os.environ['XDG_CACHE_HOME']
+else:
+	CACHE_HOME = os.environ['HOME'] + '/.cache'
+
+compat_data = {}
+COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
 
 if 'XDG_DATA_HOME' in os.environ:
 	DATA_HOME = os.environ['XDG_DATA_HOME']
@@ -98,6 +110,14 @@ def create_shortcut(entry):
 			if os.path.islink(dst) or os.path.isfile(dst):
 				os.remove(dst)
 			os.symlink(entry['banner'], dst)
+
+	if 'compat_tool' in entry:
+		app_id = shortcut_app_id_new(entry['cmd'], entry['name'])
+		if app_id not in compat_data:
+			compat_data[app_id] = {}
+		compat_data[app_id]['compat_tool'] = entry['compat_tool']
+		if 'compat_config' in entry:
+			compat_data[app_id]['compat_config'] = entry['compat_config']
 	
 	return shortcut
 
@@ -124,6 +144,8 @@ for d in SHORTCUT_DIRS:
 if len(shortcuts) == 0:
 	sys.exit()
 
+
+yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
 
 for user_dir in STEAM_USER_DIRS:
 	file_path = user_dir + '/config/shortcuts.vdf'

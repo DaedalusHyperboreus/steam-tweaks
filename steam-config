@@ -17,8 +17,14 @@ if 'XDG_CONFIG_HOME' in os.environ:
 else:
 	CONFIG_HOME = os.environ['HOME'] + '/.config'
 
+if 'XDG_CACHE_HOME' in os.environ:
+	CACHE_HOME = os.environ['XDG_CACHE_HOME']
+else:
+	CACHE_HOME = os.environ['HOME'] + '/.cache'
+
 MAIN_FILE  = DATA_HOME + '/steam-tweaks.yaml'
 LOCAL_FILE = CONFIG_HOME + '/steam-tweaks.yaml'
+SHORTCUT_COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
 
 STEAM_DIR = DATA_HOME + '/Steam'
 if not os.path.isdir(STEAM_DIR):
@@ -119,6 +125,7 @@ config_data = load_steam_config(config_file)
 
 update_steam_config(MAIN_FILE, config_data, 209) # add global entries if file exists
 update_steam_config(LOCAL_FILE, config_data, 229) # add local entries if file exists
+update_steam_config(SHORTCUT_COMPAT_DATA_FILE, config_data, 209) # add shortcut compat data
 vdf.dump(config_data, open(config_file, 'w'), pretty=True)
 
 

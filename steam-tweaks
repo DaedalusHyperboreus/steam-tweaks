@@ -1,4 +1,4 @@
 #! /bin/bash
 
-steam-config
 steam-shortcuts
+steam-config
