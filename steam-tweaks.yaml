@@ -165,6 +165,13 @@
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
+"248310": # Freedom Planet
+  patch_dir: Freedom Planet
+  patches:
+    - copy:
+        src: data/Freedom Planet/control_gamepad.cfg
+        dst: control_gamepad.cfg
+
 "275390": # Guacamelee! Super Turbo Championship Edition
   compat_tool: proton_42
 
