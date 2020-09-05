@@ -410,6 +410,10 @@
 "637100": # Sonic Forces
   compat_tool: proton_411
 
+"71340": # Sonic Generations
+  compat_tool: proton_411
+  compat_config: d9vk noesync
+
 "584400": # Sonic Mania
   compat_tool: proton_411
 
