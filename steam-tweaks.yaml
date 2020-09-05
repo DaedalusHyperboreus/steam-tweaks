@@ -148,6 +148,9 @@
 "812160": # Etherborn
   compat_tool: proton_411
 
+"1020470": # Evoland Legendary Edition
+  compat_tool: proton_411
+
 "737800": # F1 2018
   compat_tool: proton_411
 
@@ -174,6 +177,9 @@
     - copy:
         src: data/Freedom Planet/control_gamepad.cfg
         dst: control_gamepad.cfg
+
+"704270": # Generation Zero
+  compat_tool: proton_411
 
 "275390": # Guacamelee! Super Turbo Championship Edition
   compat_tool: proton_42
