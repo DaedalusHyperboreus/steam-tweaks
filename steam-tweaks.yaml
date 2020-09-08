@@ -148,7 +148,7 @@
 "812160": # Etherborn
   compat_tool: proton_411
 
-"1020470": # Evoland Legendary Edition
+"1020470": # Evoland Legendary Edition; native version unplayable due to cropped display
   compat_tool: proton_411
 
 "737800": # F1 2018
@@ -227,19 +227,19 @@
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
   compat_tool: proton_411
 
-"331670": # The Jackbox Party Pack; native version displays zoomed in view and is unplayable
+"331670": # The Jackbox Party Pack; native version unplayable due to cropped display
   compat_tool: proton_411
 
-"397460": # The Jackbox Party Pack 2; native version displays zoomed in view and is unplayable
+"397460": # The Jackbox Party Pack 2; native version unplayable due to cropped display
   compat_tool: proton_411
 
-"434170": # The Jackbox Party Pack 3; native version displays zoomed in view and is unplayable
+"434170": # The Jackbox Party Pack 3; native version unplayable due to cropped display
   compat_tool: proton_411
 
-"610180": # The Jackbox Party Pack 4; native version displays zoomed in view and is unplayable
+"610180": # The Jackbox Party Pack 4; native version unplayable due to cropped display
   compat_tool: proton_411
 
-"774461": # The Jackbox Party Pack 5; native version displays zoomed in view and is unplayable
+"774461": # The Jackbox Party Pack 5; native version unplayable due to cropped display
   compat_tool: proton_411
 
 "205950": # Jet Set Radio
