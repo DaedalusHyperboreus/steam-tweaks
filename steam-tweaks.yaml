@@ -294,6 +294,9 @@
 "220860": # McPixel
   compat_tool: proton_411
 
+"1173200": # Metal Unit
+  compat_tool: proton_411
+
 "535850": # Micro Machines World Series; native version has poor controller support
   compat_tool: proton_411
 
