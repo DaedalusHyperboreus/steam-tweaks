@@ -270,6 +270,9 @@
 "640590": # The LEGO NINJAGO Movie Video Game
   compat_tool: proton_411
 
+"311770": # LEGO Pirates of the Caribbean The Video Game
+  compat_tool: proton_411
+
 "285160": # LEGO The Hobbit
   compat_tool: proton_42
 
