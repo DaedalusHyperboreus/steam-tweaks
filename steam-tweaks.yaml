@@ -67,7 +67,7 @@
 
 "774361": # Blasphemous
   compat_tool: steamlinuxruntime
-  launch_options: %command%
+  launch_options: '%command%'
 
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
