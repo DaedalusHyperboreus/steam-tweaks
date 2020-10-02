@@ -435,6 +435,7 @@
 
 "544750": # Soul Calibur VI
   compat_tool: proton_411
+  compat_config: seccomp
   launch_options: tweaks-mfplat 4.11 || true && %command%
 
 "50300": # Spec Ops: The Line
