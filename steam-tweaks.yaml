@@ -146,6 +146,10 @@
 "285840": # Enemy Mind
   compat_tool: proton_411
 
+"245280": # ENSLAVED: Odyssey to the West Premium Edition
+  compat_tool: proton_411
+  compat_config: d9vk noesync
+
 "812160": # Etherborn
   compat_tool: proton_411
 
