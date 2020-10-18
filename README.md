@@ -46,6 +46,8 @@ dir: /full/path/to/working/dir  # the directory from which to execute the comman
 params: github.com              # any parameters to invoke the command with
 banner: /path/to/image.png      # the grid banner image to use (this will be symlinked into Steam's grid directory)
 icon: firefox                   # small icon to show in Steam
+compat_tool: proton_411         # use the given compatibility tool, useful for running Windows executables
+compat_config: noesync          # use the given compatibility tool options
 hidden: false                   # 'false' to show the shortcut in Steam, 'true' to hide it
 tags:                           # a list of tags to be assigned to the shortcut in Steam
   - Browser
