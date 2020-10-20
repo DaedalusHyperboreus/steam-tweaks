@@ -173,6 +173,18 @@
 "1097150": # Fall Guys
   compat_tool: proton_411
 
+"22370": # Fallout 3: Game of the Year Edition
+  compat_tool: proton_5
+  patch_dir: Fallout 3 goty
+  patches:
+    - exec: echo "90e00bc029bbf877020827a3da9b85a6 installscript.vdf" | md5sum --status -c && sed -i 16,62d installscript.vdf
+    - copy:
+        src: data/common/xlive.ini
+        dst: xlive.ini
+    - copy:
+        src: data/common/xlive.dll
+        dst: xlive.dll
+
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
