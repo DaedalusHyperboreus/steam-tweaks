@@ -453,9 +453,8 @@
   compat_tool: proton_411
 
 "544750": # Soul Calibur VI
-  compat_tool: proton_411
-  compat_config: seccomp
-  launch_options: tweaks-mfplat 4.11 || true && %command%
+  compat_tool: proton_513
+  launch_options: tweaks-mfplat 5.13 || true && %command%
 
 "50300": # Spec Ops: The Line
   steam_input: enabled
