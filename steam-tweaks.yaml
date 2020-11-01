@@ -146,6 +146,9 @@
   compat_tool: proton_42
   compat_config: forcelgadd
 
+"528610": # Double Dragon IV
+  compat_tool: proton_5
+
 "285840": # Enemy Mind
   compat_tool: proton_411
 
