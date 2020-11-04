@@ -411,8 +411,8 @@
   compat_tool: proton_42
 
 "252950": # Rocket League
-  compat_tool: proton_5
-  launch_options: RADV_PERFTEST=aco %command%
+  compat_tool: proton_513
+  launch_options: '%command%'
 
 "516130": # Runner3
   compat_tool: proton_411
