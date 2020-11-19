@@ -194,6 +194,10 @@
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
+"966330": # Flower
+  compat_tool: proton_513
+  compat_config: noesync
+
 "751780": # Forager; native version crashes
   compat_tool: proton_411
 
