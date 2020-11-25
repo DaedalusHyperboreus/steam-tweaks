@@ -120,6 +120,9 @@
 "548430": # Deep Rock Galactic
   compat_tool: proton_411
 
+"329050": # Devil May Cry 4 Special Edition
+  compat_tool: proton_513
+
 "12840": # DiRT 2
   compat_tool: proton_37
   patch_dir: Dirt 2
