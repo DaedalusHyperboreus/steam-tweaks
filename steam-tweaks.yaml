@@ -152,6 +152,9 @@
   compat_tool: proton_42
   compat_config: forcelgadd
 
+"379720": # DOOM (2016); Valve whitelisted proton version has mouse issues
+  compat_tool: proton_5
+
 "528610": # Double Dragon IV
   compat_tool: proton_5
 
