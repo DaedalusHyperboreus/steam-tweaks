@@ -433,6 +433,9 @@
 "32360": # The Secret of Monkey Island: Special Edition
   compat_tool: proton_411
 
+"809890": # Shining Resonance Refrain
+  compat_tool: proton_5
+
 "289070": # Sid Meier's Civilization VI
   launch_options: LD_PRELOAD=/usr/lib/libfreetype.so.6 %command%
 
