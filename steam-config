@@ -2,6 +2,7 @@
 
 import os
 import vdf
+import time
 import yaml
 import shutil
 import urllib.request
@@ -109,10 +110,16 @@ def update_steam_localconfig(tweaks_file, steam_data):
 			launch_options[key]['LaunchOptions'] = data[key]['launch_options']
 
 
-try:
-	urllib.request.urlretrieve('https://gamer-os.github.io/steam-tweaks/steam-tweaks.yaml', MAIN_FILE)
-except:
-	print('failed to update tweaks file')
+attempts = 0
+while attempts < 5:
+	try:
+		urllib.request.urlretrieve('https://gamer-os.github.io/steam-tweaks/steam-tweaks.yaml', MAIN_FILE)
+		break
+	except:
+		print('failed to update tweaks file (attempt {})'.format(attempts+1))
+		time.sleep(2)
+		attempts += 1
+
 
 
 config_dir = STEAM_DIR + '/config'
