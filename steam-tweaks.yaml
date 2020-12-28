@@ -37,6 +37,9 @@
 "688420": # Bad North
   compat_tool: proton_42
 
+"208650": # Batman: Arkham Knight
+  compat_tool: proton_513
+
 "209000": # Batman: Arkham Origins
   compat_tool: proton_42
 
