@@ -161,6 +161,9 @@
 "528610": # Double Dragon IV
   compat_tool: proton_5
 
+"851850": # DRAGON BALL Z: KAKAROT
+  compat_tool: proton_513
+
 "285840": # Enemy Mind
   compat_tool: proton_411
 
