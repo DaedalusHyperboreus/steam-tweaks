@@ -203,6 +203,9 @@
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
+"637650": # FINAL FANTASY XV WINDOWS EDITION
+  compat_tool: proton_513
+
 "966330": # Flower
   compat_tool: proton_513
   compat_config: noesync
