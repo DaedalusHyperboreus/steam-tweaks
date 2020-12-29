@@ -97,6 +97,9 @@
 "518060": # Chess Ultra
   compat_tool: proton_411
 
+"390610": # Circa Infinity; native version crashes on startup
+  compat_tool: proton_37
+
 "1045720": # The Coma 2: Vicious Sisters; native version has poor controller support
   compat_tool: proton_411
 
