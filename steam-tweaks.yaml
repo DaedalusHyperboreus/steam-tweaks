@@ -88,6 +88,9 @@
 "24740": # Burnout Paradise: The Ultimate Box
   compat_tool: proton_411
 
+"544730": # Catan Universe
+  compat_tool: proton_513
+
 "204360": # Castle Crashers; Valve whitelisted proton version no longer works
   compat_tool: proton_411
 
@@ -100,15 +103,49 @@
 "390610": # Circa Infinity; native version crashes on startup
   compat_tool: proton_37
 
+"602770": # Clatter
+  compat_tool: proton_513
+
+"260650": # Cold War
+  compat_tool: proton_513
+
+"534360": # Colt Express
+  compat_tool: proton_513
+
 "1045720": # The Coma 2: Vicious Sisters; native version has poor controller support
   compat_tool: proton_411
+
+"228200": # Company of Heroes
+  compat_tool: proton_513
+
+"320340": # Cosmonautica
+  compat_tool: proton_513
+
+"248390": # Craft the World
+  compat_tool: proton_513
 
 "731490": # Crash Bandicoot N. Sane Trilogy
   compat_tool: proton_411
 
+"26900": # Crayon Physics Deluxe
+  compat_tool: proton_513
+
+
 "71230": # Crazy Taxi
   compat_tool: proton_411
   compat_config: d9vk
+
+“829590”: # Crying Suns
+  compat_tool: proton_5
+
+“829590”: # Cryofall (Beta Proton Release of devs)
+  compat_tool: proton_513
+
+“928840”: # Cybarian: The Time Travelling Warrior
+  compat_tool: proton_5
+
+“405500”: # Dangerous Golf
+  compat_tool: proton_5
 
 "939100": # Darksburg
   compat_tool: proton_5
@@ -520,7 +557,7 @@
   compat_tool: proton_42
 
 "287260": # Toybox Turbos
-  compat_tool: proton_42
+  compat_tool: proton_5
   compat_config: noesync
 
 "585420": # Trailmakers
