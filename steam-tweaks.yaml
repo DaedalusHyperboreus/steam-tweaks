@@ -9,8 +9,17 @@
 "435790": # 10 Second Ninja X
   compat_tool: proton_411
 
+"238930": # 7 Grand Steps, Step 1: What Ancients Begat
+  compat_tool: proton_5
+
+"381780": # 80 Days
+  compat_tool: proton_513
+
 "499890": # Aaero
   compat_tool: proton_411
+
+"384190": # ABZÛ
+  compat_tool: proton_513
 
 "285820": # Action Henk
   launch_options: LD_LIBRARY_PATH= %command%
@@ -28,14 +37,32 @@
 "951940": # Almost There: The Platformer
   compat_tool: proton_411
 
+"345090": # Ancient Planet
+  compat_tool: proton_513
+
+"703840": # Animal Super Squad
+  compat_tool: proton_513
+
 "401120": # Anode
   steam_input: enabled
+
+"1368440": # Armor Of Heroes
+  compat_tool: proton_513
+
+"507490": # Ashes of the Singularity: Escalation
+  compat_tool: proton_513
 
 "984800": # Automachef
   compat_tool: proton_411
 
+"979120": # Autonauts
+  compat_tool: proton_513
+
 "688420": # Bad North
   compat_tool: proton_42
+
+"214790": # The Basement Collection
+  compat_tool: proton_513
 
 "208650": # Batman: Arkham Knight
   compat_tool: proton_513
@@ -43,11 +70,23 @@
 "209000": # Batman: Arkham Origins
   compat_tool: proton_42
 
+"418060": # Battle Riders
+  compat_tool: proton_513
+
+"544610": # Battlestar Galactica Deadlock
+  compat_tool: proton_513
+
 "463150": # BARRIER X
   compat_tool: proton_411
 
 "460790": # Bayonetta
   compat_tool: proton_5
+
+"381320": # Bezier
+  compat_tool: proton_513
+
+"113200": # The Binding of Isaac
+  compat_tool: proton_513
 
 "8870": # BioShock Infinite
   steam_input: enabled
@@ -64,6 +103,9 @@
 
 "218060": # BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien; native version has severe controller issues
   compat_tool: proton_411
+
+"729660": # Blackout Z: Slaughterhouse Edition
+  compat_tool: proton_513
 
 "927250": # Bladed Fury
   compat_tool: proton_411
@@ -82,17 +124,38 @@
 "449960": # Book of Demons
   compat_tool: proton_411
 
+"1011630": # Border Force
+  compat_tool: proton_513
+
 "491040": # Bot Vice; native version does not recognize controllers
   compat_tool: proton_411
+
+"324510": # Boundless
+  compat_tool: proton_5
+
+"371520": # Bounty Train
+  compat_tool: proton_513
+
+"225080": # Brothers - A Tale of Two Sons
+  compat_tool: proton_513
+
+"390290": # Bulb Boy
+  compat_tool: proton_513
+
+"403290": # Burly Men at Sea
+  compat_tool: proton_513
 
 "24740": # Burnout Paradise: The Ultimate Box
   compat_tool: proton_411
 
-"544730": # Catan Universe
-  compat_tool: proton_513
+"598810": # Carcassonne: The Official Board Game
+  compat_tool: proton_51
 
 "204360": # Castle Crashers; Valve whitelisted proton version no longer works
   compat_tool: proton_411
+
+"544730": # Catan Universe
+  compat_tool: proton_513
 
 "319450": # Chariot
   compat_tool: proton_42
@@ -197,6 +260,9 @@
 "525040": # The Disney Afternoon Collection
   compat_tool: proton_42
   compat_config: forcelgadd
+
+"723890": # Don't Make Love
+  compat_tool: proton_5
 
 "379720": # DOOM (2016); Valve whitelisted proton version has mouse issues
   compat_tool: proton_5
@@ -422,6 +488,9 @@
 "589360": # Ni no Kuni II: Revenant Kingdom
   compat_tool: proton_411
 
+"94400": # Nidhogg
+  compat_tool: proton_51
+
 "680380": # Night Call
   compat_tool: proton_411
 
@@ -555,6 +624,10 @@
 
 "574980": # Them's Fightin' Herds
   compat_tool: proton_42
+
+"108200": # Ticket to Ride
+  compat_tool: proton_51
+  compat_config: nod3d11
 
 "287260": # Toybox Turbos
   compat_tool: proton_5
