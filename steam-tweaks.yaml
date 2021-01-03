@@ -9,7 +9,7 @@
 "435790": # 10 Second Ninja X
   compat_tool: proton_411
 
-"238930": # 7 Grand Steps, Step 1: What Ancients Begat
+"238930": # 7 Grand Steps: What Ancients Begat
   compat_tool: proton_5
 
 "381780": # 80 Days
@@ -149,7 +149,7 @@
   compat_tool: proton_411
 
 "598810": # Carcassonne: The Official Board Game
-  compat_tool: proton_51
+  compat_tool: proton_5
 
 "204360": # Castle Crashers; Valve whitelisted proton version no longer works
   compat_tool: proton_411
@@ -197,16 +197,16 @@
   compat_tool: proton_411
   compat_config: d9vk
 
-“829590”: # Crying Suns
+"873940": # Crying Suns
   compat_tool: proton_5
 
-“829590”: # Cryofall (Beta Proton Release of devs)
-  compat_tool: proton_513
+# "829590": # Cryofall (Beta Proton Release of devs)
+#  compat_tool: proton_513
 
-“928840”: # Cybarian: The Time Travelling Warrior
+"928840": # Cybarian: The Time Travelling Warrior
   compat_tool: proton_5
 
-“405500”: # Dangerous Golf
+"405500": # Dangerous Golf
   compat_tool: proton_5
 
 "939100": # Darksburg
@@ -488,7 +488,7 @@
   compat_tool: proton_411
 
 "94400": # Nidhogg
-  compat_tool: proton_51
+  compat_tool: proton_5
 
 "680380": # Night Call
   compat_tool: proton_411
@@ -625,7 +625,7 @@
   compat_tool: proton_42
 
 "108200": # Ticket to Ride
-  compat_tool: proton_51
+  compat_tool: proton_5
   compat_config: nod3d11
 
 "287260": # Toybox Turbos
