@@ -37,6 +37,10 @@
 "951940": # Almost There: The Platformer
   compat_tool: proton_411
 
+"620590": # Ancestors Legacy
+  compat_config: noesync
+  compat_tool: Proton-5.21-GE-1
+
 "345090": # Ancient Planet
   compat_tool: proton_513
 
@@ -512,6 +516,9 @@
   compat_tool: proton_411
   launch_options: tweaks-mfplat 4.11 || true && %command%
 
+"1181400": # Path of Giants
+  compat_tool: proton_5
+
 "749800": # PixelJunk Monsters Ultimate; native version does not recognize controllers
   compat_tool: proton_42
 
@@ -609,6 +616,9 @@
 "310950": # Street Fighter V
   compat_tool: proton_5
 
+"1035560": # Struggling
+  compat_tool: proton_5
+
 "375120": # Super Star Path; native version does not recognize controllers
   compat_tool: proton_411
 
@@ -686,3 +696,6 @@
 
 "846870": # Yooka-Laylee and the Impossible Lair
   compat_tool: proton_411
+
+"597760": # Yuppie Psycho; native version shows incorrect button prompts
+  compat_tool: proton_513
