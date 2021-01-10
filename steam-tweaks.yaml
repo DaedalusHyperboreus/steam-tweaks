@@ -636,7 +636,7 @@
   compat_config: nod3d11
 
 "287260": # Toybox Turbos
-  compat_tool: proton_5
+  compat_tool: proton_513
   compat_config: noesync
 
 "585420": # Trailmakers
