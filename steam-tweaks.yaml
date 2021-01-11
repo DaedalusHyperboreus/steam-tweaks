@@ -80,6 +80,9 @@
 "209000": # Batman: Arkham Origins
   compat_tool: proton_42
 
+"238460": # BattleBlock Theater; native version crashes on startup with AMD GPUs
+  compat_tool: proton_513
+
 "418060": # Battle Riders
   compat_tool: proton_513
 
