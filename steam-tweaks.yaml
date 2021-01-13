@@ -31,8 +31,8 @@
 "371140": # Aegis Defenders
   compat_tool: proton_411
 
-"331870": # AER Memories of Old; native version displays only black screen
-  compat_tool: proton_411
+"331870": # AER Memories of Old; fix black screen in native version
+  launch_options: '%command% -screen-fullscreen 0'
 
 "951940": # Almost There: The Platformer
   compat_tool: proton_411
