@@ -74,6 +74,15 @@
 "214790": # The Basement Collection
   compat_tool: proton_513
 
+"57400":  # Batman: Arkham City
+  compat_tool: proton_513
+
+"200260": # Batman: Arkham City GOTY
+  compat_tool: proton_513
+
+"57419":  # Batman: Arkham City (Alt)
+  compat_tool: proton_513
+
 "208650": # Batman: Arkham Knight
   compat_tool: proton_513
 
@@ -87,6 +96,9 @@
   compat_tool: proton_513
 
 "544610": # Battlestar Galactica Deadlock
+  compat_tool: proton_513
+
+"1244950": # Battletoads
   compat_tool: proton_513
 
 "463150": # BARRIER X
@@ -131,6 +143,12 @@
   launch_options: '%command%'
   steam_input: enabled
 
+"702890": # BlazBlue: Cross Tag Battle
+  compat_tool: proton_513
+
+"1254120": # Bless Unleashed
+  compat_tool: proton_513
+
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
 
@@ -150,6 +168,9 @@
   compat_tool: proton_513
 
 "225080": # Brothers - A Tale of Two Sons
+  compat_tool: proton_513
+
+"426630": # Bubsy Two-Fur
   compat_tool: proton_513
 
 "390290": # Bulb Boy
@@ -304,6 +325,12 @@
 "851850": # DRAGON BALL Z: KAKAROT
   compat_tool: proton_513
 
+"38480": # Earthworm Jim
+  compat_tool: boxtron
+
+"38490": # Earthworm Jim 2
+  compat_tool: boxtron
+
 "285840": # Enemy Mind
   compat_tool: proton_411
 
@@ -327,6 +354,9 @@
 "1080110": # F1 2020
   compat_tool: proton_5
   compat_config: seccomp
+
+"38400": # Fallout: A Post Nuclear Role Playing Game
+  compat_tool: boxtron
 
 "22370": # Fallout 3: Game of the Year Edition
   compat_tool: proton_5
@@ -369,6 +399,12 @@
 "275390": # Guacamelee! Super Turbo Championship Edition
   compat_tool: proton_42
 
+"520440": # GUILTY GEAR Xrd -REVELATOR-
+  compat_tool: Proton-5.21-GE-1
+
+"376300": # GUILTY GEAR Xrd -SIGN-
+  compat_tool: proton_513
+
 "12750": # GRID (2008)
   compat_tool: proton_5
   patch_dir: Grid
@@ -382,6 +418,12 @@
 "683320": # Gris
   compat_tool: Proton-5.21-GE-1
   launch_options: '%command%'
+
+"1145360": # Hades
+  compat_tool: proton_513
+
+"253230": # A Hat in Time
+  compat_tool: proton_513
 
 "905340": # Heave Ho
   compat_tool: proton_411
@@ -437,17 +479,29 @@
 "648350": # Jurassic World Evolution
   compat_tool: proton_5
 
+"577940": # Killer Instinct
+  compat_tool: proton_513
+
 "812550": # The King's Bird
   compat_tool: proton_411
 
 "313690": # LEGO Batman 3: Beyond Gotham
   compat_tool: proton_316
 
+"578330": # LEGO City Undercover
+  compat_tool: proton_513
+
 "21130": # LEGO Harry Potter: Years 1-4
   compat_tool: proton_42
 
+"405310": # LEGO MARVEL's Avengers
+  compat_tool: proton_513
+
 "249130": # LEGO MARVEL Super Heroes
   compat_tool: proton_411
+
+"647830": # LEGO MARVEL Super Heroes 2
+  compat_tool: proton_513
 
 "267530": # The LEGO Movie - Videogame
   compat_tool: proton_411
@@ -498,17 +552,26 @@
   patches:
     - exec: echo "fc73cf63e54e9858a45e1786f5881ad9 17410_install.vdf" | md5sum --status -c && sed -i 122,143d 17410_install.vdf
 
+"582010": # Monster Hunter: World
+  compat_tool: proton_513
+
 "939560": # Monster Trampoline
   compat_tool: proton_316
 
 "237110": # Mortal Kombat Komplete Edition
   compat_tool: proton_42
 
+"307780": # Mortal Kombat X
+  compat_tool: proton_513
+
 "666140": # My Time At Portia
   compat_tool: proton_42
 
 "1248990": # Mýrdalssandur, Iceland
   compat_tool: proton_5
+
+"349040": # NARUTO SHIPPUDEN: Ultimate Ninja STORM 4
+  compat_tool: proton_411
 
 "1089350": # NBA 2K20
   compat_tool: proton_5
@@ -524,6 +587,9 @@
 
 "94400": # Nidhogg
   compat_tool: proton_5
+
+"524220": # NieR:Automata
+  compat_tool: proton_513
 
 "680380": # Night Call
   compat_tool: proton_411
@@ -546,6 +612,12 @@
 "387290": # Ori and the Blind Forest: Definitive Edition
   compat_tool: proton_42
 
+"505230": # Pathologic 2
+  compat_tool: proton_513
+
+"1071590": # Pathologic 2 Demo
+  compat_tool: proton_513
+
 "758730": # Paw Patrol: On A Roll
   compat_tool: proton_411
   launch_options: tweaks-mfplat 4.11 || true && %command%
@@ -553,11 +625,17 @@
 "1181400": # Path of Giants
   compat_tool: proton_5
 
+"787480": # Phoenix Wright: Ace Attorney Trilogy
+  compat_tool: proton_5
+
 "749800": # PixelJunk Monsters Ultimate; native version does not recognize controllers
   compat_tool: proton_42
 
 "255870": # PixelJunk Shooter; native version crashes on startup
   compat_tool: proton_411
+
+"752590": # A Plague Tale: Innocence
+  compat_tool: proton_513
 
 "971620": # Puyo Puyo Champions
   compat_tool: proton_411
@@ -581,6 +659,9 @@
 "9010": # Return to Castle Wolfenstein
   compat_tool: proton_5
 
+"632360": # Risk of Rain 2
+  compat_tool: proton_513
+
 "252950": # Rocket League
   compat_tool: proton_513
   launch_options: '%command%'
@@ -590,6 +671,9 @@
 
 "32360": # The Secret of Monkey Island: Special Edition
   compat_tool: proton_411
+
+"814380": # Sekiro: Shadows Die Twice
+  compat_tool: proton_513
 
 "809890": # Shining Resonance Refrain
   compat_tool: proton_5
@@ -643,6 +727,9 @@
 "1058020": # STAR WARS Battlefront (Classic, 2004)
   compat_tool: proton_5
 
+"32400": # STAR WARS: Dark Forces
+  compat_tool: boxtron
+
 "312670": # Strange Brigade
   compat_tool: proton_411
   launch_options: mv bin/StrangeBrigade_Vulkan.exe bin/StrangeBrigade.exe; %command%
@@ -653,8 +740,14 @@
 "310950": # Street Fighter V
   compat_tool: proton_5
 
+"235210": # Strider
+  compat_tool: proton_513
+
 "1035560": # Struggling
   compat_tool: proton_5
+
+"702700": # Super Bomberman R
+  compat_tool: proton_513
 
 "375120": # Super Star Path; native version does not recognize controllers
   compat_tool: proton_411
@@ -663,6 +756,12 @@
   compat_tool: proton_5
 
 "619780": # The Swords of Ditto: Mormo's Curse; native version controller mappings are bad
+  compat_tool: proton_411
+
+"410700": # System Shock: Classic
+  compat_tool: boxtron
+
+"785260": # Team Sonic Racing
   compat_tool: proton_411
 
 "574980": # Them's Fightin' Herds
@@ -679,6 +778,9 @@
 "585420": # Trailmakers
   compat_tool: proton_42
 
+"924980": # Trials of Mana
+  compat_tool: Proton-5.21-GE-1
+
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
 
@@ -693,6 +795,9 @@
 
 "45760": # Ultra Street Fighter IV
   compat_tool: proton_411
+
+"837470": # Untitled Goose Game
+  compat_tool: proton_513
 
 "427290": # Vampyr
   compat_tool: proton_42
@@ -720,10 +825,22 @@
   compat_tool: proton_5
 
 "201810": # Wolfenstein: The New Order
-  compat_tool: proton_42
+  compat_tool: proton_513
 
 "288570": # Wolfenstein: The New Order German Edition
-  compat_tool: proton_42
+  compat_tool: proton_513
+
+"612880": # Wolfenstein II: The New Colossus
+  compat_tool: proton_513
+
+"650500": # Wolfenstein II: The New Colossus German Edition
+  compat_tool: proton_513
+
+"350080": # Wolfenstein: The Old Blood
+  compat_tool: proton_513
+
+"354830": # Wolfenstein: The Old Blood German Edition
+  compat_tool: proton_513
 
 "834530": # Yakuza Kiwami
   compat_tool: proton_42
