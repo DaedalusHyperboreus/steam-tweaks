@@ -527,6 +527,9 @@
 "453910": # Love is Dead
   compat_tool: proton_411
 
+"871420": # Lovecraft's Untold Stories
+  compat_tool: proton_5
+
 "529660": # Mages of Mystralia
   compat_tool: proton_42
 
@@ -563,6 +566,9 @@
 
 "307780": # Mortal Kombat X
   compat_tool: proton_513
+
+"996770": # Moving Out
+  compat_tool: Proton-5.21-GE-1
 
 "666140": # My Time At Portia
   compat_tool: proton_42
@@ -798,6 +804,12 @@
 
 "837470": # Untitled Goose Game
   compat_tool: proton_513
+
+"790820": # Valkyria Chronicles 4
+  compat_tool: proton_513
+
+"600130": # Valfaris
+  compat_tool: Proton-5.21-GE-1
 
 "427290": # Vampyr
   compat_tool: proton_42
