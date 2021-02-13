@@ -71,6 +71,9 @@
 "688420": # Bad North
   compat_tool: proton_42
 
+"1035850": # Balancelot  
+  compat_tool: Proton-5.21-GE-1
+
 "214790": # The Basement Collection
   compat_tool: proton_513
 
@@ -149,11 +152,17 @@
 "1254120": # Bless Unleashed
   compat_tool: proton_513
 
+"1015930": # Blood Rage Digital Edition
+  compat_tool: proton_513
+
 "692850": # Bloodstained: Ritual of the Night
   compat_tool: proton_411
 
 "449960": # Book of Demons
   compat_tool: proton_411
+
+"965680": # Boomerang Fu 
+  compat_tool: proton_513
 
 "1011630": # Border Force
   compat_tool: proton_513
@@ -266,6 +275,9 @@
 "356650": # Death's Gambit
   compat_tool: proton_411
 
+"325090": # Deep Dungeons of Doom
+  compat_tool: proton_513
+
 "548430": # Deep Rock Galactic
   compat_tool: proton_411
 
@@ -313,6 +325,12 @@
   compat_tool: proton_42
   compat_config: forcelgadd
 
+"635200": # Distrust: Polar Survival
+  compat_tool: proton_513
+
+"244730": # Divekick
+  compat_tool: proton_513
+
 "723890": # Don't Make Love
   compat_tool: proton_5
 
@@ -325,11 +343,23 @@
 "851850": # DRAGON BALL Z: KAKAROT
   compat_tool: proton_513
 
+"677880": # Draw Your Game
+  compat_tool: proton_513
+
 "38480": # Earthworm Jim
   compat_tool: boxtron
 
 "38490": # Earthworm Jim 2
   compat_tool: boxtron
+
+"208140": # Endless Space - Definitive Edition
+  compat_tool: proton_513
+
+"392110": # Endless Space 2
+  compat_tool: Proton-5.21-GE-1
+  
+"1368450": # Endless Zone
+  compat_tool: proton_513
 
 "285840": # Enemy Mind
   compat_tool: proton_411
@@ -344,6 +374,9 @@
 "1020470": # Evoland Legendary Edition; native version unplayable due to cropped display
   compat_tool: proton_411
 
+"359310": # Evoland 2  
+  compat_tool: proton_513
+
 "737800": # F1 2018
   compat_tool: proton_411
 
@@ -354,6 +387,9 @@
 "1080110": # F1 2020
   compat_tool: proton_5
   compat_config: seccomp
+
+"995980": # Fae Tactics 
+  compat_tool: proton_513
 
 "38400": # Fallout: A Post Nuclear Role Playing Game
   compat_tool: boxtron
@@ -370,10 +406,22 @@
         src: data/common/xlive.dll
         dst: xlive.dll
 
+"959520": # Fantasy Blacksmith
+  compat_tool: proton_513
+
+"545040": # Feather
+  compat_tool: proton_513
+
 "919410": # Felix the Reaper
   compat_tool: proton_411
 
 "637650": # FINAL FANTASY XV WINDOWS EDITION
+  compat_tool: proton_513
+
+"318600": # The Flame in the Flood
+  compat_tool: proton_513
+
+"405970": # Flat Kingdom Papers Cut Edition  
   compat_tool: proton_513
 
 "966330": # Flower
@@ -389,6 +437,15 @@
     - copy:
         src: data/Freedom Planet/control_gamepad.cfg
         dst: control_gamepad.cfg
+
+"1047220": # Frog Detective 2 The_Case of the Invisible Wizard
+  compat_tool: Proton-5.21-GE-1
+
+"1142500": # Fun with Ragdolls The Game
+  compat_tool: proton_513
+  
+"916730": # Gato Roboto
+  compat_tool: proton_513
 
 "704270": # Generation Zero
   compat_tool: proton_411
@@ -423,6 +480,9 @@
   compat_tool: proton_513
 
 "253230": # A Hat in Time
+  compat_tool: proton_513
+
+"797410": # Headsnatchers
   compat_tool: proton_513
 
 "905340": # Heave Ho
@@ -549,6 +609,9 @@
   compat_tool: proton_42
   compat_config: noesync
 
+"940910": # Minoria
+  compat_tool: proton_513
+  
 "17410": # Mirror's Edge
   compat_tool: proton_42
   patch_dir: mirrors edge
@@ -569,6 +632,9 @@
 
 "996770": # Moving Out
   compat_tool: Proton-5.21-GE-1
+
+"1427800": # Mutant Ops
+  compat_tool: proton_513
 
 "666140": # My Time At Portia
   compat_tool: proton_42
@@ -617,6 +683,12 @@
 
 "387290": # Ori and the Blind Forest: Definitive Edition
   compat_tool: proton_42
+
+"794260": # Outward
+  compat_tool: Proton-5.21-GE-1
+  
+"622440": # Pandemic: The Board Game
+  compat_tool: proton_513
 
 "505230": # Pathologic 2
   compat_tool: proton_513
@@ -687,6 +759,9 @@
 "289070": # Sid Meier's Civilization VI
   launch_options: LD_PRELOAD=/usr/lib/libfreetype.so.6 %command%
 
+"744050": # Space Invaders Extreme
+  compat_tool: proton_513
+ 
 "91100": # SkyDrift
   compat_tool: proton_411
   compat_config: d9vk
@@ -696,6 +771,9 @@
 
 "544330": # Snake Pass
   compat_tool: proton_5
+
+"1096570": # SONG OF HORROR COMPLETE EDITION
+  compat_tool: Proton-5.21-GE-1
 
 "71250": # Sonic Adventure DX
   compat_tool: proton_411
@@ -777,6 +855,9 @@
   compat_tool: proton_5
   compat_config: nod3d11
 
+"674500": # Total Tank Simulator
+  compat_tool: proton_513
+
 "287260": # Toybox Turbos
   compat_tool: proton_513
   compat_config: noesync
@@ -784,11 +865,17 @@
 "585420": # Trailmakers
   compat_tool: proton_42
 
+"914010": # TrainStation Renovation  
+  compat_tool: Proton-5.21-GE-1
+ 
 "924980": # Trials of Mana
   compat_tool: Proton-5.21-GE-1
 
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
+
+"690640": # Trine 4: The Nightmare Prince
+  compat_tool: proton_513
 
 "499520": # The Turing Test
   compat_tool: proton_5
@@ -824,8 +911,15 @@
   compat_tool: proton_411
   launch_options: --skip-intro
 
+"774241": # Warhammer Chaosbane
+  compat_tool: proton_513
+  steam-input: enabled
+  
 "865360": # We Were Here Together
   compat_tool: proton_411
+
+"526160": # The Wild Eight
+  compat_tool: proton_513
 
 "292030": # The Witcher 3: Wild Hunt
   compat_tool: proton_42
