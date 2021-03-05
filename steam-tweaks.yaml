@@ -155,8 +155,14 @@
 "449960": # Book of Demons
   compat_tool: proton_411
 
+"965680": # Boomerang Fu
+  compat_tool: proton_5
+
 "1011630": # Border Force
   compat_tool: proton_513
+
+"598780": # Boreal Blade
+  compat_tool: proton_5
 
 "491040": # Bot Vice; native version does not recognize controllers
   compat_tool: proton_411
@@ -213,6 +219,9 @@
   compat_tool: proton_411
 
 "228200": # Company of Heroes
+  compat_tool: proton_513
+
+"870780": # Control
   compat_tool: proton_513
 
 "320340": # Cosmonautica
@@ -393,6 +402,9 @@
 "704270": # Generation Zero
   compat_tool: proton_411
 
+"712190": # Genesis Alpha One Deluxe Edition
+  compat_tool: Proton-5.21-GE-1
+
 "555000": # Goat of Duty  
   compat_tool: proton_5
 
@@ -450,6 +462,9 @@
 
 "629090": # Horace
   compat_tool: proton_411
+
+"609920": # Hotshot Racing
+  compat_tool: proton_5
 
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
   compat_tool: proton_411
@@ -793,6 +808,9 @@
 "319910": # Trine 3: The Artifacts of Power; native version shows generic gamepad hints
   compat_tool: proton_42
 
+"319910": # Trine 4: The Nightmare Prince
+  compat_tool: proton_513
+
 "499520": # The Turing Test
   compat_tool: proton_5
   patch_dir: The Turing Test
@@ -832,6 +850,9 @@
 
 "526160": # The Wild Eight
   compat_tool: proton_5
+
+"1142100": # WWE 2K BATTLEGROUNDS
+  compat_tool: proton_513
 
 "292030": # The Witcher 3: Wild Hunt
   compat_tool: proton_42
