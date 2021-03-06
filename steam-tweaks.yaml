@@ -340,6 +340,9 @@
 "38490": # Earthworm Jim 2
   compat_tool: boxtron
 
+"411300": # ELEX
+  compat_tool: Proton-6.1-GE-2
+
 "285840": # Enemy Mind
   compat_tool: proton_411
 
@@ -583,7 +586,7 @@
   compat_tool: proton_513
 
 "996770": # Moving Out
-  compat_tool: Proton-5.21-GE-1
+  compat_tool: Proton-6.1-GE-2
 
 "666140": # My Time At Portia
   compat_tool: proton_42
@@ -601,7 +604,7 @@
   compat_tool: proton_411
 
 "1038300": # New Super Lucky's Tale
-  compat_tool: proton_411
+  compat_tool: Proton-6.1-GE-2
 
 "589360": # Ni no Kuni II: Revenant Kingdom
   compat_tool: proton_411
