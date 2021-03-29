@@ -161,11 +161,14 @@
 "449960": # Book of Demons
   compat_tool: proton_411
 
-"965680": # Boomerang Fu 
-  compat_tool: proton_513
+"965680": # Boomerang Fu
+  compat_tool: proton_5
 
 "1011630": # Border Force
   compat_tool: proton_513
+
+"598780": # Boreal Blade
+  compat_tool: proton_5
 
 "491040": # Bot Vice; native version does not recognize controllers
   compat_tool: proton_411
@@ -222,6 +225,9 @@
   compat_tool: proton_411
 
 "228200": # Company of Heroes
+  compat_tool: proton_513
+
+"870780": # Control
   compat_tool: proton_513
 
 "320340": # Cosmonautica
@@ -352,6 +358,9 @@
 "38490": # Earthworm Jim 2
   compat_tool: boxtron
 
+"411300": # ELEX
+  compat_tool: Proton-6.1-GE-2
+
 "208140": # Endless Space - Definitive Edition
   compat_tool: proton_513
 
@@ -450,6 +459,9 @@
 "704270": # Generation Zero
   compat_tool: proton_411
 
+"712190": # Genesis Alpha One Deluxe Edition
+  compat_tool: Proton-5.21-GE-1
+
 "555000": # Goat of Duty  
   compat_tool: proton_5
 
@@ -510,6 +522,9 @@
 
 "629090": # Horace
   compat_tool: proton_411
+
+"609920": # Hotshot Racing
+  compat_tool: proton_5
 
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
   compat_tool: proton_411
@@ -631,7 +646,7 @@
   compat_tool: proton_513
 
 "996770": # Moving Out
-  compat_tool: Proton-5.21-GE-1
+  compat_tool: Proton-6.1-GE-2
 
 "1427800": # Mutant Ops
   compat_tool: proton_513
@@ -652,7 +667,7 @@
   compat_tool: proton_411
 
 "1038300": # New Super Lucky's Tale
-  compat_tool: proton_411
+  compat_tool: Proton-6.1-GE-2
 
 "589360": # Ni no Kuni II: Revenant Kingdom
   compat_tool: proton_411
@@ -724,6 +739,9 @@
 
 "207490": # Rayman Origins
   compat_tool: proton_411
+
+"941570": # Relicta
+  compat_tool: Proton-5.21-GE-1
 
 "590590": # Remnants of Naezith; native version crashes on startup
   compat_tool: proton_411
@@ -919,7 +937,7 @@
   compat_tool: proton_411
 
 "526160": # The Wild Eight
-  compat_tool: proton_513
+  compat_tool: proton_5
 
 "292030": # The Witcher 3: Wild Hunt
   compat_tool: proton_42
@@ -946,6 +964,9 @@
   compat_tool: proton_513
 
 "354830": # Wolfenstein: The Old Blood German Edition
+  compat_tool: proton_513
+
+"1142100": # WWE 2K BATTLEGROUNDS
   compat_tool: proton_513
 
 "834530": # Yakuza Kiwami
