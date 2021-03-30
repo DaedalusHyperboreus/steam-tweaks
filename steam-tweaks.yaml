@@ -931,7 +931,6 @@
 
 "774241": # Warhammer: Chaosbane
   compat_tool: proton_513
-  steam_input: enabled
   
 "865360": # We Were Here Together
   compat_tool: proton_411
