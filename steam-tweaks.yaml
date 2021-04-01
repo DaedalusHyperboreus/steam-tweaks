@@ -627,6 +627,12 @@
 "370910": # Kathy Rain
   compat_tool: proton_513
 
+"261110": # Killer is Dead - Nightmare Edition # Patch according to https://www.pcgamingwiki.com/wiki/Killer_Is_Dead#Issues_fixed
+  compat_tool: proton_513
+  patch_dir: KillerIsDead
+  patches:
+    - exec: mv KidGame/Config/KidEngine.ini KidGame/Config/KidEngine.ini.bak && sed '/\[XAudio2.XAudio2Device\]/{n;N;N;N;N;N;d}' KidGame/Config/KidEngine.ini.bak | sed '/\[XAudio2.XAudio2Device\]/'a'MaxChannels=64\nCommonAudioPoolSize=320\nMinCompressedDurationGame=0.3\nMinCompressedDurationEditor=500\nLowPassFilterResonance=0.9\nWorkAroundXDKRegression=FALSE' > KidGame/Config/KidEngine.ini
+
 "603460" # King and Assassins
   compat_tool: proton_513
 
