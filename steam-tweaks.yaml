@@ -698,7 +698,7 @@
 
 "424840": # Little Nightmares
   compat_tool: proton_513
-  launch_options: %command% -onethread
+  launch_options: -onethread
 
 "262690": # Little Racers STREET
   compat_tool: steamlinuxruntime
