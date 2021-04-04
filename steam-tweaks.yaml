@@ -126,12 +126,12 @@
   steam_input: enabled
 
 "409710": # BioShock Remastered
-  compat_tool: proton_411
+  compat_tool: proton_513
   compat_config: noesync,nofsync
   launch_options: -nointro
 
 "409720": # BioShock 2 Remastered
-  compat_tool: proton_411
+  compat_tool: proton_513
   compat_config: noesync,nofsync
   launch_options: -nointro
 
