@@ -34,11 +34,17 @@
 "331870": # AER Memories of Old; fix black screen in native version
   launch_options: '%command% -screen-fullscreen 0'
 
+"1210150": # Ageless
+  compat_tool: proton_513
+
 "951940": # Almost There: The Platformer
   compat_tool: proton_411
 
 "1171660": # The Ambassador: Fractured Timelines
   compat_tool: proton_5
+
+"390720": # Anarcute
+  compat_tool: proton_513
 
 "620590": # Ancestors Legacy
   compat_config: noesync nofsync
@@ -255,6 +261,10 @@
 "405500": # Dangerous Golf
   compat_tool: proton_5
 
+"243200": # The Dark Eye: Memoria
+  compat_tool: proton_37
+  launch_options: SDL_AUDIODRIVER="directsound" %command%
+
 "939100": # Darksburg
   compat_tool: proton_5
 
@@ -296,6 +306,9 @@
 "310510": # Deathtrap
   compat_tool: proton_513
   
+"755980": # Deployment
+  compat_tool: proton_513
+
 "329050": # Devil May Cry 4 Special Edition
   compat_tool: proton_513
 
@@ -380,6 +393,9 @@
 "812160": # Etherborn
   compat_tool: proton_411
 
+"1532180: # Evo\Wave
+  compat_tool: Proton-5.21-GE-1
+
 "1020470": # Evoland Legendary Edition; native version unplayable due to cropped display
   compat_tool: proton_411
 
@@ -453,14 +469,32 @@
 "1142500": # Fun with Ragdolls: The Game
   compat_tool: proton_513
   
-"916730": # Gato Roboto
+"202200": # Galactic Civilizations II: Ultimate Edition
   compat_tool: proton_513
 
+"226860": # Galactic Civilizations III
+  compat_tool: proton_513
+
+"362930": # Garfield Kart
+  compat_tool: proton_513
+
+"1085510": # Garfield Kart - Furious Racing
+  compat_tool: proton_513
+
+"916730": # Gato Roboto
+  compat_tool: proton_513
+  
 "704270": # Generation Zero
   compat_tool: proton_411
 
 "712190": # Genesis Alpha One Deluxe Edition
   compat_tool: Proton-5.21-GE-1
+
+"9500": # Gish
+  compat_tool: proton_513
+  
+"1102500": # A Glider's Journey
+  compat_tool: proton_513
 
 "555000": # Goat of Duty  
   compat_tool: proton_5
@@ -474,12 +508,18 @@
 "376300": # GUILTY GEAR Xrd -SIGN-
   compat_tool: proton_513
 
+"48950": # Greed Corp
+  compat_tool: proton_513
+
 "12750": # GRID (2008)
   compat_tool: proton_5
   patch_dir: Grid
   patches:
     - exec: echo "2960d17d77d44b259674e0b099b9e5a6 installscript.vdf" | md5sum --status -c && sed -i '62i \\t\t\t"Command 1"\t\t"/S"^M' installscript.vdf
     - exec: echo "5c42dc1c0cfb483cee86df0779332168 system/hardware_settings_restrictions.xml" | md5sum --status -c && sed -i 150d system/hardware_settings_restrictions.xml
+
+"703860": # GRID (2019)  
+  compat_tool: proton_5
 
 "396900": # Grip: Combat Racing
   compat_tool: proton_42
@@ -491,14 +531,23 @@
 "1145360": # Hades
   compat_tool: proton_513
 
+"492290": # Has-Been Heroes
+  compat_tool: proton_513
+
 "253230": # A Hat in Time
+  compat_tool: proton_513
+
+"963000": # The Haunted Island, a Frog Detective Game
+  compat_tool: proton_513
+
+"340000": # Headlander
   compat_tool: proton_513
 
 "797410": # Headsnatchers
   compat_tool: proton_513
 
 "905340": # Heave Ho
-  compat_tool: proton_411
+  compat_tool: proton_513
 
 "960910": # Heavy Rain
   compat_tool: proton_5
@@ -514,6 +563,12 @@
 "521890": # Hello Neighbour
   compat_tool: proton_411
 
+"368370": # Her Story
+  compat_tool: Proton-5.21-GE-1
+
+"423620": # HERO DEFENSE
+  compat_tool: proton_513
+
 "464960": # Hiiro
   compat_tool: proton_411
 
@@ -526,8 +581,17 @@
 "609920": # Hotshot Racing
   compat_tool: proton_5
 
+"453340": # Hustle Cat
+  compat_tool: proton_411
+
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
   compat_tool: proton_411
+
+"230150": # Incredipede
+  compat_tool: proton_513
+
+"224900": # Iron Sky Invasion; native version doesn't work anymore
+  compat_tool: proton_513
 
 "331670": # The Jackbox Party Pack; native version unplayable due to cropped display
   compat_tool: proton_411
@@ -548,20 +612,47 @@
   compat_tool: proton_42
   launch_options: mv jetsetradio.exe jsrsetup.exe; %command%
 
+"270810": # Jones On Fire
+  compat_tool: proton_513
+
 "638230": # Journey
   compat_tool: proton_411
 
 "648350": # Jurassic World Evolution
-  compat_tool: proton_5
+  compat_tool: proton_513
+
+"571520": # Kalaban
+  compat_tool: proton_513
+
+"370910": # Kathy Rain
+  compat_tool: proton_513
+
+"261110": # Killer is Dead - Nightmare Edition # Patch according to https://www.pcgamingwiki.com/wiki/Killer_Is_Dead#Issues_fixed
+  compat_tool: proton_513
+  patch_dir: KillerIsDead
+  patches:
+    - exec: mv KidGame/Config/KidEngine.ini KidGame/Config/KidEngine.ini.bak && sed '/\[XAudio2.XAudio2Device\]/{n;N;N;N;N;N;d}' KidGame/Config/KidEngine.ini.bak | sed '/\[XAudio2.XAudio2Device\]/'a'MaxChannels=64\nCommonAudioPoolSize=320\nMinCompressedDurationGame=0.3\nMinCompressedDurationEditor=500\nLowPassFilterResonance=0.9\nWorkAroundXDKRegression=FALSE' > KidGame/Config/KidEngine.ini
+
+"603460" # King and Assassins
+  compat_tool: proton_513
 
 "577940": # Killer Instinct
+  compat_tool: proton_513
+
+"232090": # Killing Floor 2
   compat_tool: proton_513
 
 "812550": # The King's Bird
   compat_tool: proton_411
 
+"289690": # LARA CROFT AND THE TEMPLE OF OSIRIS
+  compat_tool: proton_513
+
+"500": # Left 4 Dead
+  compat_tool: proton_513
+
 "313690": # LEGO Batman 3: Beyond Gotham
-  compat_tool: proton_316
+  compat_tool: proton_513
 
 "578330": # LEGO City Undercover
   compat_tool: proton_513
@@ -593,11 +684,36 @@
 "332310": # LEGO Worlds
   compat_tool: proton_42
 
+"306680": # Lexica
+  compat_tool: Proton-5.21-GE-1
+
 "116120": # Lightfish
   compat_tool: proton_411
 
+"994140": # Lightmatter
+  compat_tool: proton_513
+
+"574720": # Little Big Workshop
+  compat_tool: proton_513
+
+"424840": # Little Nightmares
+  compat_tool: proton_513
+  launch_options: -onethread
+
 "262690": # Little Racers STREET
   compat_tool: steamlinuxruntime
+
+"366910": # The Long Journey Home
+  compat_tool: proton_513
+
+"443880": # Loot Rascals
+  compat_tool: proton_513
+
+"509580": # The Lord of the Rings: Adventure Card Game - Definitive Edition
+  compat_tool: proton_513
+
+"447780": # LostWinds
+  compat_tool: proton_513
 
 "453910": # Love is Dead
   compat_tool: proton_411
@@ -605,11 +721,23 @@
 "871420": # Lovecraft's Untold Stories
   compat_tool: proton_513
 
+"330660": # Luna's Wandering Stars
+  compat_tool: proton_513
+
+"40700": # Machinarium
+  compat_tool: proton_513
+
 "529660": # Mages of Mystralia
   compat_tool: proton_42
 
 "504130": # Manual Samuel
   steam_input: enabled
+
+"299380": # Masquerade: The Baubles of Doom
+  compat_tool: proton_513
+
+"331190": # Master Spy
+  compat_tool: proton_513
 
 "220860": # McPixel
   compat_tool: proton_411
@@ -624,6 +752,9 @@
   compat_tool: proton_42
   compat_config: noesync nofsync
 
+"489520": # Minion Masters
+  compat_tool: proton_513
+
 "940910": # Minoria
   compat_tool: proton_513
   
@@ -632,6 +763,9 @@
   patch_dir: mirrors edge
   patches:
     - exec: echo "fc73cf63e54e9858a45e1786f5881ad9 17410_install.vdf" | md5sum --status -c && sed -i 122,143d 17410_install.vdf
+
+"1104660": # MO:Astray
+  compat_tool: proton_513
 
 "582010": # Monster Hunter: World
   compat_tool: proton_513
@@ -645,8 +779,14 @@
 "307780": # Mortal Kombat X
   compat_tool: proton_513
 
+"578720": # A Mortician's Tale
+  compat_tool: proton_513
+
 "996770": # Moving Out
   compat_tool: Proton-6.1-GE-2
+
+"1049820": # Must Dash Amigos  
+  compat_tool: proton_513
 
 "1427800": # Mutant Ops
   compat_tool: proton_513
@@ -666,6 +806,18 @@
 "47870": # Need for Speed: Hot Pursuit
   compat_tool: proton_411
 
+"1262560": # Need for Speed: Most Wanted
+  compat_tool: proton_513
+
+"24870": # Need for Speed: Shift
+  compat_tool: proton_513
+
+"356820": # Nemo Dungeon
+  compat_tool: proton_513
+
+"994220": # NEOVERSE
+  compat_tool: proton_513
+
 "1038300": # New Super Lucky's Tale
   compat_tool: Proton-6.1-GE-2
 
@@ -681,14 +833,38 @@
 "680380": # Night Call
   compat_tool: proton_411
 
+"405540": # Ninja Senki DX
+  compat_tool: proton_513
+
 "275850": # No Man's Sky
   compat_tool: proton_411
+
+"733790": # Not Tonight
+  compat_tool: Proton-5.21-GE-1
+
+"306760": # Obduction
+  compat_tool: Proton-5.21-GE-1
+
+"765880": # The Occupation
+  compat_tool: Proton-5.21-GE-1
 
 "314660": # Oddworld: New 'n' Tasty
   steam_input: enabled
 
+"211360": # Offspring Fling
+  compat_tool: proton_513
+
+"271240": # Offworld Trading Company
+  compat_tool: proton_513
+
 "587620": # OKAMI HD / 大神 絶景版
   compat_tool: proton_411
+
+"455820": # Omensight: Definitive Edition
+  compat_tool: Proton-5.21-GE-1
+
+"12830": # Operation Flashpoint: Dragon Rising
+  compat_tool: proton_513
 
 "102600": # Orcs Must Die!
   compat_tool: proton_42
@@ -698,6 +874,9 @@
 
 "387290": # Ori and the Blind Forest: Definitive Edition
   compat_tool: proton_42
+
+"402710": # Osiris: New Dawn  
+  compat_tool: proton_513
 
 "794260": # Outward
   compat_tool: Proton-5.21-GE-1
@@ -718,6 +897,9 @@
 "1181400": # Path of Giants
   compat_tool: proton_5
 
+"1013310": # Peaky Blinders: Mastermind
+  compat_tool: proton_513
+
 "787480": # Phoenix Wright: Ace Attorney Trilogy
   compat_tool: proton_5
 
@@ -728,6 +910,9 @@
   compat_tool: proton_411
 
 "752590": # A Plague Tale: Innocence
+  compat_tool: proton_513
+
+"798790": # PolyCube
   compat_tool: proton_513
 
 "971620": # Puyo Puyo Champions
@@ -870,8 +1055,7 @@
   compat_tool: proton_42
 
 "108200": # Ticket to Ride
-  compat_tool: proton_5
-  compat_config: nod3d11
+  compat_tool: proton_513
 
 "674500": # Total Tank Simulator
   compat_tool: proton_513
@@ -938,6 +1122,9 @@
 "526160": # The Wild Eight
   compat_tool: proton_5
 
+"431940": # Wildfire
+  compat_tool: proton_513
+
 "292030": # The Witcher 3: Wild Hunt
   compat_tool: proton_42
 
@@ -971,6 +1158,9 @@
 "834530": # Yakuza Kiwami
   compat_tool: proton_42
 
+"882100": # XCOM: Chimera Squad
+  compat_tool: proton_5
+  
 "927380": # Yakuza Kiwami 2
   compat_tool: proton_5
 
