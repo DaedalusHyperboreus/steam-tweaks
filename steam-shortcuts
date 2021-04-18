@@ -5,134 +5,126 @@ import sys
 import vdf
 import yaml
 import binascii
-import zlib
-from pycrc.algorithms import Crc
-
 
 def shortcut_app_id(exe, name):
     crc_input = ''.join([exe, name])
     return str(binascii.crc32(bytes(crc_input.encode())) & 0xFFFFFFFF | 0x80000000 - 2**32)
 
-
-def shortcut_app_id_new(exe, name):
-	crc_input = ''.join([exe, name])
-	return str((zlib.crc32(crc_input.encode()) & 0xffffffff) | 0x80000000)
-
-
 def create_shortcut(entry):
-	if 'name' not in entry:
-		print('shortcut missing required field "name"; skipping')
-		return
+    if 'name' not in entry:
+        print('shortcut missing required field "name"; skipping')
+        return
+    if 'cmd' not in entry:
+        print('shortcut missing required field "cmd"; skipping')
+        return
 
-	if 'cmd' not in entry:
-		print('shortcut missing required field "cmd"; skipping')
-		return
+    app_id = shortcut_app_id(entry['cmd'], entry['name'])
 
-	shortcut = {}
-	shortcut['AppName'] = entry['name']
-	shortcut['Exe'] = entry['cmd']
+    shortcut = {}
+    shortcut['appid'] = app_id
+    shortcut['AppName'] = entry['name']
+    shortcut['Exe'] = entry['cmd']
 
-	if 'dir' in entry:
-		shortcut['StartDir'] = entry['dir']
+    if 'dir' in entry:
+        shortcut['StartDir'] = entry['dir']
+    else:
+        shortcut['StartDir'] = "~"
 
-	if 'params' in entry:
-		shortcut['LaunchOptions'] = entry['params']
+    if 'params' in entry:
+        shortcut['LaunchOptions'] = entry['params']
 
-	if 'hidden' in entry:
-		shortcut['isHidden'] = entry['hidden']
+    if 'hidden' in entry:
+        shortcut['isHidden'] = entry['hidden']
 
-	if 'icon' in entry:
-		shortcut['icon'] = entry['icon']
+    if 'icon' in entry:
+        shortcut['icon'] = entry['icon']
 
-	shortcut['AllowDesktopConfig'] = 1
-	shortcut['AllowOverlay'] = 1
-	shortcut['OpenVR'] = 0
-	shortcut['tags'] = {}
+    shortcut['AllowDesktopConfig'] = 1
+    shortcut['AllowOverlay'] = 1
+    shortcut['OpenVR'] = 0
+    shortcut['tags'] = {}
 
-	if 'tags' in entry:
-		t = 0
-		for tag in entry['tags']:
-			shortcut['tags'][str(t)] = tag
-			t += 1
+    if 'tags' in entry:
+        t = 0
+        for tag in entry['tags']:
+            shortcut['tags'][str(t)] = tag
+            t += 1
 
-	if 'banner' in entry:
-		app_id = shortcut_app_id(entry['cmd'], entry['name'])
-		_, ext = os.path.splitext(entry['banner'])
+    if 'banner' in entry:
+        _, ext = os.path.splitext(entry['banner'])
+        for user_dir in STEAM_USER_DIRS:
+            dst_dir = user_dir + '/config/grid/'
+            if not os.path.isdir(dst_dir):
+                os.makedirs(dst_dir)
+            dst = dst_dir + app_id + ext
+            if os.path.islink(dst) or os.path.isfile(dst):
+                os.remove(dst)
+            os.symlink(entry['banner'], dst)
 
-		for user_dir in STEAM_USER_DIRS:
-			dst_dir = user_dir + '/config/grid/'
-		
-			if not os.path.isdir(dst_dir):
-				os.makedirs(dst_dir)
-			dst = dst_dir + app_id + ext
-			if os.path.islink(dst) or os.path.isfile(dst):
-				os.remove(dst)
-			os.symlink(entry['banner'], dst)
+    if 'compat_tool' in entry:
+        if app_id not in compat_data:
+            compat_data[app_id] = {}
+        compat_data[app_id]['compat_tool'] = entry['compat_tool']
+        if 'compat_config' in entry:
+            compat_data[app_id]['compat_config'] = entry['compat_config']
 
-	if 'compat_tool' in entry:
-		app_id = shortcut_app_id_new(entry['cmd'], entry['name'])
-		if app_id not in compat_data:
-			compat_data[app_id] = {}
-		compat_data[app_id]['compat_tool'] = entry['compat_tool']
-		if 'compat_config' in entry:
-			compat_data[app_id]['compat_config'] = entry['compat_config']
-	
-	return shortcut
+    return shortcut
+
 
 # Initialize all directories and files
 if 'XDG_CACHE_HOME' in os.environ:
-	CACHE_HOME = os.environ['XDG_CACHE_HOME']
+    CACHE_HOME = os.environ['XDG_CACHE_HOME']
 else:
-	CACHE_HOME = os.environ['HOME'] + '/.cache'
+    CACHE_HOME = os.environ['HOME'] + '/.cache'
 
 compat_data = {}
 COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
 
 if 'XDG_DATA_HOME' in os.environ:
-	DATA_HOME = os.environ['XDG_DATA_HOME']
+    DATA_HOME = os.environ['XDG_DATA_HOME']
 else:
-	DATA_HOME = os.environ['HOME'] + '/.local/share'
+    DATA_HOME = os.environ['HOME'] + '/.local/share'
 
 DATA_HOME += '/'
 
 if not os.path.isdir(DATA_HOME + 'steam-shortcuts'):
-	os.makedirs(DATA_HOME + 'steam-shortcuts')
+    os.makedirs(DATA_HOME + 'steam-shortcuts')
 
 SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
 
 if os.path.isdir('/usr/share/steam-shortcuts'):
-	SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
+    SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
 
 STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
 STEAM_USER_DIRS = []
 for d in os.listdir(STEAM_USER_BASE_DIR):
-	if d == 'anonymous':
-		continue
-	path = STEAM_USER_BASE_DIR + d
-	if os.path.isdir(path):
-		STEAM_USER_DIRS.append(path)
+    if d == 'anonymous':
+        continue
+    path = STEAM_USER_BASE_DIR + d
+    if os.path.isdir(path):
+        STEAM_USER_DIRS.append(path)
 
 shortcuts = {}
 n = 0
 for d in SHORTCUT_DIRS:
-	for f in os.listdir(d):
-		y = open(d + '/' + f)
-		data = yaml.load(y, Loader=yaml.FullLoader)
+    for f in os.listdir(d):
+        y = open(d + '/' + f)
+        data = yaml.load(y, Loader=yaml.FullLoader)
 
-		shortcut = None
-		if type(data) is list:
-			for entry in data:
-				shortcut = create_shortcut(entry)
-				shortcuts[str(n)] = shortcut
-				n += 1
-		elif type(data) is dict:
-			shortcut = create_shortcut(data)
-			shortcuts[str(n)] = shortcut
-			n += 1
+        shortcut = None
+        if type(data) is list:
+            for entry in data:
+                shortcut = create_shortcut(entry)
+                shortcuts[str(n)] = shortcut
+                n += 1
+        elif type(data) is dict:
+            shortcut = create_shortcut(data)
+            shortcuts[str(n)] = shortcut
+            n += 1
 
 
 if len(shortcuts) == 0:
-	sys.exit()
+    sys.exit()
 
 
 yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
