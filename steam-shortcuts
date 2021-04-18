@@ -4,25 +4,14 @@ import os
 import sys
 import vdf
 import yaml
+import binascii
 import zlib
 from pycrc.algorithms import Crc
 
 
 def shortcut_app_id(exe, name):
-	"""
-	Generates the app id for a given shortcut. Steam uses app ids as a unique
-	identifier for games, but since shortcuts dont have a canonical serverside
-	representation they need to be generated on the fly. The important part
-	about this function is that it will generate the same app id as Steam does
-	for a given shortcut
-	
-	Taken from https://github.com/scottrice/pysteam
-	"""
-	algorithm = Crc(width = 32, poly = 0x04C11DB7, reflect_in = True, xor_in = 0xffffffff, reflect_out = True, xor_out = 0xffffffff)
-	crc_input = ''.join([exe,name])
-	high_32 = algorithm.bit_by_bit(crc_input) | 0x80000000
-	full_64 = (high_32 << 32) | 0x02000000
-	return str(full_64)
+    crc_input = ''.join([exe, name])
+    return str(binascii.crc32(bytes(crc_input.encode())) & 0xFFFFFFFF | 0x80000000 - 2**32)
 
 
 def shortcut_app_id_new(exe, name):
