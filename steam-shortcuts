@@ -104,6 +104,14 @@ for d in os.listdir(STEAM_USER_BASE_DIR):
     if os.path.isdir(path):
         STEAM_USER_DIRS.append(path)
 
+# Get current shortcuts
+steam_shortcuts = {}
+for user_dir in STEAM_USER_DIRS:
+    file_path = user_dir + '/config/shortcuts.vdf'
+    if os.path.isfile(file_path):
+        STEAM_SHORTCUT_FILE = file_path
+        steam_shortcuts = vdf.binary_load(open(STEAM_SHORTCUT_FILE, 'rb'))
+
 shortcuts = {}
 n = 0
 for d in SHORTCUT_DIRS:
@@ -129,11 +137,8 @@ if len(shortcuts) == 0:
 
 yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
 
-for user_dir in STEAM_USER_DIRS:
-	file_path = user_dir + '/config/shortcuts.vdf'
-	out = {}
-	out['shortcuts'] = shortcuts
-	if os.path.isfile(file_path):
-		os.truncate(file_path, 0)
-	b = vdf.binary_dumps(out)
-	open(file_path, 'wb').write(b)
+# Write the new file
+out = {}
+out['shortcuts'] = shortcuts
+b = vdf.binary_dumps(out)
+open(STEAM_SHORTCUT_FILE, 'wb').write(b)
