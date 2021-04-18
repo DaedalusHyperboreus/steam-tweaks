@@ -10,6 +10,20 @@ def shortcut_app_id(exe, name):
     crc_input = ''.join([exe, name])
     return str(binascii.crc32(bytes(crc_input.encode())) & 0xFFFFFFFF | 0x80000000 - 2**32)
 
+
+"""
+Returns the shortcut dictionary of the given app_id. If not found returns {}
+"""
+def match_app_id(sc, app_id):
+    for s in sc:
+        if sc[s]['appid'] == app_id:
+            return sc[s]
+    return {}
+
+"""
+Creates a new shrotcut dictionary to be written later on the shortcut file.
+If an application exists with the same app ID in the file, tries to update it.
+"""
 def create_shortcut(entry):
     if 'name' not in entry:
         print('shortcut missing required field "name"; skipping')
@@ -20,7 +34,7 @@ def create_shortcut(entry):
 
     app_id = shortcut_app_id(entry['cmd'], entry['name'])
 
-    shortcut = {}
+    shortcut = match_app_id(steam_shortcuts, int(app_id))
     shortcut['appid'] = app_id
     shortcut['AppName'] = entry['name']
     shortcut['Exe'] = entry['cmd']
@@ -110,7 +124,9 @@ for user_dir in STEAM_USER_DIRS:
     file_path = user_dir + '/config/shortcuts.vdf'
     if os.path.isfile(file_path):
         STEAM_SHORTCUT_FILE = file_path
-        steam_shortcuts = vdf.binary_load(open(STEAM_SHORTCUT_FILE, 'rb'))
+        s = vdf.binary_load(open(STEAM_SHORTCUT_FILE, 'rb'))
+        if 'shortcuts' in s:
+            steam_shortcuts = s['shortcuts']
 
 shortcuts = {}
 n = 0
