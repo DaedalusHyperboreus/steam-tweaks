@@ -29,37 +29,6 @@ def shortcut_app_id_new(exe, name):
 	crc_input = ''.join([exe, name])
 	return str((zlib.crc32(crc_input.encode()) & 0xffffffff) | 0x80000000)
 
-if 'XDG_CACHE_HOME' in os.environ:
-	CACHE_HOME = os.environ['XDG_CACHE_HOME']
-else:
-	CACHE_HOME = os.environ['HOME'] + '/.cache'
-
-compat_data = {}
-COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
-
-if 'XDG_DATA_HOME' in os.environ:
-	DATA_HOME = os.environ['XDG_DATA_HOME']
-else:
-	DATA_HOME = os.environ['HOME'] + '/.local/share'
-
-DATA_HOME += '/'
-
-if not os.path.isdir(DATA_HOME + 'steam-shortcuts'):
-	os.makedirs(DATA_HOME + 'steam-shortcuts')
-
-SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
-
-if os.path.isdir('/usr/share/steam-shortcuts'):
-	SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
-
-STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
-STEAM_USER_DIRS = []
-for d in os.listdir(STEAM_USER_BASE_DIR):
-	if d == 'anonymous':
-		continue
-	path = STEAM_USER_BASE_DIR + d
-	if os.path.isdir(path):
-		STEAM_USER_DIRS.append(path)
 
 def create_shortcut(entry):
 	if 'name' not in entry:
@@ -121,6 +90,38 @@ def create_shortcut(entry):
 	
 	return shortcut
 
+# Initialize all directories and files
+if 'XDG_CACHE_HOME' in os.environ:
+	CACHE_HOME = os.environ['XDG_CACHE_HOME']
+else:
+	CACHE_HOME = os.environ['HOME'] + '/.cache'
+
+compat_data = {}
+COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
+
+if 'XDG_DATA_HOME' in os.environ:
+	DATA_HOME = os.environ['XDG_DATA_HOME']
+else:
+	DATA_HOME = os.environ['HOME'] + '/.local/share'
+
+DATA_HOME += '/'
+
+if not os.path.isdir(DATA_HOME + 'steam-shortcuts'):
+	os.makedirs(DATA_HOME + 'steam-shortcuts')
+
+SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
+
+if os.path.isdir('/usr/share/steam-shortcuts'):
+	SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
+
+STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
+STEAM_USER_DIRS = []
+for d in os.listdir(STEAM_USER_BASE_DIR):
+	if d == 'anonymous':
+		continue
+	path = STEAM_USER_BASE_DIR + d
+	if os.path.isdir(path):
+		STEAM_USER_DIRS.append(path)
 
 shortcuts = {}
 n = 0
