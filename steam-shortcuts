@@ -118,9 +118,21 @@ for d in os.listdir(STEAM_USER_BASE_DIR):
     if os.path.isdir(path):
         STEAM_USER_DIRS.append(path)
 
-# Get current shortcuts
-steam_shortcuts = {}
+# Don't scan user directories if there are no shortcuts to create
+data = []
+for d in SHORTCUT_DIRS:
+    for f in os.listdir(d):
+        y = open(d + '/' + f)
+        data = yaml.load(y, Loader=yaml.FullLoader)
+
+if len(data) == 0:
+    sys.exit(1)
+
+yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
+
+# Get current shortcuts for each user
 for user_dir in STEAM_USER_DIRS:
+    steam_shortcuts = {}
     file_path = user_dir + '/config/shortcuts.vdf'
     if os.path.isfile(file_path):
         STEAM_SHORTCUT_FILE = file_path
@@ -128,33 +140,21 @@ for user_dir in STEAM_USER_DIRS:
         if 'shortcuts' in s:
             steam_shortcuts = s['shortcuts']
 
-shortcuts = {}
-n = 0
-for d in SHORTCUT_DIRS:
-    for f in os.listdir(d):
-        y = open(d + '/' + f)
-        data = yaml.load(y, Loader=yaml.FullLoader)
-
-        shortcut = None
-        if type(data) is list:
-            for entry in data:
-                shortcut = create_shortcut(entry)
-                shortcuts[str(n)] = shortcut
-                n += 1
-        elif type(data) is dict:
-            shortcut = create_shortcut(data)
+    shortcuts = {}
+    n = 0
+    shortcut = None
+    if type(data) is list:
+        for entry in data:
+            shortcut = create_shortcut(entry)
             shortcuts[str(n)] = shortcut
             n += 1
+    elif type(data) is dict:
+        shortcut = create_shortcut(data)
+        shortcuts[str(n)] = shortcut
+        n += 1
 
-
-if len(shortcuts) == 0:
-    sys.exit()
-
-
-yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
-
-# Write the new file
-out = {}
-out['shortcuts'] = shortcuts
-b = vdf.binary_dumps(out)
-open(STEAM_SHORTCUT_FILE, 'wb').write(b)
+    # Write the new file
+    out = {}
+    out['shortcuts'] = shortcuts
+    b = vdf.binary_dumps(out)
+    open(STEAM_SHORTCUT_FILE, 'wb').write(b)
