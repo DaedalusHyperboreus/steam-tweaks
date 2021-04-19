@@ -16,7 +16,7 @@ Returns the shortcut dictionary of the given app_id. If not found returns {}
 """
 def match_app_id(sc, app_id):
     for s in sc:
-        if sc[s]['appid'] == app_id:
+        if int(sc[s]['appid']) == int(app_id):
             return sc[s]
     return {}
 
@@ -34,7 +34,7 @@ def create_shortcut(entry):
 
     app_id = shortcut_app_id(entry['cmd'], entry['name'])
 
-    shortcut = match_app_id(steam_shortcuts, int(app_id))
+    shortcut = match_app_id(steam_shortcuts, app_id)
     shortcut['appid'] = app_id
     shortcut['AppName'] = entry['name']
     shortcut['Exe'] = entry['cmd']
