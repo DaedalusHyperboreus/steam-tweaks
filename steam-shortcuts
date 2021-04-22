@@ -124,7 +124,8 @@ data = []
 for d in SHORTCUT_DIRS:
     for f in os.listdir(d):
         y = open(d + '/' + f)
-        data = yaml.load(y, Loader=yaml.FullLoader)
+        dd = yaml.load(y, Loader=yaml.FullLoader)
+        data = data + dd
 
 if len(data) == 0:
     sys.exit(1)
