@@ -125,7 +125,12 @@ for d in SHORTCUT_DIRS:
     for f in os.listdir(d):
         y = open(d + '/' + f)
         dd = yaml.load(y, Loader=yaml.FullLoader)
-        data = data + dd
+        if type(dd) is list:
+            data = data + dd
+        elif type(dd) is dict:
+            data.append(dd)
+        else:
+            print("Error reading file " + d + "/" + f)  # Should not happen
 
 if len(data) == 0:
     sys.exit(1)
@@ -145,13 +150,8 @@ for user_dir in STEAM_USER_DIRS:
     shortcuts = {}
     n = 0
     shortcut = None
-    if type(data) is list:
-        for entry in data:
-            shortcut = create_shortcut(entry)
-            shortcuts[str(n)] = shortcut
-            n += 1
-    elif type(data) is dict:
-        shortcut = create_shortcut(data)
+    for entry in data:
+        shortcut = create_shortcut(entry)
         shortcuts[str(n)] = shortcut
         n += 1
 
