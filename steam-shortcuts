@@ -16,8 +16,9 @@ Returns the shortcut dictionary of the given app_id. If not found returns {}
 """
 def match_app_id(sc, app_id):
     for s in sc:
-        if int(sc[s]['appid']) == int(app_id):
-            return sc[s]
+        if "appid" in sc[s]:
+            if (int(sc[s]['appid']) == int(app_id)):
+                return sc[s]
     return {}
 
 """
