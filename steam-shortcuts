@@ -113,7 +113,7 @@ if os.path.isdir('/usr/share/steam-shortcuts'):
 STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
 STEAM_USER_DIRS = []
 for d in os.listdir(STEAM_USER_BASE_DIR):
-    if d == 'anonymous':
+    if d == 'anonymous' or d == 'ac' or d == '0':
         continue
     path = STEAM_USER_BASE_DIR + d
     if os.path.isdir(path):
@@ -141,8 +141,8 @@ yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
 for user_dir in STEAM_USER_DIRS:
     steam_shortcuts = {}
     file_path = user_dir + '/config/shortcuts.vdf'
+    STEAM_SHORTCUT_FILE = file_path
     if os.path.isfile(file_path):
-        STEAM_SHORTCUT_FILE = file_path
         s = vdf.binary_load(open(STEAM_SHORTCUT_FILE, 'rb'))
         if 'shortcuts' in s:
             steam_shortcuts = s['shortcuts']
