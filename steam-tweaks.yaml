@@ -47,7 +47,7 @@
   compat_tool: proton_513
 
 "620590": # Ancestors Legacy
-  compat_config: noesync
+  compat_config: noesync,nofsync
   compat_tool: Proton-5.21-GE-1
 
 "536270": # Ancestors: The Humankind Odyssey
@@ -126,13 +126,13 @@
   steam_input: enabled
 
 "409710": # BioShock Remastered
-  compat_tool: proton_411
-  compat_config: noesync
+  compat_tool: proton_513
+  compat_config: noesync,nofsync
   launch_options: -nointro
 
 "409720": # BioShock 2 Remastered
-  compat_tool: proton_411
-  compat_config: noesync
+  compat_tool: proton_513
+  compat_config: noesync,nofsync
   launch_options: -nointro
 
 "218060": # BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien; native version has severe controller issues
@@ -329,7 +329,7 @@
 
 "321040": # DiRT 3 Complete Edition
   compat_tool: proton_411
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "690790": # DiRT Rally 2.0
   compat_tool: proton_411
@@ -388,12 +388,12 @@
 
 "245280": # ENSLAVED: Odyssey to the West Premium Edition
   compat_tool: proton_411
-  compat_config: d9vk noesync
+  compat_config: d9vk,noesync,nofsync
 
 "812160": # Etherborn
   compat_tool: proton_411
 
-"1532180: # Evo\Wave
+"1532180": # Evo\Wave
   compat_tool: Proton-5.21-GE-1
 
 "1020470": # Evoland Legendary Edition; native version unplayable due to cropped display
@@ -412,6 +412,7 @@
 "1080110": # F1 2020
   compat_tool: proton_5
   compat_config: seccomp
+  launch_options: rm -f F1_2020_dx12.exe && ln -s F1_2020.exe F1_2020_dx12.exe; %command%
 
 "995980": # Fae Tactics 
   compat_tool: proton_513
@@ -451,7 +452,7 @@
 
 "966330": # Flower
   compat_tool: proton_513
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "751780": # Forager; native version crashes
   compat_tool: proton_411
@@ -633,7 +634,7 @@
   patches:
     - exec: mv KidGame/Config/KidEngine.ini KidGame/Config/KidEngine.ini.bak && sed '/\[XAudio2.XAudio2Device\]/{n;N;N;N;N;N;d}' KidGame/Config/KidEngine.ini.bak | sed '/\[XAudio2.XAudio2Device\]/'a'MaxChannels=64\nCommonAudioPoolSize=320\nMinCompressedDurationGame=0.3\nMinCompressedDurationEditor=500\nLowPassFilterResonance=0.9\nWorkAroundXDKRegression=FALSE' > KidGame/Config/KidEngine.ini
 
-"603460" # King and Assassins
+"603460": # King and Assassins
   compat_tool: proton_513
 
 "577940": # Killer Instinct
@@ -750,7 +751,7 @@
 
 "356190": # Middle-earth: Shadow of War
   compat_tool: proton_42
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "489520": # Minion Masters
   compat_tool: proton_513
@@ -995,7 +996,7 @@
 
 "71340": # Sonic Generations
   compat_tool: proton_411
-  compat_config: d9vk noesync
+  compat_config: d9vk,noesync,nofsync
 
 "584400": # Sonic Mania
   compat_tool: proton_411
@@ -1062,7 +1063,7 @@
 
 "287260": # Toybox Turbos
   compat_tool: proton_513
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "585420": # Trailmakers
   compat_tool: proton_42
