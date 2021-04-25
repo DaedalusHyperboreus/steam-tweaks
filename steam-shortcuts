@@ -57,11 +57,16 @@ def create_shortcut(entry):
     shortcut['AllowDesktopConfig'] = 1
     shortcut['AllowOverlay'] = 1
     shortcut['OpenVR'] = 0
-    shortcut['tags'] = {}
+
+    if 'tags' not in shortcut:
+        shortcut['tags'] = {}
 
     if 'tags' in entry:
+        entry['tags'].extend(shortcut['tags'].values())
+        tags = set(entry['tags'])
         t = 0
-        for tag in entry['tags']:
+        shortcut['tags'] = {}
+        for tag in tags:
             shortcut['tags'][str(t)] = tag
             t += 1
 
