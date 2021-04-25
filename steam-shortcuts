@@ -25,7 +25,7 @@ def match_app_id(sc, app_id):
 Creates a new shrotcut dictionary to be written later on the shortcut file.
 If an application exists with the same app ID in the file, tries to update it.
 """
-def create_shortcut(entry):
+def create_shortcut(entry, steam_shortcuts):
     if 'name' not in entry:
         print('shortcut missing required field "name"; skipping')
         return
@@ -90,78 +90,82 @@ def create_shortcut(entry):
 
     return shortcut
 
+def main():
+    # Initialize all directories and files
+    if 'XDG_CACHE_HOME' in os.environ:
+        CACHE_HOME = os.environ['XDG_CACHE_HOME']
+    else:
+        CACHE_HOME = os.environ['HOME'] + '/.cache'
 
-# Initialize all directories and files
-if 'XDG_CACHE_HOME' in os.environ:
-    CACHE_HOME = os.environ['XDG_CACHE_HOME']
-else:
-    CACHE_HOME = os.environ['HOME'] + '/.cache'
+    compat_data = {}
+    COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
 
-compat_data = {}
-COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
+    if 'XDG_DATA_HOME' in os.environ:
+        DATA_HOME = os.environ['XDG_DATA_HOME']
+    else:
+        DATA_HOME = os.environ['HOME'] + '/.local/share'
 
-if 'XDG_DATA_HOME' in os.environ:
-    DATA_HOME = os.environ['XDG_DATA_HOME']
-else:
-    DATA_HOME = os.environ['HOME'] + '/.local/share'
+    DATA_HOME += '/'
 
-DATA_HOME += '/'
+    if not os.path.isdir(DATA_HOME + 'steam-shortcuts'):
+        os.makedirs(DATA_HOME + 'steam-shortcuts')
 
-if not os.path.isdir(DATA_HOME + 'steam-shortcuts'):
-    os.makedirs(DATA_HOME + 'steam-shortcuts')
+    SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
 
-SHORTCUT_DIRS = [ DATA_HOME + 'steam-shortcuts' ]
+    if os.path.isdir('/usr/share/steam-shortcuts'):
+        SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
 
-if os.path.isdir('/usr/share/steam-shortcuts'):
-    SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
+    STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
+    STEAM_USER_DIRS = []
+    for d in os.listdir(STEAM_USER_BASE_DIR):
+        if d == 'anonymous' or d == 'ac' or d == '0':
+            continue
+        path = STEAM_USER_BASE_DIR + d
+        if os.path.isdir(path):
+            STEAM_USER_DIRS.append(path)
 
-STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
-STEAM_USER_DIRS = []
-for d in os.listdir(STEAM_USER_BASE_DIR):
-    if d == 'anonymous' or d == 'ac' or d == '0':
-        continue
-    path = STEAM_USER_BASE_DIR + d
-    if os.path.isdir(path):
-        STEAM_USER_DIRS.append(path)
+    # Don't scan user directories if there are no shortcuts to create
+    data = []
+    for d in SHORTCUT_DIRS:
+        for f in os.listdir(d):
+            y = open(d + '/' + f)
+            dd = yaml.load(y, Loader=yaml.FullLoader)
+            if type(dd) is list:
+                data = data + dd
+            elif type(dd) is dict:
+                data.append(dd)
+            else:
+                print("Error reading file " + d + "/" + f)  # Should not happen
 
-# Don't scan user directories if there are no shortcuts to create
-data = []
-for d in SHORTCUT_DIRS:
-    for f in os.listdir(d):
-        y = open(d + '/' + f)
-        dd = yaml.load(y, Loader=yaml.FullLoader)
-        if type(dd) is list:
-            data = data + dd
-        elif type(dd) is dict:
-            data.append(dd)
-        else:
-            print("Error reading file " + d + "/" + f)  # Should not happen
+    if len(data) == 0:
+        sys.exit(1)
 
-if len(data) == 0:
-    sys.exit(1)
+    yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
 
-yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
+    # Get current shortcuts for each user
+    for user_dir in STEAM_USER_DIRS:
+        steam_shortcuts = {}
+        file_path = user_dir + '/config/shortcuts.vdf'
+        STEAM_SHORTCUT_FILE = file_path
+        if os.path.isfile(file_path):
+            s = vdf.binary_load(open(STEAM_SHORTCUT_FILE, 'rb'))
+            if 'shortcuts' in s:
+                steam_shortcuts = s['shortcuts']
 
-# Get current shortcuts for each user
-for user_dir in STEAM_USER_DIRS:
-    steam_shortcuts = {}
-    file_path = user_dir + '/config/shortcuts.vdf'
-    STEAM_SHORTCUT_FILE = file_path
-    if os.path.isfile(file_path):
-        s = vdf.binary_load(open(STEAM_SHORTCUT_FILE, 'rb'))
-        if 'shortcuts' in s:
-            steam_shortcuts = s['shortcuts']
+        shortcuts = {}
+        n = 0
+        shortcut = None
+        for entry in data:
+            shortcut = create_shortcut(entry, steam_shortcuts)
+            shortcuts[str(n)] = shortcut
+            n += 1
 
-    shortcuts = {}
-    n = 0
-    shortcut = None
-    for entry in data:
-        shortcut = create_shortcut(entry)
-        shortcuts[str(n)] = shortcut
-        n += 1
+        # Write the new file
+        out = {}
+        out['shortcuts'] = shortcuts
+        b = vdf.binary_dumps(out)
+        open(STEAM_SHORTCUT_FILE, 'wb').write(b)
 
-    # Write the new file
-    out = {}
-    out['shortcuts'] = shortcuts
-    b = vdf.binary_dumps(out)
-    open(STEAM_SHORTCUT_FILE, 'wb').write(b)
+
+
+main()
