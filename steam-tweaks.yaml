@@ -47,7 +47,7 @@
   compat_tool: proton_513
 
 "620590": # Ancestors Legacy
-  compat_config: noesync
+  compat_config: noesync,nofsync
   compat_tool: Proton-5.21-GE-1
 
 "536270": # Ancestors: The Humankind Odyssey
@@ -73,9 +73,6 @@
 
 "979120": # Autonauts
   compat_tool: proton_513
-
-"484900": # Aven Colony 
-  compat_tool: Proton-6.1-GE-2
 
 "688420": # Bad North
   compat_tool: proton_42
@@ -129,13 +126,13 @@
   steam_input: enabled
 
 "409710": # BioShock Remastered
-  compat_tool: proton_411
-  compat_config: noesync
+  compat_tool: proton_513
+  compat_config: noesync,nofsync
   launch_options: -nointro
 
 "409720": # BioShock 2 Remastered
-  compat_tool: proton_411
-  compat_config: noesync
+  compat_tool: proton_513
+  compat_config: noesync,nofsync
   launch_options: -nointro
 
 "218060": # BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien; native version has severe controller issues
@@ -228,9 +225,6 @@
   compat_tool: proton_513
 
 "534360": # Colt Express
-  compat_tool: proton_513
-
-"940710": # Colt Canyon
   compat_tool: proton_513
 
 "1045720": # The Coma 2: Vicious Sisters; native version has poor controller support
@@ -335,7 +329,7 @@
 
 "321040": # DiRT 3 Complete Edition
   compat_tool: proton_411
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "690790": # DiRT Rally 2.0
   compat_tool: proton_411
@@ -394,12 +388,12 @@
 
 "245280": # ENSLAVED: Odyssey to the West Premium Edition
   compat_tool: proton_411
-  compat_config: d9vk noesync
+  compat_config: d9vk,noesync,nofsync
 
 "812160": # Etherborn
   compat_tool: proton_411
 
-"1532180: # Evo\Wave
+"1532180": # Evo\Wave
   compat_tool: Proton-5.21-GE-1
 
 "1020470": # Evoland Legendary Edition; native version unplayable due to cropped display
@@ -418,6 +412,7 @@
 "1080110": # F1 2020
   compat_tool: proton_5
   compat_config: seccomp
+  launch_options: rm -f F1_2020_dx12.exe && ln -s F1_2020.exe F1_2020_dx12.exe; %command%
 
 "995980": # Fae Tactics 
   compat_tool: proton_513
@@ -457,7 +452,7 @@
 
 "966330": # Flower
   compat_tool: proton_513
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "751780": # Forager; native version crashes
   compat_tool: proton_411
@@ -475,7 +470,7 @@
 "1142500": # Fun with Ragdolls: The Game
   compat_tool: proton_513
   
-"202200": # Galactic Civilizations II Ultimate Edition
+"202200": # Galactic Civilizations II: Ultimate Edition
   compat_tool: proton_513
 
 "226860": # Galactic Civilizations III
@@ -590,9 +585,6 @@
 "453340": # Hustle Cat
   compat_tool: proton_411
 
-"890720": # In Other Waters
-  compat_tool: proton_513
- 
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
   compat_tool: proton_411
 
@@ -636,7 +628,13 @@
 "370910": # Kathy Rain
   compat_tool: proton_513
 
-"603460" # King and Assassins
+"261110": # Killer is Dead - Nightmare Edition # Patch according to https://www.pcgamingwiki.com/wiki/Killer_Is_Dead#Issues_fixed
+  compat_tool: proton_513
+  patch_dir: KillerIsDead
+  patches:
+    - exec: mv KidGame/Config/KidEngine.ini KidGame/Config/KidEngine.ini.bak && sed '/\[XAudio2.XAudio2Device\]/{n;N;N;N;N;N;d}' KidGame/Config/KidEngine.ini.bak | sed '/\[XAudio2.XAudio2Device\]/'a'MaxChannels=64\nCommonAudioPoolSize=320\nMinCompressedDurationGame=0.3\nMinCompressedDurationEditor=500\nLowPassFilterResonance=0.9\nWorkAroundXDKRegression=FALSE' > KidGame/Config/KidEngine.ini
+
+"603460": # King and Assassins
   compat_tool: proton_513
 
 "577940": # Killer Instinct
@@ -701,7 +699,7 @@
 
 "424840": # Little Nightmares
   compat_tool: proton_513
-  launch_options: %command% -onethread
+  launch_options: -onethread
 
 "262690": # Little Racers STREET
   compat_tool: steamlinuxruntime
@@ -733,13 +731,10 @@
 "529660": # Mages of Mystralia
   compat_tool: proton_42
 
-"1078920": # Main Assembly
-  compat_tool: Proton-6.1-GE-2
-
 "504130": # Manual Samuel
   steam_input: enabled
 
-"299380: # Masquerade: The Baubles of Doom
+"299380": # Masquerade: The Baubles of Doom
   compat_tool: proton_513
 
 "331190": # Master Spy
@@ -756,7 +751,7 @@
 
 "356190": # Middle-earth: Shadow of War
   compat_tool: proton_42
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "489520": # Minion Masters
   compat_tool: proton_513
@@ -839,10 +834,6 @@
 "680380": # Night Call
   compat_tool: proton_411
 
-"219950": # NiGHTS Into Dreams
-  compat_tool: proton_513
-  compat_config: noesync
-  
 "405540": # Ninja Senki DX
   compat_tool: proton_513
 
@@ -894,18 +885,6 @@
 "622440": # Pandemic: The Board Game
   compat_tool: proton_513
 
-"441380": # PAC-MAN CHAMPIONSHIP EDITION 2
-  compat_tool: proton_513
-
-"384550": # Painters Guild
-  compat_tool: proton_513
-
-"916900": # Paperbark
-  compat_tool: proton_513
-
-"1001230": # Partial Control
-  compat_tool: proton_513
-
 "505230": # Pathologic 2
   compat_tool: proton_513
 
@@ -922,9 +901,6 @@
 "1013310": # Peaky Blinders: Mastermind
   compat_tool: proton_513
 
-"409870": # Phantom Brave PC
-  compat_tool: proton_513
-
 "787480": # Phoenix Wright: Ace Attorney Trilogy
   compat_tool: proton_5
 
@@ -937,16 +913,7 @@
 "752590": # A Plague Tale: Innocence
   compat_tool: proton_513
 
-"803980": # Plane Mechanic Simulator
-  compat_tool: proton_513
-
 "798790": # PolyCube
-  compat_tool: proton_513
-
-"328500": # Potatoman Seeks the Troof
-  compat_tool: proton_513
-
-"392070": # Pumped BMX +
   compat_tool: proton_513
 
 "971620": # Puyo Puyo Champions
@@ -956,32 +923,8 @@
 "355010": # Race Arcade
   steam_input: enabled
 
-"292380": # Racer 8
-  compat_tool: proton_513
-
 "207490": # Rayman Origins
   compat_tool: proton_411
-
-"290300": # Rebel Galaxy
-  compat_tool: proton_513
-
-"1057560": # Rebound Dodgeball Evolved
-  compat_tool: Proton-6.1-GE-2
-
-"257170": # Rebuild 3: Gangs of Deadsville  
-  compat_tool: proton_513
-
-"1106790": # Red Horizon
-  compat_tool: proton_513
-
-"236830": # Red Orchestra 2: Heroes of Stalingrad - Single Player
-  compat_tool: proton_513
-
-"265590": # The Red Solstice
-  compat_tool: proton_513
- 
-"1140630": # Red Wings: Aces of the Sky
-  compat_tool: Proton-6.1-GE-2
 
 "941570": # Relicta
   compat_tool: Proton-5.21-GE-1
@@ -992,25 +935,13 @@
 "254700": # Resident Evil 4
   compat_tool: proton_411
 
-"290040": # Retro Game Crunch
-  compat_tool: proton_513
- 
 "1152020": # Return Of The Zombie King
   compat_tool: proton_42
 
 "9010": # Return to Castle Wolfenstein
   compat_tool: proton_5
 
-"493200": # RiME
-  compat_tool: proton_513
-
-"848930": # Rising Dusk
-  compat_tool: proton_513
-
 "632360": # Risk of Rain 2
-  compat_tool: proton_513
-
-"1101360": # Rock of Ages 3: Make & Break
   compat_tool: proton_513
 
 "252950": # Rocket League
@@ -1031,9 +962,6 @@
 
 "289070": # Sid Meier's Civilization VI
   launch_options: LD_PRELOAD=/usr/lib/libfreetype.so.6 %command%
-
-"973580": # Sniper Ghost Warrior Contracts
-  compat_tool: proton_63
 
 "744050": # Space Invaders Extreme
   compat_tool: proton_513
@@ -1068,7 +996,7 @@
 
 "71340": # Sonic Generations
   compat_tool: proton_411
-  compat_config: d9vk noesync
+  compat_config: d9vk,noesync,nofsync
 
 "584400": # Sonic Mania
   compat_tool: proton_411
@@ -1135,7 +1063,7 @@
 
 "287260": # Toybox Turbos
   compat_tool: proton_513
-  compat_config: noesync
+  compat_config: noesync,nofsync
 
 "585420": # Trailmakers
   compat_tool: proton_42
@@ -1232,7 +1160,7 @@
   compat_tool: proton_42
 
 "882100": # XCOM: Chimera Squad
-  compat_tool: proton_63
+  compat_tool: proton_5
   
 "927380": # Yakuza Kiwami 2
   compat_tool: proton_5
