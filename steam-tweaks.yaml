@@ -833,10 +833,6 @@
 
 "1038300": # New Super Lucky's Tale
   compat_tool: Proton-6.1-GE-2
-
-"219950": # NiGHTS Into Dreams
-  compat_tool: proton_513
-  compat_config: noesync
   
 "589360": # Ni no Kuni II: Revenant Kingdom
   compat_tool: proton_411
@@ -849,6 +845,10 @@
 
 "680380": # Night Call
   compat_tool: proton_411
+
+"219950": # NiGHTS Into Dreams
+  compat_tool: proton_513
+  compat_config: noesync
 
 "405540": # Ninja Senki DX
   compat_tool: proton_513
