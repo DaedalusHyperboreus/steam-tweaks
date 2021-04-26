@@ -6,6 +6,8 @@ import vdf
 import yaml
 import binascii
 
+STEAM_USER_DIRS = []
+
 def shortcut_app_id(exe, name):
     crc_input = ''.join([exe, name])
     return str(binascii.crc32(bytes(crc_input.encode())) & 0xFFFFFFFF | 0x80000000 - 2**32)
@@ -116,7 +118,6 @@ def main():
         SHORTCUT_DIRS.append('/usr/share/steam-shortcuts')
 
     STEAM_USER_BASE_DIR = DATA_HOME + 'Steam/userdata/'
-    STEAM_USER_DIRS = []
     for d in os.listdir(STEAM_USER_BASE_DIR):
         if d == 'anonymous' or d == 'ac' or d == '0':
             continue
