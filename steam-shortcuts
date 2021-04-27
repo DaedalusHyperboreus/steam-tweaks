@@ -7,6 +7,7 @@ import yaml
 import zlib
 
 STEAM_USER_DIRS = []
+compat_data = {}
 
 def shortcut_app_id(exe, name):
     crc_input = ''.join([exe, name])
@@ -101,7 +102,6 @@ def main():
     else:
         CACHE_HOME = os.environ['HOME'] + '/.cache'
 
-    compat_data = {}
     COMPAT_DATA_FILE = CACHE_HOME + '/steam-shortcuts-compat.yaml'
 
     if 'XDG_DATA_HOME' in os.environ:
@@ -143,8 +143,6 @@ def main():
     if len(data) == 0:
         sys.exit(1)
 
-    yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
-
     # Get current shortcuts for each user
     for user_dir in STEAM_USER_DIRS:
         steam_shortcuts = {}
@@ -169,6 +167,7 @@ def main():
         b = vdf.binary_dumps(out)
         open(STEAM_SHORTCUT_FILE, 'wb').write(b)
 
+    yaml.dump(compat_data, open(COMPAT_DATA_FILE, 'w'), default_flow_style=False)
 
 
 main()
