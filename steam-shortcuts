@@ -4,13 +4,15 @@ import os
 import sys
 import vdf
 import yaml
-import binascii
+import zlib
 
 STEAM_USER_DIRS = []
 
 def shortcut_app_id(exe, name):
     crc_input = ''.join([exe, name])
-    return str(binascii.crc32(bytes(crc_input.encode())) & 0xFFFFFFFF | 0x80000000 - 2**32)
+    high_32 = zlib.crc32(crc_input.encode('utf-8')) | 0x80000000
+    full_64 = (high_32 << 32) | 0x02000000
+    return str(full_64)
 
 
 """
@@ -18,8 +20,8 @@ Returns the shortcut dictionary of the given app_id. If not found returns {}
 """
 def match_app_id(sc, app_id):
     for s in sc:
-        if "appid" in sc[s]:
-            if (int(sc[s]['appid']) == int(app_id)):
+        if 'Exe' in sc[s] and 'AppName' in sc[s]:
+            if (shortcut_app_id(sc[s]['Exe'], sc[s]['AppName']) == app_id):
                 return sc[s]
     return {}
 
