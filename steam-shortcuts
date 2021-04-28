@@ -5,9 +5,25 @@ import sys
 import vdf
 import yaml
 import zlib
+from datetime import datetime
 
 STEAM_USER_DIRS = []
 compat_data = {}
+
+def yearsago(years):
+    from_date = datetime.now().date()
+    try:
+        return from_date.replace(year=from_date.year - years)
+    except ValueError:
+        return from_date.replace(month=2, day=28, year=from_date.year - years)
+
+
+TIME_WARP_TAG='Time Warp'
+TIME_WARP_DATE=None
+TIME_WARP=os.environ.get('TIME_WARP')
+if TIME_WARP:
+    TIME_WARP_DATE=yearsago(int(TIME_WARP))
+
 
 def get_banner_id(exe, name):
     crc_input = ''.join([exe, name])
@@ -74,14 +90,26 @@ def create_shortcut(entry, steam_shortcuts):
     if 'tags' not in shortcut:
         shortcut['tags'] = {}
 
-    if 'tags' in entry:
-        entry['tags'].extend(shortcut['tags'].values())
-        tags = set(entry['tags'])
-        t = 0
-        shortcut['tags'] = {}
-        for tag in tags:
-            shortcut['tags'][str(t)] = tag
-            t += 1
+    if 'tags' not in entry:
+        entry['tags'] = []
+
+    shortcut_tags = list(shortcut['tags'].values())
+
+    if TIME_WARP_DATE:
+        # handle the case where the time warp or release dates changed; i.e. need to be able to remove the tag
+        if TIME_WARP_TAG in shortcut_tags:
+            shortcut_tags.remove(TIME_WARP_TAG)
+
+        if 'release_date' in entry and entry['release_date'] <= TIME_WARP_DATE:
+            entry['tags'].append(TIME_WARP_TAG)
+
+    entry['tags'].extend(shortcut_tags)
+    tags = set(entry['tags'])
+    t = 0
+    shortcut['tags'] = {}
+    for tag in tags:
+        shortcut['tags'][str(t)] = tag
+        t += 1
 
     if 'banner' in entry:
         _, ext = os.path.splitext(entry['banner'])
