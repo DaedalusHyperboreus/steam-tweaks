@@ -9,11 +9,18 @@ import zlib
 STEAM_USER_DIRS = []
 compat_data = {}
 
-def shortcut_app_id(exe, name):
+def get_banner_id(exe, name):
     crc_input = ''.join([exe, name])
     high_32 = zlib.crc32(crc_input.encode('utf-8')) | 0x80000000
     full_64 = (high_32 << 32) | 0x02000000
-    return str(full_64)
+    return full_64
+
+def get_compat_id(exe, name):
+    crc_input = ''.join([exe, name])
+    return (zlib.crc32(crc_input.encode('utf-8')) & 0xffffffff) | 0x80000000
+
+def get_shortcut_id(exe, name):
+    return get_compat_id(exe, name) - 2**32
 
 
 """
@@ -21,9 +28,8 @@ Returns the shortcut dictionary of the given app_id. If not found returns {}
 """
 def match_app_id(sc, app_id):
     for s in sc:
-        if 'Exe' in sc[s] and 'AppName' in sc[s]:
-            if (shortcut_app_id(sc[s]['Exe'], sc[s]['AppName']) == app_id):
-                return sc[s]
+        if 'appid' in sc[s] and sc[s]['appid'] == app_id:
+            return sc[s]
     return {}
 
 """
@@ -38,10 +44,12 @@ def create_shortcut(entry, steam_shortcuts):
         print('shortcut missing required field "cmd"; skipping')
         return
 
-    app_id = shortcut_app_id(entry['cmd'], entry['name'])
+    shortcut_id = get_shortcut_id(entry['cmd'], entry['name'])
+    banner_id = str(get_banner_id(entry['cmd'], entry['name']))
+    compat_id = str(get_compat_id(entry['cmd'], entry['name']))
 
-    shortcut = match_app_id(steam_shortcuts, app_id)
-    shortcut['appid'] = app_id
+    shortcut = match_app_id(steam_shortcuts, shortcut_id)
+    shortcut['appid'] = shortcut_id
     shortcut['AppName'] = entry['name']
     shortcut['Exe'] = entry['cmd']
 
@@ -81,17 +89,17 @@ def create_shortcut(entry, steam_shortcuts):
             dst_dir = user_dir + '/config/grid/'
             if not os.path.isdir(dst_dir):
                 os.makedirs(dst_dir)
-            dst = dst_dir + app_id + ext
+            dst = dst_dir + banner_id + ext
             if os.path.islink(dst) or os.path.isfile(dst):
                 os.remove(dst)
             os.symlink(entry['banner'], dst)
 
     if 'compat_tool' in entry:
-        if app_id not in compat_data:
-            compat_data[app_id] = {}
-        compat_data[app_id]['compat_tool'] = entry['compat_tool']
+        if compat_id not in compat_data:
+            compat_data[compat_id] = {}
+        compat_data[compat_id]['compat_tool'] = entry['compat_tool']
         if 'compat_config' in entry:
-            compat_data[app_id]['compat_config'] = entry['compat_config']
+            compat_data[compat_id]['compat_config'] = entry['compat_config']
 
     return shortcut
 
