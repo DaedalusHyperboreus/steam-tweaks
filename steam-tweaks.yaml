@@ -74,6 +74,9 @@
 "979120": # Autonauts
   compat_tool: proton_513
 
+"484900": # Aven Colony 
+  compat_tool: Proton-6.1-GE-2
+
 "688420": # Bad North
   compat_tool: proton_42
 
@@ -222,6 +225,9 @@
   compat_tool: proton_513
 
 "260650": # Cold War
+  compat_tool: proton_513
+
+"940710": # Colt Canyon
   compat_tool: proton_513
 
 "534360": # Colt Express
@@ -585,6 +591,9 @@
 "453340": # Hustle Cat
   compat_tool: proton_411
 
+"890720": # In Other Waters
+  compat_tool: proton_513
+ 
 "400170": # The Incredible Adventures of Van Helsing: Final Cut
   compat_tool: proton_411
 
@@ -731,6 +740,9 @@
 "529660": # Mages of Mystralia
   compat_tool: proton_42
 
+"1078920": # Main Assembly
+  compat_tool: Proton-6.1-GE-2
+
 "504130": # Manual Samuel
   steam_input: enabled
 
@@ -834,6 +846,10 @@
 "680380": # Night Call
   compat_tool: proton_411
 
+"219950": # NiGHTS Into Dreams
+  compat_tool: proton_513
+  compat_config: noesync
+
 "405540": # Ninja Senki DX
   compat_tool: proton_513
 
@@ -882,7 +898,19 @@
 "794260": # Outward
   compat_tool: Proton-5.21-GE-1
   
+"441380": # PAC-MAN CHAMPIONSHIP EDITION 2
+  compat_tool: proton_513
+
+"384550": # Painters Guild
+  compat_tool: proton_513
+
+"916900": # Paperbark
+  compat_tool: proton_513
+
 "622440": # Pandemic: The Board Game
+  compat_tool: proton_513
+
+"1001230": # Partial Control
   compat_tool: proton_513
 
 "505230": # Pathologic 2
@@ -901,6 +929,9 @@
 "1013310": # Peaky Blinders: Mastermind
   compat_tool: proton_513
 
+"409870": # Phantom Brave PC
+  compat_tool: proton_513
+
 "787480": # Phoenix Wright: Ace Attorney Trilogy
   compat_tool: proton_5
 
@@ -913,18 +944,51 @@
 "752590": # A Plague Tale: Innocence
   compat_tool: proton_513
 
+"803980": # Plane Mechanic Simulator
+  compat_tool: proton_513
+
 "798790": # PolyCube
   compat_tool: proton_513
 
+"328500": # Potatoman Seeks the Troof
+  compat_tool: proton_513
+
+"392070": # Pumped BMX +
+  compat_tool: proton_513
+    
 "971620": # Puyo Puyo Champions
   compat_tool: proton_411
   launch_options: WINEDLLOVERRIDES="xaudio2_7=native,builtin" %command%
+
+"292380": # Racer 8
+  compat_tool: proton_513
 
 "355010": # Race Arcade
   steam_input: enabled
 
 "207490": # Rayman Origins
   compat_tool: proton_411
+
+"290300": # Rebel Galaxy
+  compat_tool: proton_513
+
+"1057560": # Rebound Dodgeball Evolved
+  compat_tool: Proton-6.1-GE-2
+
+"257170": # Rebuild 3: Gangs of Deadsville  
+  compat_tool: proton_513
+
+"1106790": # Red Horizon
+  compat_tool: proton_513
+
+"236830": # Red Orchestra 2: Heroes of Stalingrad - Single Player
+  compat_tool: proton_513
+
+"265590": # The Red Solstice
+  compat_tool: proton_513
+ 
+"1140630": # Red Wings: Aces of the Sky
+  compat_tool: Proton-6.1-GE-2
 
 "941570": # Relicta
   compat_tool: Proton-5.21-GE-1
@@ -935,13 +999,25 @@
 "254700": # Resident Evil 4
   compat_tool: proton_411
 
+"290040": # Retro Game Crunch
+  compat_tool: proton_513
+ 
 "1152020": # Return Of The Zombie King
   compat_tool: proton_42
 
 "9010": # Return to Castle Wolfenstein
   compat_tool: proton_5
 
+"493200": # RiME
+  compat_tool: proton_513
+
+"848930": # Rising Dusk
+  compat_tool: proton_513
+
 "632360": # Risk of Rain 2
+  compat_tool: proton_513
+
+"1101360": # Rock of Ages 3: Make & Break
   compat_tool: proton_513
 
 "252950": # Rocket League
@@ -975,6 +1051,9 @@
 
 "544330": # Snake Pass
   compat_tool: proton_5
+
+"973580": # Sniper Ghost Warrior Contracts
+  compat_tool: proton_63
 
 "1096570": # SONG OF HORROR COMPLETE EDITION
   compat_tool: Proton-5.21-GE-1
@@ -1160,7 +1239,7 @@
   compat_tool: proton_42
 
 "882100": # XCOM: Chimera Squad
-  compat_tool: proton_5
+  compat_tool: proton_63
   
 "927380": # Yakuza Kiwami 2
   compat_tool: proton_5
