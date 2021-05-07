@@ -297,6 +297,9 @@
 "356650": # Death's Gambit
   compat_tool: proton_411
 
+"1190460": # Death Stranding
+  compat_tool: proton_63
+
 "325090": # Deep Dungeons of Doom
   compat_tool: proton_513
 
