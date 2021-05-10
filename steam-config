@@ -51,9 +51,9 @@ def load_steam_config(path):
 		stale_entries=[]
         
 		for game in steam['CompatToolMapping']:
-                if 'name' in steam['CompatToolMapping'][game] and 'config' in steam['CompatToolMapping'][game]:
-                        if not steam['CompatToolMapping'][game]['name'] and not steam['CompatToolMapping'][game]['config']:
-                                stale_entries.append(game)
+			if 'name' in steam['CompatToolMapping'][game] and 'config' in steam['CompatToolMapping'][game]:
+				if not steam['CompatToolMapping'][game]['name'] and not steam['CompatToolMapping'][game]['config']:
+					stale_entries.append(game)
 
 		for entry in stale_entries:
 			del data['InstallConfigStore']['Software']['Valve']['Steam']['CompatToolMapping'][entry]
